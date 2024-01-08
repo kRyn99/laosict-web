@@ -1,0 +1,26 @@
+server {
+
+    root /var/www/html/vilove/public;
+    index index.php index.html index.htm;
+
+    server_name vilove.tnet.vn;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    access_log /var/log/nginx/vilove.access.log;
+    error_log /var/log/nginx/vilove.error.log error;
+
+    location ~ \.php$ {
+        try_files $uri /index.php =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/run/php/php8.1-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+        fastcgi_read_timeout 300000;
+    }
+
+    listen 80;
+
+}

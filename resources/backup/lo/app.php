@@ -1,0 +1,68 @@
+<?php
+
+ return [
+    "program_collect_percent" => "% quyên góp đạt được",
+    "program" => "Chương trình quyên góp",
+    "post" => "Các Bài Viết  23",
+    "category" => "Các Chuyên Mục",
+    "payment" => "Các Giao Dịch",
+    "feedback" => "Các Góp ý",
+    "project" => "Các Hoàn Cảnh",
+    "partner_image" => "Hình ảnh/Logo Đối Tác Đồng Hành",
+    "program_source_id" => "ID/Mã Chương trình quyên góp",
+    "program_type_source_id" => "ID/Mã loại Chương trình",
+    "partner_source_id" => "ID/Mã Đối Tác Đồng Hành",
+    "program_type" => "Loại Chương Trình",
+    "program_type_id" => "Loại Chương trình quyên góp",
+    "project_type" => "Loại Hoàn Cảnh",
+    "program_donation_type" => "Loại Quyên góp",
+    "bill_number" => "Mã Bill",
+    "payment_number" => "Mã Giao dịch",
+    "partner_desc" => "Mô tả Đối Tác Đồng Hành",
+    "program_end_date" => "Ngày Kết thúc",
+    "program_start_date" => "Ngày bắt đầu",
+    "partner_slogan" => "Slogan Đối Tác Đồng Hành",
+    "partner_number_of_success_projects" => "Số dự án quyên góp thành công của Đối Tác Đồng Hành",
+    "program_total_collect_turn" => "Số lượt quyên góp",
+    "partner_total_collect_turn" => "Số lượt quyên góp của Đối Tác Đồng Hành",
+    "payment_amount" => "Số tiền",
+    "partner_total_collect_amount" => "Số tiền quyên góp được của Đối Tác Đồng Hành",
+    "program_current_collect_amount" => "Số tiền/Quà tặng đã quyên góp hiện tại",
+    "payment_phone" => "Số điện thoại",
+    "payment_time" => "Thời gian GD",
+    "program_day_left" => "Thời hạn chương trình còn lại số ngày",
+    "payment_status" => "Trạng thái",
+    "program_name" => "Tên Chương trình quyên góp",
+    "project_type_name" => "Tên Loại Hoàn Cảnh",
+    "program_type_name" => "Tên loại Chương trình",
+    "partner_name" => "Tên Đối Tác Đồng Hành",
+    "program_total_collect_amount" => "Tổng Số tiền/Quà Tặng cần quyên góp",
+    "program_slug" => "Đường dẫn/Link Chương trình quyên góp",
+    "partner_slug" => "Đường dẫn/Link Đối Tác Đồng Hành",
+    "partner" => "Đối Tác Đồng Hành",
+    "program_partner_id" => "Đối tác đồng hành",
+
+     "quan_tri_noi_dung" => "Quản trị nội dung",
+     "cac_hoan_canh_quyen_gop" => "Các hoàn cảnh quyên góp",
+
+     "cac_thiet_lap" => "Các thiết lập",
+
+     // image
+     "category_banner_pc" => "Banner Image PC (1920x740)",
+     "category_banner_mobile" => "Banner Image Mobile (900x900)",
+     "category_frontend_image" => "Frontend Image",
+     "partner_content" => "Partner Content",
+
+     "post_image" => "Ảnh bài viết",
+     "post_content" => "Nội dung bài viết",
+
+
+     "project_image" => "Ảnh hoàn cảnh",
+     "project_image1" => "Ảnh hoàn cảnh 1",
+     "project_image2" => "Ảnh hoàn cảnh 2",
+     "project_image3" => "Ảnh hoàn cảnh 3",
+     "project_image4" => "Ảnh hoàn cảnh 4",
+     "project_image5" => "Ảnh hoàn cảnh 5",
+
+     "partner_frontend_image" => "Frontend Image 489 x 397",
+];

@@ -1,0 +1,68 @@
+<?php
+
+ return [
+    "program_collect_percent" => "同伴夥伴姓名",
+    "program" => "同伴夥伴姓名",
+    "post" => "同伴夥伴姓名",
+    "payment" => "同伴夥伴姓名",
+    "feedback" => "同伴夥伴姓名",
+    "project" => "同伴夥伴姓名",
+    "partner_image" => "同伴夥伴姓名",
+    "program_source_id" => "同伴夥伴姓名",
+    "program_type_source_id" => "同伴夥伴姓名",
+    "partner_source_id" => "同伴夥伴姓名",
+    "program_type" => "同伴夥伴姓名",
+    "program_type_id" => "同伴夥伴姓名",
+    "project_type" => "同伴夥伴姓名",
+    "program_donation_type" => "同伴夥伴姓名",
+    "bill_number" => "同伴夥伴姓名",
+    "payment_number" => "同伴夥伴姓名",
+    "partner_desc" => "同伴夥伴姓名",
+    "program_end_date" => "同伴夥伴姓名",
+    "program_start_date" => "同伴夥伴姓名",
+    "partner_slogan" => "同伴夥伴姓名",
+    "partner_number_of_success_projects" => "同伴夥伴姓名",
+    "program_total_collect_turn" => "同伴夥伴姓名",
+    "partner_total_collect_turn" => "同伴夥伴姓名",
+    "payment_amount" => "同伴夥伴姓名",
+    "partner_total_collect_amount" => "同伴夥伴姓名",
+    "program_current_collect_amount" => "同伴夥伴姓名",
+    "payment_phone" => "同伴夥伴姓名",
+    "payment_time" => "同伴夥伴姓名",
+    "program_day_left" => "同伴夥伴姓名",
+    "payment_status" => "同伴夥伴姓名",
+    "program_name" => "同伴夥伴姓名",
+    "project_type_name" => "同伴夥伴姓名",
+    "program_type_name" => "同伴夥伴姓名",
+    "program_total_collect_amount" => "同伴夥伴姓名",
+    "program_slug" => "同伴夥伴姓名",
+    "partner_slug" => "同伴夥伴姓名",
+    "category" => "同伴夥伴姓名",
+    "partner" => "同伴夥伴姓名",
+    "program_partner_id" => "同伴夥伴姓名",
+    "partner_name" => "同伴夥伴姓名 1",
+
+     "quan_tri_noi_dung" => "Quản trị nội dung",
+     "cac_hoan_canh_quyen_gop" => "Các hoàn cảnh quyên góp",
+
+     "cac_thiet_lap" => "Các thiết lập",
+
+     // image
+     "category_banner_pc" => "Banner Image PC (1920x740)",
+     "category_banner_mobile" => "Banner Image Mobile (900x900)",
+     "category_frontend_image" => "Frontend Image",
+     "partner_content" => "Partner Content",
+
+     "post_image" => "Ảnh bài viết",
+     "post_content" => "Nội dung bài viết",
+
+
+     "project_image" => "Ảnh hoàn cảnh",
+     "project_image1" => "Ảnh hoàn cảnh 1",
+     "project_image2" => "Ảnh hoàn cảnh 2",
+     "project_image3" => "Ảnh hoàn cảnh 3",
+     "project_image4" => "Ảnh hoàn cảnh 4",
+     "project_image5" => "Ảnh hoàn cảnh 5",
+
+     "partner_frontend_image" => "Frontend Image 489 x 397",
+];

@@ -1,0 +1,57 @@
+- Danh sách api:
+	+ api tổng hợp toàn bộ các chương trình thiện nguyện:
+		* Tổng số dự án đã gây quỹ
+		* Tổng số tiền quyên góp được
+		* Tổng số lượt quyên góp
+		* Tổng số đối tác đồng hành
+	+ api lấy danh sách đối tác đồng hành: (Có cần phải trả ra thêm api chi tiết hay ko? )
+		* Id đối tác
+		* Tên đối tác
+		* Hình ảnh/logo
+		* Slogan
+		* Mô tả
+		* Số dự án được gây quỹ thành công
+		* Tổng số tiền quyên góp được
+		* Số lượt tham gia quyên góp
+		* Danh sách chương trình quyên góp của đối tác:
+			# Tên chương trình
+			# Loại chương trình: loại sản phẩm: voucher, quà tặng... 
+			# Số tiền quyên góp hiện tại
+			# Tổng số tiền cần quyên góp
+			# Số lượt quyên góp
+			# % đạt được
+			# Thời hạn chương trình: Còn n ngày	
+	+ api lấy danh sách loại chương trình: 
+		* Id loại chương trình:
+		* Tên loại chương trình: voucher, quà tặng...  
+	+ api chi tiết đối tác đồng hành: 
+		* Id đối tác
+		* Tên đối tác
+		* Hình ảnh/logo
+		* Slogan
+		* Mô tả
+		* Số dự án được gây quỹ thành công
+		* Tổng số tiền quyên góp được
+		* Số lượt tham gia quyên góp
+		* Danh sách chương trình quyên góp của đối tác:
+			# Tên chương trình
+			# Số tiền quyên góp hiện tại
+			# Tổng số tiền cần quyên góp
+			# Số lượt quyên góp
+			# % đạt được
+			# Thời hạn chương trình: Còn n ngày	
+	+ api chi tiết chương trình:
+		* Id chương trình
+		* Tên chương trình
+		* Số tiền quyên góp hiện tại
+		* Tổng số tiền cần quyên góp
+		* Số lượt quyên góp
+		* % đạt được
+		* Thời hạn chương trình: Còn n ngày		
+	+ api góp ý: Lưu thông tin khách hàng muốn góp ý:
+		* Họ và tên:
+		* Email
+		* SĐT:
+		* Địa chỉ:
+		* Nội dung góp ý:
+		
