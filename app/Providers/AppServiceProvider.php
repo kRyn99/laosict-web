@@ -33,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Program::observe(ProgramObserver::class);
         LanguageCustom::observe(LanguageCustomObserver::class);
-        \URL::forceScheme('https');
+        // \URL::forceScheme('https');
 //        DB::listen(function($query) {
 //            Helpers::log($query->sql);
 //            try { } catch (\Exception $e) {

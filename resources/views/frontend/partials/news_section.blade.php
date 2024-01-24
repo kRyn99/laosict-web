@@ -4,7 +4,7 @@
             <div class="title-article" id="section-article2">
                 <h2>{{ trans('home.section_tintuc_header') }}</h2>
                 <!-- Nếu mô tả ít hơn 30 từ thì cho text căn giữa, dùng cái này -->
-                <h3 class="section_desc">{{ trans('home.section_tintuc_desc') }}</h3>
+                <!-- <h3 class="section_desc">{{ trans('home.section_tintuc_desc') }}</h3> -->
                 <!-- Nếu mô tả lớn hơn 30 từ thì cho text căn đều, dùng cái này -->
                 <!-- <h3 style="text-align: justify;">{{ trans('home.section_tintuc_desc') }}</h3> -->
             </div>

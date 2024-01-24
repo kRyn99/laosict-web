@@ -43,7 +43,7 @@ class FrontendController extends Controller
 
     public function privacy()
     {
-
+        
     }
 
     public function feedback()
@@ -198,7 +198,7 @@ class FrontendController extends Controller
 
             $meta = [];
             $category = Category::find(request()->input('id'));
-
+            
             if ($category) {
                 if ($category->identify == 'hoan-canh-quyen-gop') {
                     $childCate = Helpers::findCateByIdentify('vi-tre-em');

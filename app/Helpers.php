@@ -86,7 +86,7 @@ class Helpers
             'key'         => 'website_logo_header',
             'name'        => 'Header Website Logo',
             'description' => 'For SEO',
-            'value'       => 'uploads/logo.webp',
+            'value'       => 'image/logo_laos_center.jpg',
             'field'       => '{"name":"value","label":"Value","type":"browse"}', //text, textarea
             'active'      => 1,
         ],
@@ -232,6 +232,7 @@ class Helpers
 
     public static function getFlagLang() {
         return [
+
             'vi' => trans('home.title_flag_vietnamese'),
             'en' => trans('home.title_flag_english'),
             'lo' => trans('home.title_flag_laos'),
@@ -613,7 +614,7 @@ class Helpers
 
     public static function getImageUrlBySize($path, $w, $h)
     {
-        return url('img/cache/'.$w.'x'.$h.'/'.str_replace('uploads/', '', $path));
+        return url('uploads/'.str_replace('uploads/', '', $path));
     }
 
     public static function genPostContent()

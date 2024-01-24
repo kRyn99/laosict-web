@@ -3,7 +3,7 @@
         <div class="section-wrapper situation-wrapper">
             <div class="title-article" id="section-article1">
                 <h2>{{ trans('home.section_article1_header') }}</h2>
-                <h3 class="section_desc">{{ trans('home.section_article1_desc') }}</h3>
+                <!-- <h3 class="section_desc">{{ trans('home.section_article1_desc') }}</h3> -->
             </div>
             <div data-reach-tabs="" data-orientation="horizontal">
                 <div class="jsx-1428799533 soju-carousel relative -mx-5">
@@ -20,7 +20,6 @@
                                 @foreach (\App\Helpers::getIndexProjects($donationType) as $project)
                                     @include('frontend.partials.index_project', ['project' => $project])
                                 @endforeach
-
                             </div>
                             <div class="btn-more">
                                 <button id="loadMoreProject-{{$donationType}}" onclick="void(0)">

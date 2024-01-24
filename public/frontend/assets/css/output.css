@@ -8659,12 +8659,12 @@ h2.title{
   }
 
   .header__nav{
-    width: 100%;
-    position: absolute;
+    /* width: 100%; */
+    /* position: absolute; */
     top: 69px;
     max-width: 100%;
     background: #fff;
-    box-shadow: 0 3px 5px -2px #d2bbbb;
+    /* box-shadow: 0 3px 5px -2px #d2bbbb; */
     left: 0;
   }
 }
