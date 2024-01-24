@@ -37,12 +37,12 @@ header {
     color: #fff;
 }
 
-.banner {
+.course-banner {
     padding: 50px 0px;
     background: #F5F5F5;
 }
 
-.banner-content {
+.course-banner-content {
     display: flex;
     justify-content: space-between;
 }
@@ -116,6 +116,7 @@ header {
 .course-card {
     box-shadow: 0px 18.05851173400879px 18.05851173400879px 0px #0000000D;
     border-radius: 10px;
+    width: 328px;
 }
 
 .course-info {
@@ -169,6 +170,7 @@ textarea {
 .card-testimonial {
     box-shadow: 0px 20px 20px 0px #0000001A;
     padding: 40px;
+    height: 100%;
 }
 
 .card-testimonial img {
@@ -216,6 +218,22 @@ footer {
     margin-top: 20px;
     font-size: 14px;
 }
+
+/* @media all and (max-width: 480px) {
+    .course-banner-content {
+        display: block;
+    }
+    .career-opportunities-content {
+        display: block;
+    }
+    .list-course-content {
+        display: block;
+    }
+    .course-description {
+        display: flex;
+        justify-content: space-between;
+    }
+} */
 
 /* ----------------------------------------------------------------- */
 /* Custom shorten CSS */

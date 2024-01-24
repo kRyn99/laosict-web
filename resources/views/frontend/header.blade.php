@@ -2,7 +2,7 @@
 <header class="header">
     <h1 class="logo">
         <a href="{{ route('frontend.index') }}" title="{{ \App\Helpers::getSettings($settings, 'website_name') }}">
-            <img src="{{ url(\App\Helpers::getSettings($settings, 'website_logo_header')) }}" alt="" class="lazyload">
+            <img src="{{ url(\App\Helpers::getSettings($settings, 'website_logo_header')) }}" alt="" class="lazyload" style="width:100px;height:40px">
             <span>{{ \App\Helpers::getSettings($settings, 'website_name') }}</span>
         </a>
     </h1>
