@@ -59,7 +59,8 @@
                 </div>
             </div>
             <div class="grow">
-                <a title="{{ $project->name }}" class="stretched-link" href="{{ route('frontend.main', $project->slug.'.html') }}">
+                <a title="{{ $project->name }}" class="stretched-link" href="{{route('detail-course-1')}}">
+                    {{-- href="{{ route('frontend.main', $project->slug.'.html') }}" --}}
                     <span>{{ trans('home.button_quyen_gop') }}</span>
                 </a>
             </div>

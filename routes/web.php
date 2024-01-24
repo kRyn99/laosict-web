@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//mới nhưng chỉ làm demo
+Route::get('detail-course-1','App\Http\Controllers\NewController@detail_course_1')->name('detail-course-1');
+Route::get('detail-course-2','App\Http\Controllers\NewController@detail_course_2')->name('detail-course-2');
+//===============================
 Route::get('/', 'App\Http\Controllers\FrontendController@index')->name('frontend.index');
 Route::get('feedback', 'App\Http\Controllers\FrontendController@feedback')->name('frontend.feedback');
 Route::get('privacy', 'App\Http\Controllers\FrontendController@privacy')->name('frontend.privacy');
@@ -33,7 +37,5 @@ Route::get('chi-tiet-doi-tac-dong-hanh/{value}', 'App\Http\Controllers\FrontendC
 Route::get('lang/{value}', 'App\Http\Controllers\FrontendController@setLang')->name('frontend.set_lang');
 
 
-
 Route::get('{value}', 'App\Http\Controllers\FrontendController@main')->name('frontend.main');
-
 

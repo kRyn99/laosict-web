@@ -1,4 +1,4 @@
-<section class="partner-section bg-gray-50">
+{{-- <section class="partner-section bg-gray-50">
     <div class="section-container">
         <div class="section-wrapper">
             <div class="title-article" id="section-brand">
@@ -11,4 +11,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
