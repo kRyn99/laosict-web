@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.3 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Thuộc tính in đậm trong CSS và cách sử dụng - Blog | Got It Vietnam</title>
+	<meta name="description" content="Để in đậm một đoạn text trên trang web, ngoài thẻ bold hoặc strong trong HTML, bạn có thể sử dụng thẻ in đậm trong CSS. Cùng Got It tìm hiểu thẻ này trong bài viết sau." />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Thuộc tính in đậm trong CSS và cách sử dụng - Blog | Got It Vietnam" />
+	<meta property="og:description" content="Để in đậm một đoạn text trên trang web, ngoài thẻ bold hoặc strong trong HTML, bạn có thể sử dụng thẻ in đậm trong CSS. Cùng Got It tìm hiểu thẻ này trong bài viết sau." />
+	<meta property="og:url" content="https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung" />
+	<meta property="og:site_name" content="Blog | Got It Vietnam" />
+	<meta property="article:publisher" content="https://www.facebook.com/gotitvietnam/" />
+	<meta property="article:published_time" content="2021-02-07T18:37:32+00:00" />
+	<meta property="article:modified_time" content="2023-10-30T04:13:38+00:00" />
+	<meta property="og:image" content="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25185057/ThuE1BB99c-tC3ADnh-in-C491E1BAADm-trong-CSS-vC3A0-cC3A1ch-sE1BBAD-dE1BBA5ng-1536x836-1.png" />
+	<meta property="og:image:width" content="1536" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Branding">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="4 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://vn.got-it.ai/blog/#organization","name":"Got It Vietnam","url":"https://vn.got-it.ai/blog/","sameAs":["https://www.facebook.com/gotitvietnam/","https://www.instagram.com/lifeatgotit","https://www.linkedin.com/company/gotitvietnam/","https://www.youtube.com/channel/UCeivZRA4QJzNbz9vnOeG5RA/"],"logo":{"@type":"ImageObject","@id":"https://vn.got-it.ai/blog/#logo","inLanguage":"en-US","url":"https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29204148/Got-It-Original-logo.png","width":2040,"height":1350,"caption":"Got It Vietnam"},"image":{"@id":"https://vn.got-it.ai/blog/#logo"}},{"@type":"WebSite","@id":"https://vn.got-it.ai/blog/#website","url":"https://vn.got-it.ai/blog/","name":"Blog | Got It Vietnam","description":"","publisher":{"@id":"https://vn.got-it.ai/blog/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://vn.got-it.ai/blog/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung#primaryimage","inLanguage":"en-US","url":"https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25185057/ThuE1BB99c-tC3ADnh-in-C491E1BAADm-trong-CSS-vC3A0-cC3A1ch-sE1BBAD-dE1BBA5ng-1536x836-1.png","width":1536,"height":836},{"@type":"WebPage","@id":"https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung#webpage","url":"https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung","name":"Thu\u1ed9c t\u00ednh in \u0111\u1eadm trong CSS v\u00e0 c\u00e1ch s\u1eed d\u1ee5ng - Blog | Got It Vietnam","isPartOf":{"@id":"https://vn.got-it.ai/blog/#website"},"primaryImageOfPage":{"@id":"https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung#primaryimage"},"datePublished":"2021-02-07T18:37:32+00:00","dateModified":"2023-10-30T04:13:38+00:00","description":"\u0110\u1ec3 in \u0111\u1eadm m\u1ed9t \u0111o\u1ea1n text tr\u00ean trang web, ngo\u00e0i th\u1ebb bold ho\u1eb7c strong trong HTML, b\u1ea1n c\u00f3 th\u1ec3 s\u1eed d\u1ee5ng th\u1ebb in \u0111\u1eadm trong CSS. C\u00f9ng Got It t\u00ecm hi\u1ec3u th\u1ebb n\u00e0y trong b\u00e0i vi\u1ebft sau.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung"]}]},{"@type":"Article","@id":"https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung#article","isPartOf":{"@id":"https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung#webpage"},"author":{"@id":"https://vn.got-it.ai/blog/#/schema/person/0badc83899db33113dace4ad7de60679"},"headline":"Thu\u1ed9c t\u00ednh in \u0111\u1eadm trong CSS v\u00e0 c\u00e1ch s\u1eed d\u1ee5ng","datePublished":"2021-02-07T18:37:32+00:00","dateModified":"2023-10-30T04:13:38+00:00","mainEntityOfPage":{"@id":"https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung#webpage"},"commentCount":0,"publisher":{"@id":"https://vn.got-it.ai/blog/#organization"},"image":{"@id":"https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung#primaryimage"},"keywords":"CSS","articleSection":"Reference","inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung#respond"]}]},{"@type":"Person","@id":"https://vn.got-it.ai/blog/#/schema/person/0badc83899db33113dace4ad7de60679","name":"Branding","image":{"@type":"ImageObject","@id":"https://vn.got-it.ai/blog/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/9a4566bd0dc6706f91f0fb6244c7d237?s=96&d=mm&r=g","caption":"Branding"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Blog | Got It Vietnam &raquo; Feed" href="https://vn.got-it.ai/blog/feed" />
+<link rel="alternate" type="application/rss+xml" title="Blog | Got It Vietnam &raquo; Comments Feed" href="https://vn.got-it.ai/blog/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Blog | Got It Vietnam &raquo; Thuộc tính in đậm trong CSS và cách sử dụng Comments Feed" href="https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/vn.got-it.ai\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://vn.got-it.ai/blog/wp-includes/css/dist/block-library/style.min.css?ver=5.4' type='text/css' media='all' disabled />
+<link rel='stylesheet' id='toc-screen-css'  href='https://vn.got-it.ai/blog/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2106' type='text/css' media='all' disabled />
+<link rel='stylesheet' id='wpdiscuz-frontend-css-css'  href='https://vn.got-it.ai/blog/wp-content/plugins/wpdiscuz/themes/default/style.css?ver=7.2.2' type='text/css' media='all' disabled />
+<style id='wpdiscuz-frontend-css-inline-css' type='text/css'>
+ #wpdcom .wpd-blog-administrator .wpd-comment-label{color:#ffffff;background-color:#D0021B;border:none}#wpdcom .wpd-blog-administrator .wpd-comment-author, #wpdcom .wpd-blog-administrator .wpd-comment-author a{color:#D0021B}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-administrator .wpd-avatar img{border-color:#D0021B}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-administrator{border-left:3px solid #D0021B}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-administrator .wpd-avatar img{border-bottom-color:#D0021B}#wpdcom.wpd-layout-3 .wpd-blog-administrator .wpd-comment-subheader{border-top:1px dashed #D0021B}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-administrator .wpd-comment-right{border-left:1px solid #D0021B}#wpdcom .wpd-blog-editor .wpd-comment-label{color:#ffffff;background-color:#1AB7EA;border:none}#wpdcom .wpd-blog-editor .wpd-comment-author, #wpdcom .wpd-blog-editor .wpd-comment-author a{color:#1AB7EA}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-editor .wpd-avatar img{border-color:#1AB7EA}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-editor{border-left:3px solid #1AB7EA}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-editor .wpd-avatar img{border-bottom-color:#1AB7EA}#wpdcom.wpd-layout-3 .wpd-blog-editor .wpd-comment-subheader{border-top:1px dashed #1AB7EA}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-editor .wpd-comment-right{border-left:1px solid #1AB7EA}#wpdcom .wpd-blog-author .wpd-comment-label{color:#ffffff;background-color:#375DE7;border:none}#wpdcom .wpd-blog-author .wpd-comment-author, #wpdcom .wpd-blog-author .wpd-comment-author a{color:#375DE7}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-author .wpd-avatar img{border-color:#375DE7}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-author .wpd-avatar img{border-bottom-color:#375DE7}#wpdcom.wpd-layout-3 .wpd-blog-author .wpd-comment-subheader{border-top:1px dashed #375DE7}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-author .wpd-comment-right{border-left:1px solid #375DE7}#wpdcom .wpd-blog-contributor .wpd-comment-label{color:#ffffff;background-color:#22A861;border:none}#wpdcom .wpd-blog-contributor .wpd-comment-author, #wpdcom .wpd-blog-contributor .wpd-comment-author a{color:#22A861}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-contributor .wpd-avatar img{border-color:#22A861}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-contributor .wpd-avatar img{border-bottom-color:#22A861}#wpdcom.wpd-layout-3 .wpd-blog-contributor .wpd-comment-subheader{border-top:1px dashed #22A861}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-contributor .wpd-comment-right{border-left:1px solid #22A861}#wpdcom .wpd-blog-subscriber .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-subscriber .wpd-comment-author, #wpdcom .wpd-blog-subscriber .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-subscriber .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-subscriber .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom .wpd-blog-wpseo_manager .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-wpseo_manager .wpd-comment-author, #wpdcom .wpd-blog-wpseo_manager .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-wpseo_manager .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-wpseo_manager .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-wpseo_manager .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-wpseo_manager .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-wpseo_editor .wpd-comment-label{color:#ffffff;background-color:#22A861;border:none}#wpdcom .wpd-blog-wpseo_editor .wpd-comment-author, #wpdcom .wpd-blog-wpseo_editor .wpd-comment-author a{color:#22A861}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-wpseo_editor .wpd-avatar img{border-color:#22A861}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-wpseo_editor .wpd-avatar img{border-bottom-color:#22A861}#wpdcom.wpd-layout-3 .wpd-blog-wpseo_editor .wpd-comment-subheader{border-top:1px dashed #22A861}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-wpseo_editor .wpd-comment-right{border-left:1px solid #22A861}#wpdcom .wpd-blog-post_author .wpd-comment-label{color:#ffffff;background-color:#308DE8;border:none}#wpdcom .wpd-blog-post_author .wpd-comment-author, #wpdcom .wpd-blog-post_author .wpd-comment-author a{color:#308DE8}#wpdcom .wpd-blog-post_author .wpd-avatar img{border-color:#308DE8}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-post_author .wpd-avatar img{border-color:#308DE8}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-post_author{border-left:3px solid #308DE8}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-post_author .wpd-avatar img{border-bottom-color:#308DE8}#wpdcom.wpd-layout-3 .wpd-blog-post_author .wpd-comment-subheader{border-top:1px dashed #308DE8}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-post_author .wpd-comment-right{border-left:1px solid #308DE8}#wpdcom .wpd-blog-guest .wpd-comment-label{color:#ffffff;background-color:#C1C7D0;border:none}#wpdcom .wpd-blog-guest .wpd-comment-author, #wpdcom .wpd-blog-guest .wpd-comment-author a{color:#C1C7D0}#wpdcom.wpd-layout-3 .wpd-blog-guest .wpd-comment-subheader{border-top:1px dashed #C1C7D0}#comments, #respond, .comments-area, #wpdcom{}#wpdcom .ql-editor > *{color:#777777}#wpdcom .ql-editor::before{}#wpdcom .ql-toolbar{border:1px solid #DDDDDD;border-top:none}#wpdcom .ql-container{border:1px solid #DDDDDD;border-bottom:none}#wpdcom .wpd-form-row .wpdiscuz-item input[type="text"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="email"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="url"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="color"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="date"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="datetime"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="datetime-local"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="month"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="number"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="time"], #wpdcom textarea, #wpdcom select{border:1px solid #DDDDDD;color:#777777}#wpdcom .wpd-form-row .wpdiscuz-item textarea{border:1px solid #DDDDDD}#wpdcom input::placeholder, #wpdcom textarea::placeholder, #wpdcom input::-moz-placeholder, #wpdcom textarea::-webkit-input-placeholder{}#wpdcom .wpd-comment-text{color:#777777}#wpdcom .wpd-thread-head .wpd-thread-info{border-bottom:2px solid #375DE7}#wpdcom .wpd-thread-head .wpd-thread-info.wpd-reviews-tab svg{fill:#375DE7}#wpdcom .wpd-thread-head .wpdiscuz-user-settings{border-bottom:2px solid #375DE7}#wpdcom .wpd-thread-head .wpdiscuz-user-settings:hover{color:#375DE7}#wpdcom .wpd-comment .wpd-follow-link:hover{color:#375DE7}#wpdcom .wpd-comment-status .wpd-sticky{color:#375DE7}#wpdcom .wpd-thread-filter .wpdf-active{color:#375DE7;border-bottom-color:#375DE7}#wpdcom .wpd-comment-info-bar{border:1px dashed #5f7eec;background:#ebeffd}#wpdcom .wpd-comment-info-bar .wpd-current-view i{color:#375DE7}#wpdcom .wpd-filter-view-all:hover{background:#375DE7}#wpdcom .wpdiscuz-item .wpdiscuz-rating > label{color:#DDDDDD}#wpdcom .wpdiscuz-item .wpdiscuz-rating:not(:checked) > label:hover, .wpdiscuz-rating:not(:checked) > label:hover ~ label{}#wpdcom .wpdiscuz-item .wpdiscuz-rating > input ~ label:hover, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label{color:#FFED85}#wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover, #wpdcom .wpdiscuz-item .wpdiscuz-rating > label:hover ~ input:checked ~ label, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked + label:hover ~ label, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover ~ label, .wpd-custom-field .wcf-active-star, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label{color:#FFD700}#wpd-post-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-star{fill:#DDDDDD}#wpd-post-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-active{fill:#FFD700}#wpd-post-rating .wpd-rating-wrap .wpd-rate-starts svg .wpd-star{fill:#DDDDDD}#wpd-post-rating .wpd-rating-wrap .wpd-rate-starts:hover svg .wpd-star{fill:#FFED85}#wpd-post-rating.wpd-not-rated .wpd-rating-wrap .wpd-rate-starts svg:hover ~ svg .wpd-star{fill:#DDDDDD}.wpdiscuz-post-rating-wrap .wpd-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-star{fill:#DDDDDD}.wpdiscuz-post-rating-wrap .wpd-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-active{fill:#FFD700}#wpdcom .wpd-comment .wpd-follow-active{color:#ff7a00}#wpdcom .page-numbers{color:#555;border:#555 1px solid}#wpdcom span.current{background:#555}#wpdcom.wpd-layout-1 .wpd-new-loaded-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6}#wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6}#wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment.wpd-reply > .wpd-comment-wrap > .wpd-comment-right{background:transparent}#wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment.wpd-reply > .wpd-comment-wrap{background:#FFFAD6}#wpdcom.wpd-layout-3 .wpd-new-loaded-comment.wpd-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6}#wpdcom .wpd-follow:hover i, #wpdcom .wpd-unfollow:hover i, #wpdcom .wpd-comment .wpd-follow-active:hover i{color:#375DE7}#wpdcom .wpdiscuz-readmore{cursor:pointer;color:#375DE7}.wpd-custom-field .wcf-pasiv-star, #wpcomm .wpdiscuz-item .wpdiscuz-rating > label{color:#DDDDDD}.wpd-wrapper .wpd-list-item.wpd-active{border-top:3px solid #375DE7}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply.wpd-unapproved-comment .wpd-comment-wrap{border-left:3px solid #FFFAD6}#wpdcom.wpd-layout-3 .wpd-comment.wpd-reply.wpd-unapproved-comment .wpd-comment-right{border-left:1px solid #FFFAD6}#wpdcom .wpd-prim-button{background-color:#375DE7;color:#FFFFFF}#wpdcom .wpd_label__check i.wpdicon-on{color:#375DE7;border:1px solid #9baef3}#wpd-bubble-wrapper #wpd-bubble-all-comments-count{color:#375DE7}#wpd-bubble-wrapper > div{background-color:#375DE7}#wpd-bubble-wrapper > #wpd-bubble #wpd-bubble-add-message{background-color:#375DE7}#wpd-bubble-wrapper > #wpd-bubble #wpd-bubble-add-message::before{border-left-color:#375DE7;border-right-color:#375DE7}#wpd-bubble-wrapper.wpd-right-corner > #wpd-bubble #wpd-bubble-add-message::before{border-left-color:#375DE7;border-right-color:#375DE7}.wpd-inline-icon-wrapper path.wpd-inline-icon-first{fill:#375DE7}.wpd-inline-icon-count{background-color:#375DE7}.wpd-inline-icon-count::before{border-right-color:#375DE7}.wpd-inline-form-wrapper::before{border-bottom-color:#375DE7}.wpd-inline-form-question{background-color:#375DE7}.wpd-inline-form{background-color:#375DE7}.wpd-last-inline-comments-wrapper{border-color:#375DE7}.wpd-last-inline-comments-wrapper::before{border-bottom-color:#375DE7}.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments{background:#375DE7}.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:hover,.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:active,.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:focus{background-color:#375DE7}#wpdcom .ql-snow .ql-tooltip[data-mode="link"]::before{content:"Enter link:"}#wpdcom .ql-snow .ql-tooltip.ql-editing a.ql-action::after{content:"Save"}.comments-area{width:auto}
+</style>
+<link rel='stylesheet' id='wpdiscuz-combo-css-css'  href='https://vn.got-it.ai/blog/wp-content/plugins/wpdiscuz/assets/css/wpdiscuz-combo.min.css?ver=5.4' type='text/css' media='all' disabled />
+<link rel='stylesheet' id='awesome-font-css'  href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css?ver=5.15.3' type='text/css' media='all' disabled />
+<link rel='stylesheet' id='app-css'  href='https://vn.got-it.ai/blog/wp-content/themes/gotitblog/assets/css/app.min.css?ver=2.1.3' type='text/css' media='all' disabled />
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=1.12.4'></script>
+<script type='text/javascript' src='//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js?ver=3.4.1'></script>
+<link rel='https://api.w.org/' href='https://vn.got-it.ai/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://vn.got-it.ai/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://vn.got-it.ai/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4" />
+<link rel='shortlink' href='https://vn.got-it.ai/blog/?p=9364' />
+<link rel="alternate" type="application/json+oembed" href="https://vn.got-it.ai/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvn.got-it.ai%2Fblog%2Fthuoc-tinh-in-dam-trong-css-va-cach-su-dung" />
+<link rel="alternate" type="text/xml+oembed" href="https://vn.got-it.ai/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvn.got-it.ai%2Fblog%2Fthuoc-tinh-in-dam-trong-css-va-cach-su-dung&#038;format=xml" />
+<style type="text/css">div#toc_container {background: #f2f5fd;border: 1px solid #21388B;width: 100%;}div#toc_container p.toc_title {color: #21388B;}div#toc_container p.toc_title a,div#toc_container ul.toc_list a {color: #21388B;}</style><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N962JSR');</script>
+<!-- End Google Tag Manager --><link rel="icon" href="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/06/29180322/cropped-Got-It-Origianl-App-icon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/06/29180322/cropped-Got-It-Origianl-App-icon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/06/29180322/cropped-Got-It-Origianl-App-icon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/06/29180322/cropped-Got-It-Origianl-App-icon-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			@media only screen and (min-width:992px){
+	.gi-Header-menu {
+		align-items: initial
+	}
+}
+
+.wp-block-columns{margin-bottom:28px}.wp-block-column{min-width:0;word-break:break-word;overflow-wrap:break-word}@media (max-width:781px) and (min-width:600px){.wp-block-column:nth-child(2n){margin-left:32px}}.wp-block-image{margin-bottom:1em}.wp-block-image img{max-width:100%}.wp-block-image .aligncenter,.wp-block-image.is-resized{display:table;margin-left:0;margin-right:0}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.has-normal-font-size{font-size:16px}#wpdcom *{box-sizing:border-box;line-height:initial}#comments #wpdcom span,#wpdcom span{display:inline;letter-spacing:inherit;text-transform:none;font-size:1em}#wpdcom .wpd-clear,#wpdcom .clearfix{clear:both}#wpdcom .wpd-social-login-agreement{width:100%;margin-top:15px;margin-bottom:0;font-size:12px;padding:20px 30px 10px;background-color:rgb(248,248,248);border:1px dotted rgb(221,221,221);clear:both;line-height:normal}#wpdcom .wpd-social-login-agreement .wpd-agreement-title{font-weight:700;margin-bottom:5px;font-size:15px}#wpdcom .wpd-social-login-agreement .wpd-agreement-button{text-transform:uppercase;padding:3px 20px;margin:5px 0 0 15px;font-size:12px;line-height:20px;color:rgb(0,179,143);display:inline-block}#wpdcom .wpd-social-login-agreement .wpd-agreement-button.wpd-agreement-button-agree{border:1px dotted rgb(0,179,143);color:rgb(0,179,143)}#wpdcom .wpd-social-login-agreement .wpd-agreement-button.wpd-agreement-button-disagree{border:1px dotted rgb(255,49,47);color:rgb(255,49,47)}#wpdcom .wpd-social-login-agreement .wpd-agreement-buttons{margin-top:4px}#wpdcom .wpd-social-login-agreement .wpd-agreement-buttons-right{float:right}#wpdcom .wpd-secondary-forms-social-content .wpd-social-login-agreement{padding:20px}#wpdcom .wpd-form.wpd-secondary-form-wrapper{margin-bottom:25px}@media screen and (max-width:600px){#wpdcom .wpd-form.wpd-form-wrapper{padding-right:5px}}.wpd-clear{clear:both}*,::after,::before{box-sizing:border-box;outline:rgb(0,0,0)}html{font-size:16px;line-height:1.15}body{color:rgb(23,43,77);font-size:16px;line-height:1.5;margin:0}a{background-color:transparent;text-decoration:none}strong{font-weight:bolder}p{margin-bottom:1rem;margin-top:0}img{border-style:none}input{font-family:inherit;font-size:100%;line-height:1.5;margin:0}input{overflow:visible}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}*::-webkit-file-upload-button{-webkit-appearance:button;font-family:inherit;font-size:inherit;font-style:inherit;font-variant:inherit;font-weight:inherit;line-height:inherit}p{font-size:16px;line-height:1.5}.aligncenter{clear:both;display:block;margin:0 auto 28px}article img{display:block;max-width:100%;height:auto}@media (max-width:599px){.wp-block-column{padding-left:15px;padding-right:15px}}#mc_embed_signup input{border-color:rgb(223,225,230)!important}
+
+/*youtube responsive video: */
+.wp-embed-aspect-16-9 {margin:0 0 1em;}
+.wp-embed-aspect-16-9 .wp-block-embed__wrapper {width:100%;padding-bottom:56.25%;position:relative;}
+.wp-embed-aspect-16-9 iframe {width:100%;height:100%;position:absolute;}		</style>
+		</head>
+
+<body class="post-template-default single single-post postid-9364 single-format-standard wp-custom-logo">
+    <div id="root">
+        <div class="App">
+            <div class="PageLayout">
+                <div class="PageLayout-header">
+                    <div class="gi-Header">
+    <div class="Container">
+        <div class="gi-Header-inner">
+            <div class="gi-Header-brand u-lineHeightNone u-marginNone">
+                <a class="u-inlineBlock" href="https://vn.got-it.ai/" rel="home" title="" itemprop="url"><span class="u-srOnly"></span> <img width="212" height="72" class="custom-logo" alt="" data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/07/13121326/logo-header%402x.png" /></a>            </div>
+            <div class="gi-Header-searchMobile u-block sm:u-hidden">
+                <div class="js-search-top-mobile-click u-marginRightExtraSmall" aria-label="Search" role="button"><svg
+                        width="25" height="25">
+                        <path
+                            d="M20.067 18.933l-4.157-4.157a6 6 0 10-.884.884l4.157 4.157a.624.624 0 10.884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"
+                            style="fill: currentcolor;"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="gi-Header-hamburger js-menu-hamburger-button"><span></span></div>
+            <div class="gi-Header-menu">
+                <div class="menu-main-menu-container"><ul id="menu-main-menu" class="gi-Header-menu"><li id="menu-item-1617" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1617"><a href="https://vn.got-it.ai/">Home</a></li>
+<li id="menu-item-1624" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1624"><a href="https://vn.got-it.ai/teams">Teams</a></li>
+<li id="menu-item-1625" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1625"><a href="https://vn.got-it.ai/products">Products</a></li>
+<li id="menu-item-1626" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1626"><a href="https://vn.got-it.ai/career">Career</a></li>
+<li id="menu-item-4941" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4941"><a href="https://vn.got-it.ai/blog">Blog</a></li>
+<li id="menu-item-1628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1628"><a href="https://vn.got-it.ai/visit-us">Visit Us</a></li>
+</ul></div>            </div>
+        </div>
+    </div>
+</div>
+<div class="u-block sm:u-hidden">
+    <div class="gi-Header-searchMobile-content js-search-top-mobile">
+        <form role="search" method="get" class="u-marginHorizontalSmall u-marginTopLarge"
+            action="https://vn.got-it.ai/blog/">
+            <input class="FormInput FormInput--large u-block u-widthFull" name="s" type="search" placeholder="Search">
+        </form>
+    </div>
+</div><div class="u-backgroundPrimary">
+    <div class="Container">
+        <div class="gi-CategoriesHead-wrapper u-flex u-justifyContentBetween lg:u-alignItemsCenter">
+            <ul
+                class="gi-CategoriesHead u-paddingLeftNone u-listStyleTypeNone u-marginVerticalNone u-paddingTopExtraSmall u-paddingBottomLarge  lg:u-paddingBottomExtraSmall u-marginHorizontalNone ">
+                <li class='cat-item-all'><a href='https://vn.got-it.ai/blog/'>All</a></li>	<li class="cat-item cat-item-68"><a href="https://vn.got-it.ai/blog/category/job-opportunities" title="Tìm hiểu các jobs hay vị trí đang tuyển dụng tại Got It Vietnam trong chuyên mục Jobs Opportunities. Các vị trí hiện tại bao gồm Software Engineer, Test Engineer, Technical Product Manager, v.v..
+
+Nếu bạn quan tâm, hãy xem các vị trí đang tuyển dụng - Jobs Opportunities ở Got It tại: bit.ly/gotit-hanoi và đọc thêm về quy trình tuyển dụng tại đây.">Job Opportunities</a>
+</li>
+	<li class="cat-item cat-item-59"><a href="https://vn.got-it.ai/blog/category/recruitment-tips" title="Bạn đang muốn ứng tuyển vào Got It Vietnam và muốn biết về quy trình tuyển dụng (Recruitment Process) của công ty? Hay bạn đang tò mò về cách một startup Việt hiếm hoi thành công ở Silicon Valley và đang phát triển các sản phẩm world-class tuyển chọn các thành viên của mình?
+
+Chuyên mục Recruitment Tips sẽ cho bạn cái nhìn tổng quan nhất về 6 bước trong quy trình tuyển dụng của Got It Vietnam, bao gồm: CV Review - Phone screen - Competency Interview - Culture Fit Interview - Management Interview - Onboard. Mục đích của từng vòng, cũng như hình thức phỏng vấn và các tiêu chí đánh giá sẽ được bật mí trong từng bài viết cụ thể. Got It Vietnam rất khuyến khích ứng viên đọc các bài viết trong chuyên mục Recruitment trước khi tham gia phỏng vấn để tự tin, chủ động hơn.
+
+Đặc biệt, Got It còn bật mí những câu hỏi thường gặp trong phỏng vấn Software Engineer và Test Engineer, cũng như lộ trình đào tạo cho hai vị trí siêu hot này (và có thể các vị trí khác cũng sẽ sớm được tiết lộ). Vậy nên hãy đọc chuyên mục Recruitment để tham khảo những gợi ý đến từ các interviewer trước khi tham gia phỏng vấn nhé!">Recruitment Tips</a>
+</li>
+	<li class="cat-item cat-item-58"><a href="https://vn.got-it.ai/blog/category/products" title="Products là chuyên mục dành riêng cho các sản phẩm của Got It.
+
+Với mỗi công ty product, sản phẩm chính là linh hồn, là DNA, và cũng là một trong những yếu tố ứng viên rất nên tìm hiểu trước khi nộp hồ sơ. Bởi khi trực tiếp tham gia phát triển sản phẩm, bạn sẽ rất nhanh nản nếu không thực sự yêu thích hay thấy sản phẩm đó thú vị, bổ ích.
+
+Got It hân hạnh giới thiệu với bạn những sản phẩm global triệu đô đình đám đã góp phần không nhỏ để làm nên thương hiệu của Got It ngày nay. Chúng bao gồm:
+
+ 	Got It KaaS Platform — Nền tảng chia sẻ kiến thức dưới dạng dịch vụ dựa trên AI, là nền tảng mọi sản phẩm của Got It với khả năng mở rộng (scalability) vô hạn. Dựa trên platform này, Got It dần dần xây dựng rất nhiều sản phẩm phục vụ về nhu cầu chia sẻ kiến thức ở các lĩnh vực khác nhau. Dưới đây là các sản phẩm cụ thể được xây dựng dựa trên Got It Platform.
+ 	PhotoStudy, chú ngựa ô ở mảng ứng dụng giáo dục với nhiều giải thưởng, danh hiệu lớn nhỏ, nhiều lần được featured trên trang chủ App Store và được tin dùng tại hàng trăm trường học tại Mỹ.
+ 	Excelchat, sản phẩm triệu đô thứ hai của Got It giúp người dùng làm việc trong văn phòng giải quyết các vấn đề về kiến thức liên quan đến bảng tính (trên Microsoft Excel và Google Sheets) trong tích tắc với độ tin cậy và bảo mật cao.
+ 	QueryChat AI, công nghệ của tương lai. cho phép giúp người dùng sử dụng ngôn ngữ tự nhiên (Natural Language) để truy vấn dữ liệu thay vì phải viết những câu lệnh SQL query phức tạp. Từ đó, tất cả các bộ phận như marketing, vận hành, kinh doanh, quản lý sản phẩm, v.v. đều có thể truy vấn dữ liệu chỉ với một vài câu tiếng Anh đơn giản.
+">Products</a>
+</li>
+	<li class="cat-item cat-item-56"><a href="https://vn.got-it.ai/blog/category/people-and-culture" title="People and Culture là chuyên mục dành riêng cho Got It và các Got It-ians. Ở đây, bạn sẽ được nghe kể câu chuyện về những Software Engineer, Test Engineer, Data Analyst,... - những con người đã trở thành một phần không thể thiếu ở Got It Vietnam.
+
+Đó có thể là câu chuyện từ một cậu sinh viên ĐH Công nghệ (ĐH Quốc gia HN) trở thành một thành viên cốt cán ở Got It chỉ sau vẻn vẹn 2 năm làm việc, là chặng đường zero-to-one của chàng trai từ 2 lần trượt phỏng vấn đến tech lead của sản phẩm triệu đô...
+
+Bên cạnh phần Con người (People), chuyên mục này cũng cung cấp góc nhìn về Văn hoá (Culture) - một nét vô cùng đặc trưng, hoà trộn giữa môi trường bản địa ở Việt Nam với văn hoá của những startup Mỹ từ thung lũng công nghệ Silicon.">People &amp; Culture</a>
+</li>
+	<li class="cat-item cat-item-66"><a href="https://vn.got-it.ai/blog/category/tech-blogs" title="Tech blogs tổng hợp các bài viết thuần về kỹ thuật được viết bởi chính các thành viên của team Software Engineer, Test Engineer, Product Manager và các team khác của Got It Vietnam.
+
+Các bài viết tech blogs có chủ đề đa dạng từ các kiến thức về lập trình, kiểm thử đến cách xây dựng các kỹ năng mềm trong công việc, cũng như định hướng về nghề nghiệp.
+
+Các chủ đề mà bạn sẽ bắt gặp trong chuyên mục bao gồm:
+
+ 	Git và GitHub — liệu bạn đã thật sự biết cách sử dụng?
+ 	ORM và SQLAlchemy — ‘chiếc đũa thần’ trong quản trị cơ sở dữ liệu
+ 	Nâng tầm kỹ năng backend với kỹ thuật sử dụng task queue
+ 	Cách tạo một Product Roadmap được người dùng yêu thích
+ 	...
+">Tech blogs</a>
+</li>
+	<li class="cat-item cat-item-60"><a href="https://vn.got-it.ai/blog/category/sharing" title="Phát triển kỹ năng phỏng vấn, chắp cánh cho công việc của bạn với những bài viết, sharing hot nhất được tổng hợp và biên soạn bởi Got It Vietnam!
+
+Phỏng vấn ở một công ty lập trình như thế nào? Quy trình tuyển dụng ở Got It Vietnam và các công ty IT thường có bao nhiêu vòng? Bạn cần chuẩn bị gì trước khi tham gia phỏng vấn? Những câu hỏi thường gặp trong phỏng vấn Software Engineer, Test Engineer là gì?
+
+Bên cạnh đó, là một sinh viên mới ra trường, liệu bạn cần có những kĩ năng gì để bứt phá trong công việc? Đâu là những điều bạn nên và không nên làm trong những năm đầu tiên? Có những nguồn học liệu nào, những kiến thức gì bạn nên trau dồi thêm? Hay làm thế nào để có được những mối quan hệ của riêng mình, làm thế nào để làm việc một cách cân bằng, &quot;healthy và balanced&quot; hơn?
+
+Câu trả lời cho tất cả các câu hỏi trên sẽ có trong chuyên mục Sharing, thuộc blog của Got It Vietnam. Đây là các bài viết được tổng hợp từ chính kinh nghiệm của Got It Vietnam trong quá trình tuyển dụng và làm việc, cũng như chọn lọc thông tin từ các nguồn báo chí, blog uy tín.">Sharing</a>
+</li>
+	<li class="cat-item cat-item-276 current-cat"><a aria-current="page" href="https://vn.got-it.ai/blog/category/reference">Reference</a>
+</li>
+            </ul>
+            <div class="u-flexShrink-0 u-textRight u-hidden lg:u-block u-marginTopExtraSmall">
+                <form class="js-search-top u-lineHeightReset u-flexInline u-textNowrap gi-SearchTopBar" role="search"
+                    method="get" action="https://vn.got-it.ai/blog/">
+                    <span class="js-search-top-click u-marginRightSmall" aria-label="Search" role="button"><svg
+                            width="25" height="25">
+                            <path
+                                d="M20.067 18.933l-4.157-4.157a6 6 0 10-.884.884l4.157 4.157a.624.624 0 10.884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"
+                                style="fill: currentcolor;"></path>
+                        </svg></span>
+                    <label for="search-input" class="u-srOnly">Search</label>
+                    <input id="search-input" class="u-backgroundTransparent" type="search" placeholder="Search"
+                        name="s" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>                </div><div class="PageLayout-body">
+        <div itemscope itemtype="//schema.org/Article">
+    <div class="Container">
+        <div class="Grid">
+            <div class="u-sizeFull md:u-size8of12">
+                <div class="u-paddingTopMedium xl:u-paddingTopLarge">
+                    <h1 class="display-2 u-textCenter u-marginBottomMedium" itemprop="name">
+                        Thuộc tính in đậm trong CSS và cách sử dụng                    </h1>
+                    <meta itemprop="datePublished" content="2021-02-08T01:37:32+07:00" />
+                </div>
+                <div class="u-paddingBottomExtraSmall">
+                    <article id="post-9364" class="gi-Blog">
+                        
+<p>Có rất nhiều cách khác nhau để in đậm một đoạn text trên trang web. Ngoài việc sử dụng thẻ <em>bold</em> hoặc <em>strong</em>, bạn có thể sử dụng <strong>thẻ in đậm trong CSS</strong>. Thuộc tính in đậm của <a href="https://vn.got-it.ai/blog/css-la-gi">CSS</a> giúp bạn có nhiều lựa chọn hơn so với <a href="https://vn.got-it.ai/blog/html-va-css-co-gi-khac-nhau">HTML</a>. Hãy cùng Got It tìm hiểu về<strong> thẻ in đậm trong CSS</strong> cũng như cách sử dụng nó qua bài viết dưới đây nhé.</p>
+
+
+
+<ul><li><em><strong>Đọc thêm:</strong> <a href="https://vn.got-it.ai/blog/gioi-thieu-ve-css-co-ban-va-nhung-dieu-can-biet">Giới thiệu về CSS cơ bản và những điều cần biết</a></em></li><li><strong><em>Đọc thêm: </em></strong><a href="https://vn.got-it.ai/blog/huong-dan-css-can-ban-danh-cho-nguoi-moi-bat-dau"><em>Hướng dẫn CSS căn bản dành cho người mới bắt đầu</em></a></li></ul>
+
+
+
+<div id="toc_container" class="no_bullets"><p class="toc_title">Mục lục</p><ul class="toc_list"><li><a href="#1_The_in_dam_trong_CSS_la_gi">1. Thẻ in đậm trong CSS là gì?</a></li><li><a href="#2_Cach_su_dung_the_in_dam">2. Cách sử dụng thẻ in đậm</a></li><li><a href="#3_Cac_gia_tri_cua_the_in_dam_trong_CSS">3. Các giá trị của thẻ in đậm trong CSS</a></li></ul></div>
+<h2><span id="1_The_in_dam_trong_CSS_la_gi">1. <strong>Thẻ in đậm trong CSS là gì?</strong></span></h2>
+
+
+
+<p>Khi thiết kế một website, việc in đậm một đoạn text giúp người dùng chú ý hơn vào nội dung này. Đây là cách hữu ích để truyền đạt một thông tin quan trọng cho người đọc. In đậm một đoạn text cũng có công dụng về cải thiện SEO (Search Engine Optimization) website. Các từ khóa được in đậm sẽ giúp công cụ tìm kiếm đánh giá tầm quan trọng cao hơn khi index website. Để in đậm một đoạn text, thông thường bạn hay sử dụng thẻ <em>bold</em> và thẻ <em>strong</em> trong HTML. Tuy nhiên, hai thẻ này có khá ít lựa chọn và không dễ thao tác đối với lập trình viên.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30105339/Huyen-A%CC%89nh-bi%CC%80a-blog-96-1024x576.png" alt="" class="wp-image-19844" data-srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30105339/Huyen-A%CC%89nh-bi%CC%80a-blog-96-1024x576.png 1024w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30105339/Huyen-A%CC%89nh-bi%CC%80a-blog-96-300x169.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30105339/Huyen-A%CC%89nh-bi%CC%80a-blog-96-768x432.png 768w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30105339/Huyen-A%CC%89nh-bi%CC%80a-blog-96-1536x864.png 1536w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30105339/Huyen-A%CC%89nh-bi%CC%80a-blog-96.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>Thẻ in đậm trong CSS là gì?</figcaption></figure></div>
+
+
+
+<p>Một trong những cách tối ưu hơn để in đậm text là sử dụng thẻ in đậm trong CSS. Thẻ in đậm text trong CSS là thẻ <em>font-weight</em>. Thẻ này sẽ giúp thay đổi độ mỏng và dày của chữ tùy theo mục đích của lập trình viên. Thẻ <em>font-weight</em> mang lại rất nhiều lựa chọn cho bạn so với thẻ <em>bold</em> và <em>strong</em> trong HTML. Thuộc tính font-weight được hỗ trợ bởi hầu hết các trình duyệt như Chrome, Firefox, Safari,&#8230;</p>
+
+
+
+<h2><span id="2_Cach_su_dung_the_in_dam">2. <strong>Cách sử dụng thẻ in đậm</strong></span></h2>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30110006/Screen-Shot-2023-10-30-at-10.59.52-AM-1024x437.png" alt="" class="wp-image-19847" data-srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30110006/Screen-Shot-2023-10-30-at-10.59.52-AM-1024x437.png 1024w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30110006/Screen-Shot-2023-10-30-at-10.59.52-AM-300x128.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30110006/Screen-Shot-2023-10-30-at-10.59.52-AM-768x327.png 768w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30110006/Screen-Shot-2023-10-30-at-10.59.52-AM-1536x655.png 1536w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30110006/Screen-Shot-2023-10-30-at-10.59.52-AM.png 1590w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>Cách sử dụng thẻ in đậm </figcaption></figure></div>
+
+
+
+<p>Thuộc tính in đậm được sử dụng giống như hầu hết các thuộc tính CSS khác. Để sử dụng thuộc tính này, đầu tiên bạn hãy lựa chọn đoạn text mà mình muốn in đậm. Bạn có thể in đậm cả đoạn văn bản, hoặc sử dụng <em>span</em> để in đậm một text nhỏ. Bạn hãy tham khảo đoạn code mẫu dưới đây:</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: xml; title: ; notranslate" title="">
+p {
+font-weight: bold;
+}
+</pre></div>
+
+
+<p>Đoạn code trên sẽ in đậm toàn bộ văn bản p của website. “font-weight” là tên thuộc tính in đậm trong CSS. Còn “bold” là giá trị in đậm. Bạn có thay thế giá trị “bold” bằng các giá trị khác tùy theo mục đích.</p>
+
+
+
+<h2><span id="3_Cac_gia_tri_cua_the_in_dam_trong_CSS">3. <strong>Các giá trị của thẻ in đậm trong CSS</strong></span></h2>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30111329/Huyen-A%CC%89nh-bi%CC%80a-blog-98-1024x576.png" alt="" class="wp-image-19851" data-srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30111329/Huyen-A%CC%89nh-bi%CC%80a-blog-98-1024x576.png 1024w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30111329/Huyen-A%CC%89nh-bi%CC%80a-blog-98-300x169.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30111329/Huyen-A%CC%89nh-bi%CC%80a-blog-98-768x432.png 768w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30111329/Huyen-A%CC%89nh-bi%CC%80a-blog-98-1536x864.png 1536w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/10/30111329/Huyen-A%CC%89nh-bi%CC%80a-blog-98.png 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>Các giá trị của thẻ in đậm trong CSS</figcaption></figure></div>
+
+
+
+<p>Thẻ in đậm có rất nhiều giá trị khác nhau. Bạn có thể thay đổi độ mỏng và dày của đoạn text bằng các giá trị này. Thẻ <em>font-weight</em> trong CSS thường có các giá trị như:</p>
+
+
+
+<ul><li><strong>normal:</strong> Đây là giá trị mặc định của thẻ font-weight. Đoạn text sẽ được hiển thị với độ dày mặc định của trình duyệt web.</li><li><strong>bold: </strong>Giá trị này sẽ hiển thị đoạn text đậm hơn so với bình thường.</li><li><strong>bolder:</strong> Đây là giá trị hiển thị đoạn text đậm hơn so với giá trị bold.</li><li><strong>lighter: </strong>Giá trị lighter của thẻ in đậm sẽ hiển thị đoạn text mỏng hơn so với normal.</li><li><strong>100,200,&#8230;,900:</strong> Bạn có thể nhập các giá trị này vào để tùy chỉnh độ dày của đoạn text.</li><li><strong>inherit:</strong> Giá trị này sẽ kế thừa độ đậm của thành phần mẹ bao quanh đoạn text.</li></ul>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p>Thuộc tính in đậm là cách hữu hiệu để in đậm một đoạn text của website. Bạn có thể tùy chỉnh độ đậm nhạt của văn bản với nhiều giá trị của thẻ <em>font-weight.</em> Thẻ<strong> in đậm trong CSS</strong> sẽ giúp bạn thiết kế website một cách tốt nhất.</p>
+                    </article>
+                </div>
+                                <div class="u-paddingMedium u-border u-roundedMedium u-shadowMedium u-backgroundWhite">
+                    <p><span style="font-size: 14pt;">Nếu bạn quan tâm, hãy xem các vị trí đang tuyển dụng của Got It tại: <a href="http://bit.ly/gotit-hanoi" target="_blank" rel="noopener noreferrer">bit.ly/gotit-hanoi</a> và đọc thêm về quy trình tuyển dụng tại <a href="https://vn.got-it.ai/blog/got-it-recruitment%E2%80%8A-%E2%80%8Aphan-1-quy-trinh-tuyen-dung" target="_blank" rel="noopener noreferrer">đây</a>.</span></p>
+<div style="display: flex; flex-wrap: wrap;">
+<div style="display: flex; flex-direction: column; justify-content: flex-end; margin: 0 8px 16px;"></div>
+<div style="display: flex; flex-direction: column; justify-content: flex-end; margin: 0 8px 16px;"><a href="https://www.facebook.com/gotitvietnam/"><img class="aligncenter wp-image-3622" src="https://vn.got-it.ai/blog/wp-content/uploads/2020/08/768px-Facebook_Logo_2019-300x300.png" alt="Facebook Got It Vietnam" width="50" height="50" srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205319/768px-Facebook_Logo_2019-300x300.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205319/768px-Facebook_Logo_2019-150x150.png 150w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205319/768px-Facebook_Logo_2019.png 768w" sizes="(max-width: 50px) 100vw, 50px" /></a><a href="https://www.facebook.com/gotitvietnam/">Facebook</a></div>
+<div style="display: flex; flex-direction: column; justify-content: flex-end; margin: 0 8px 16px;"><a href="https://www.linkedin.com/company/gotitvietnam/"><img class="aligncenter wp-image-3626" src="https://vn.got-it.ai/blog/wp-content/uploads/2020/08/linkedin3-300x300.png" alt="LinkedIn Got It Vietnam" width="50" height="50" srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205337/linkedin3-300x300.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205337/linkedin3-150x150.png 150w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205337/linkedin3.png 361w" sizes="(max-width: 50px) 100vw, 50px" /></a><a href="https://www.linkedin.com/company/gotitvietnam/">LinkedIn</a></div>
+<div style="display: flex; flex-direction: column; justify-content: flex-end; margin: 0 8px 16px;"><a href="https://www.instagram.com/lifeatgotit/"><img class="aligncenter wp-image-3624" src="https://vn.got-it.ai/blog/wp-content/uploads/2020/08/b414768e7af1948afcbafb9bd4b0fd12-300x300.png" alt="Instagram Got It Vietnam" width="50" height="50" srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205332/b414768e7af1948afcbafb9bd4b0fd12-300x300.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205332/b414768e7af1948afcbafb9bd4b0fd12-150x150.png 150w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205332/b414768e7af1948afcbafb9bd4b0fd12.png 640w" sizes="(max-width: 50px) 100vw, 50px" /></a><a href="https://www.instagram.com/lifeatgotit/">Instagram</a></div>
+<div style="display: flex; flex-direction: column; justify-content: flex-end; margin: 0 8px 16px;"><a href="https://www.youtube.com/channel/UCeivZRA4QJzNbz9vnOeG5RA/"><img class="aligncenter wp-image-3623" src="https://vn.got-it.ai/blog/wp-content/uploads/2020/08/60005d802c2876c821bdab2bbdb9af2a-300x300.png" alt="YouTube Got It Vietnam" width="50" height="50" srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205323/60005d802c2876c821bdab2bbdb9af2a-300x300.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205323/60005d802c2876c821bdab2bbdb9af2a-150x150.png 150w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205323/60005d802c2876c821bdab2bbdb9af2a.png 640w" sizes="(max-width: 50px) 100vw, 50px" /></a><a href="https://www.youtube.com/channel/UCeivZRA4QJzNbz9vnOeG5RA/">YouTube</a></div>
+<div style="display: flex; flex-direction: column; justify-content: flex-end; margin: 0 8px 16px;"><a href="mailto:vnteam@got-it.ai"><img class="aligncenter wp-image-3628" src="https://vn.got-it.ai/blog/wp-content/uploads/2020/08/2-5-300x300.png" alt="Gmail Got It Vietnam" width="50" height="50" srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205439/2-5-300x300.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205439/2-5-1024x1024.png 1024w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205439/2-5-150x150.png 150w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205439/2-5-768x768.png 768w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2020/08/29205439/2-5.png 1080w" sizes="(max-width: 50px) 100vw, 50px" /></a><a href="mailto:vnteam@got-it.ai">Gmail</a></div>
+</div>
+                </div>
+                            <div class="Grid">
+                <div class="u-sizeFull lg:u-size1of2">
+                    <div class="u-flex u-text200 u-paddingTopMedium">
+                        <div class="u-flexShrink-0 u-marginRightExtraSmall">
+                            <img src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/04/29235048/1_QAG9RXQyyMAY7i9OYo84FA.png"
+                                class="u-maxWidthFull u-roundedCircle u-u-objectCover" width="48" height="48"
+                                alt="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/04/29235048/1_QAG9RXQyyMAY7i9OYo84FA.png" />
+                        </div>
+                        <div class="u-textLeft">
+                            <div class="u-fontMedium">Got It Vietnam</div>
+                            <div class="u-textGray">February 07, 2021</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="u-sizeFull lg:u-size1of2 u-flex u-alignItemsCenter lg:u-justifyContentEnd u-marginTopMedium lg:u-marginTopNone">
+                    <div class="u-textGray u-text200 u-marginRightSmall">Share this post to:</div>
+                    <button
+                        class="u-lineHeightNone hover:u-textPrimary u-textGray u-marginNone u-paddingNone u-backgroundTransparent u-borderNone"
+                        onclick="window.open('http://www.twitter.com/share?url=https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung');"
+                        role="button" aria-label="Share this post to Twitter">
+                        <svg width="29" height="29" class="ax">
+                            <path
+                                d="M22.05 7.54a4.47 4.47 0 0 0-3.3-1.46 4.53 4.53 0 0 0-4.53 4.53c0 .35.04.7.08 1.05A12.9 12.9 0 0 1 5 6.89a5.1 5.1 0 0 0-.65 2.26c.03 1.6.83 2.99 2.02 3.79a4.3 4.3 0 0 1-2.02-.57v.08a4.55 4.55 0 0 0 3.63 4.44c-.4.08-.8.13-1.21.16l-.81-.08a4.54 4.54 0 0 0 4.2 3.15 9.56 9.56 0 0 1-5.66 1.94l-1.05-.08c2 1.27 4.38 2.02 6.94 2.02 8.3 0 12.86-6.9 12.84-12.85.02-.24 0-.43 0-.65a8.68 8.68 0 0 0 2.26-2.34c-.82.38-1.7.62-2.6.72a4.37 4.37 0 0 0 1.95-2.51c-.84.53-1.81.9-2.83 1.13z"
+                                style="fill: currentcolor"></path>
+                        </svg>
+
+                    </button>
+                    <button
+                        class="u-lineHeightNone hover:u-textPrimary u-textGray u-marginNone u-paddingNone u-backgroundTransparent u-borderNone"
+                        onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung');"
+                        role="button" aria-label="Share this post to LinkedIn">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" class="ax">
+                            <path
+                                d="M5 6.36C5 5.61 5.63 5 6.4 5h16.2c.77 0 1.4.61 1.4 1.36v16.28c0 .75-.63 1.36-1.4 1.36H6.4c-.77 0-1.4-.6-1.4-1.36V6.36z"
+                                style="fill: currentcolor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.76 20.9v-8.57H7.89v8.58h2.87zm-1.44-9.75c1 0 1.63-.65 1.63-1.48-.02-.84-.62-1.48-1.6-1.48-.99 0-1.63.64-1.63 1.48 0 .83.62 1.48 1.59 1.48h.01zM12.35 20.9h2.87v-4.79c0-.25.02-.5.1-.7.2-.5.67-1.04 1.46-1.04 1.04 0 1.46.8 1.46 1.95v4.59h2.87v-4.92c0-2.64-1.42-3.87-3.3-3.87-1.55 0-2.23.86-2.61 1.45h.02v-1.24h-2.87c.04.8 0 8.58 0 8.58z"
+                                fill="#fff"></path>
+                        </svg>
+                    </button>
+                    <button
+                        class="u-lineHeightNone hover:u-textPrimary u-textGray u-marginNone u-paddingNone u-backgroundTransparent u-borderNone"
+                        onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung');"
+                        role="button" aria-label="Share this post to Facebook">
+                        <svg width="29" height="29" class="ax">
+                            <path
+                                d="M23.2 5H5.8a.8.8 0 0 0-.8.8V23.2c0 .44.35.8.8.8h9.3v-7.13h-2.38V13.9h2.38v-2.38c0-2.45 1.55-3.66 3.74-3.66 1.05 0 1.95.08 2.2.11v2.57h-1.5c-1.2 0-1.48.57-1.48 1.4v1.96h2.97l-.6 2.97h-2.37l.05 7.12h5.1a.8.8 0 0 0 .79-.8V5.8a.8.8 0 0 0-.8-.79"
+                                style="fill: currentcolor"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+                        <div class="u-textGray u-text200 u-marginBottomExtraSmall">Tags:</div>
+            <div class="u-flex">
+                <a class="Tag u-flexInline u-alignItemsCenter u-textCenter u-textNoWrap u-roundedMedium u-text200 hover:u-textDecorationNone u-textDark hover:u-textDark u-backgroundPrimaryLighter u-marginRightExtraSmall" href="https://vn.got-it.ai/blog/tag/css" title="View all posts in CSS">CSS</a>            </div>
+                <div class="wpdiscuz_top_clearing"></div>
+    <div id='comments' class='comments-area'><div id='respond' style='width: 0;height: 0;clear: both;margin: 0;padding: 0;'></div>    <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-1 wpd-comments-open">
+                    <div class="wc_social_plugin_wrapper">
+                            </div>
+            <div class="wpd-form-wrap">
+                <div class="wpd-form-head">
+                                        <div class="wpd-auth">
+                        <div class='wpd-social-login'><span class='wpd-connect-with'>Connect with</span><span class='wpdsn wpdsn-fb wpdiscuz-login-button' wpd-tooltip='Facebook'><i class='fab fa-facebook'></i></span><span class='wpdsn wpdsn-gg wpdiscuz-login-button' wpd-tooltip='Google'><i class='fab fa-google'></i></span><div class='wpdiscuz-social-login-spinner'><i class='fas fa-spinner fa-pulse'></i></div><div class='wpd-clear'></div></div>                        <div class="wpd-login">
+                                                    </div>
+                    </div>
+                </div>
+                            <div class="wpd-social-login-agreement" style="display: none;">
+                <div class="wpd-agreement-title">I allow to create an account</div>
+                <div class="wpd-agreement">When you login first time using a Social Login button, we collect your account public profile information shared by Social Login provider, based on your privacy settings. We also get your email address to automatically create an account for you in our website. Once your account is created, you&#039;ll be logged-in to this account.</div>
+                <div class="wpd-agreement-buttons">
+                    <div class="wpd-agreement-buttons-right"><span class="wpd-agreement-button wpd-agreement-button-disagree">Disagree</span><span class="wpd-agreement-button wpd-agreement-button-agree">Agree</span></div>
+                    <div class="wpd-clear"></div>
+                </div>
+            </div>
+                                    <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id='wpd-main-form-wrapper-0_0'>
+                                </div>
+                <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+                    <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id='wpd-secondary-form-wrapper-wpdiscuzuniqueid' style='display: none;'>
+                            <div class="wpd-secondary-forms-social-content">            <div class="wpd-social-login-agreement" style="display: none;">
+                <div class="wpd-agreement-title">I allow to create an account</div>
+                <div class="wpd-agreement">When you login first time using a Social Login button, we collect your account public profile information shared by Social Login provider, based on your privacy settings. We also get your email address to automatically create an account for you in our website. Once your account is created, you&#039;ll be logged-in to this account.</div>
+                <div class="wpd-agreement-buttons">
+                    <div class="wpd-agreement-buttons-right"><span class="wpd-agreement-button wpd-agreement-button-disagree">Disagree</span><span class="wpd-agreement-button wpd-agreement-button-agree">Agree</span></div>
+                    <div class="wpd-clear"></div>
+                </div>
+            </div>
+            </div><div class="clearfix"></div>
+                                </div>
+                </div>
+                            <div class="wpd-login-to-comment">Please login to comment</div>
+                                </div>
+                        <div id="wpd-threads" class="wpd-thread-wrapper">
+                <div class="wpd-thread-head">
+                    <div class="wpd-thread-info " data-comments-count="0">
+                        <span class='wpdtc' title='0'>0</span> Comments                    </div>
+                                        <div class="wpd-space"></div>
+                    <div class="wpd-thread-filter">
+                                                    <div class="wpd-filter wpdf-reacted wpd_not_clicked" wpd-tooltip="Most reacted comment"><i class="fas fa-bolt"></i></div>
+                                                        <div class="wpd-filter wpdf-hottest wpd_not_clicked" wpd-tooltip="Hottest comment thread"><i class="fas fa-fire"></i></div>
+                                                </div>
+                </div>
+                <div class="wpd-comment-info-bar">
+                    <div class="wpd-current-view"><i class="fas fa-quote-left"></i> Inline Feedbacks</div>
+                    <div class="wpd-filter-view-all">View all comments</div>
+                </div>
+                                <div class="wpd-thread-list">
+                                        <div class="wpdiscuz-comment-pagination">
+                                            </div>
+                </div>
+            </div>
+                </div>
+        </div>
+    <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+    <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+                </div>
+            <div class="u-sizeFull md:u-size4of12">
+                <div class="u-positionSticky u-positionTop xl:u-paddingTopLarge u-paddingBottomMedium">
+                    <div class="u-paddingVerticalMedium">
+    <div class="u-marginBottomMedium u-paddingBottomExtraSmall u-backgroundLightest u-roundedMedium">
+        <div class="u-paddingHorizontalSmall u-paddingVerticalExtraSmall u-borderBottom">
+            <h2 class="u-text500 u-marginBottomNone u-fontRegular">Cơ hội việc làm</h2>
+        </div>
+        <div class="u-marginTopMedium u-marginHorizontalSmall">
+            <div id="post-17011" class="u-marginBottomMedium">
+    <h3 class="u-block u-text400 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/?p=17011"
+            class="u-textDark hover:u-textDecorationNone">Technical Product Manager</a>
+    </h3>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+    <a class="u-textUppercase u-fontMedium u-textDark u-opacity75 hover:u-opacityReset hover:u-textPrimary hover:u-textDecorationNone" href="https://vn.got-it.ai/blog/category/job-opportunities">Job Opportunities</a>    <div
+        class="u-textDark u-opacity75 hover:u-opacityReset u-marginHorizontalSmall u-hidden">
+        |</div>
+        <div class="u-textDark u-opacity75 hover:u-opacityReset u-hidden"><time
+            datetime="2023-09-21T14:00:10+07:00"
+            itemprop="datePublished">September 21, 2023</time></div>
+</div>
+</div><div id="post-17002" class="u-marginBottomMedium">
+    <h3 class="u-block u-text400 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/operations-associate"
+            class="u-textDark hover:u-textDecorationNone">Operations Associate (Labeling)</a>
+    </h3>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+    <a class="u-textUppercase u-fontMedium u-textDark u-opacity75 hover:u-opacityReset hover:u-textPrimary hover:u-textDecorationNone" href="https://vn.got-it.ai/blog/category/job-opportunities">Job Opportunities</a>    <div
+        class="u-textDark u-opacity75 hover:u-opacityReset u-marginHorizontalSmall u-hidden">
+        |</div>
+        <div class="u-textDark u-opacity75 hover:u-opacityReset u-hidden"><time
+            datetime="2023-09-21T12:09:09+07:00"
+            itemprop="datePublished">September 21, 2023</time></div>
+</div>
+</div><div id="post-16993" class="u-marginBottomMedium">
+    <h3 class="u-block u-text400 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/backend-engineer-middle-senior"
+            class="u-textDark hover:u-textDecorationNone">Backend Engineer (Middle/Senior)</a>
+    </h3>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+    <a class="u-textUppercase u-fontMedium u-textDark u-opacity75 hover:u-opacityReset hover:u-textPrimary hover:u-textDecorationNone" href="https://vn.got-it.ai/blog/category/job-opportunities">Job Opportunities</a>    <div
+        class="u-textDark u-opacity75 hover:u-opacityReset u-marginHorizontalSmall u-hidden">
+        |</div>
+        <div class="u-textDark u-opacity75 hover:u-opacityReset u-hidden"><time
+            datetime="2023-09-21T12:01:02+07:00"
+            itemprop="datePublished">September 21, 2023</time></div>
+</div>
+</div><div id="post-16984" class="u-marginBottomMedium">
+    <h3 class="u-block u-text400 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/test-lead"
+            class="u-textDark hover:u-textDecorationNone">Test Lead</a>
+    </h3>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+    <a class="u-textUppercase u-fontMedium u-textDark u-opacity75 hover:u-opacityReset hover:u-textPrimary hover:u-textDecorationNone" href="https://vn.got-it.ai/blog/category/job-opportunities">Job Opportunities</a>    <div
+        class="u-textDark u-opacity75 hover:u-opacityReset u-marginHorizontalSmall u-hidden">
+        |</div>
+        <div class="u-textDark u-opacity75 hover:u-opacityReset u-hidden"><time
+            datetime="2023-09-21T10:55:13+07:00"
+            itemprop="datePublished">September 21, 2023</time></div>
+</div>
+</div><div id="post-81" class="u-marginBottomMedium">
+    <h3 class="u-block u-text400 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/got-it-recruitment-phan-1-quy-trinh-tuyen-dung"
+            class="u-textDark hover:u-textDecorationNone">Got It Recruitment — Phần 1. Quy trình tuyển dụng</a>
+    </h3>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+    <a class="u-textUppercase u-fontMedium u-textDark u-opacity75 hover:u-opacityReset hover:u-textPrimary hover:u-textDecorationNone" href="https://vn.got-it.ai/blog/category/recruitment-tips">Recruitment Tips</a>    <div
+        class="u-textDark u-opacity75 hover:u-opacityReset u-marginHorizontalSmall u-hidden">
+        |</div>
+        <div class="u-textDark u-opacity75 hover:u-opacityReset u-hidden"><time
+            datetime="2019-04-02T08:50:11+07:00"
+            itemprop="datePublished">April 2, 2019</time></div>
+</div>
+</div>        </div>
+    </div>
+</div>                </div>
+            </div>
+        </div>
+    </div>
+</div>    <div class="Container u-marginTopLarge u-marginBottomExtraLarge">
+    <div class="u-text600 u-marginBottomMedium u-textCenter">Các bài viết liên quan</div>
+    <div class="Grid">
+                <div class="u-sizeFull lg:u-size1of3">
+            <div id="post-12253" class="u-marginBottomMedium">
+    <a href="https://vn.got-it.ai/blog/css-la-gi-kinh-nghiem-giup-ban-tu-hoc-css-tai-nha-khong-nen-bo-qua" title="CSS là gì? Kinh nghiệm giúp bạn tự học CSS tại nhà không nên bỏ qua!">
+        <div class="Media u-positionRelative u-block u-paddingNone u-overflowHidden Media--16by9 u-marginBottomSmall">
+            <img width="640" height="348" class="u-transitionOpacity u-easeInOut u-duration200 hover:u-opacityThreeQuarter wp-post-image" alt="CSS là gì? Kinh nghiệm giúp bạn tự học CSS tại nhà không nên bỏ qua!" sizes="(max-width: 640px) 100vw, 640px" data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25163320/34-1024x557.png" data-srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25163320/34-1024x557.png 1024w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25163320/34-300x163.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25163320/34-768x418.png 768w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25163320/34-1536x836.png 1536w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25163320/34.png 1916w" />        </div>
+    </a>
+    <h3 class="u-block u-text500 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/css-la-gi-kinh-nghiem-giup-ban-tu-hoc-css-tai-nha-khong-nen-bo-qua"
+            class="u-textDark hover:u-textDecorationNone">CSS là gì? Kinh nghiệm giúp bạn tự học CSS tại nhà không nên bỏ qua!</a>
+    </h3>
+    <div class="u-textGray u-marginBottomExtraSmall u-textTruncate-2">Tự học CSS là một quy trình không có điểm dừng, vì thế những người mới bắt đầu sẽ dễ bị rối trong thư viện kiến thức về CSS. Vậy tự học CSS nên bắt đầu với những điều gì? Cùng tìm hiểu nhé! Mục lụcCSS là gì?Bạn nên chuẩn bị gì trước khi tự [&hellip;]</div>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+        <div class="u-textDark u-opacity75 hover:u-opacityReset"><time
+            datetime="2021-02-17T17:34:50+07:00"
+            itemprop="datePublished">February 17, 2021</time></div>
+</div>
+</div>        </div>
+                <div class="u-sizeFull lg:u-size1of3">
+            <div id="post-9640" class="u-marginBottomMedium">
+    <a href="https://vn.got-it.ai/blog/chu-thich-trong-css" title="CSS là gì? Tìm hiểu về chú thích trong CSS">
+        <div class="Media u-positionRelative u-block u-paddingNone u-overflowHidden Media--16by9 u-marginBottomSmall">
+            <img width="640" height="348" class="u-transitionOpacity u-easeInOut u-duration200 hover:u-opacityThreeQuarter wp-post-image" alt="CSS là gì? Tìm hiểu về chú thích trong CSS" sizes="(max-width: 640px) 100vw, 640px" data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191133/001-1024x557.png" data-srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191133/001-1024x557.png 1024w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191133/001-300x163.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191133/001-768x418.png 768w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191133/001-1536x836.png 1536w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191133/001.png 1916w" />        </div>
+    </a>
+    <h3 class="u-block u-text500 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/chu-thich-trong-css"
+            class="u-textDark hover:u-textDecorationNone">CSS là gì? Tìm hiểu về chú thích trong CSS</a>
+    </h3>
+    <div class="u-textGray u-marginBottomExtraSmall u-textTruncate-2">Chú thích trong CSS thường được sử dụng để giải thích các đoạn mã trong CSS. Nó rất hữu ích khi bạn hoặc người khác đọc lại các đoạn mã đã viết ra. Bài viết dưới đây sẽ cung cấp tới bạn những thông tin cơ bản về CSS nói chung và tìm hiểu về [&hellip;]</div>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+        <div class="u-textDark u-opacity75 hover:u-opacityReset"><time
+            datetime="2021-02-08T01:57:49+07:00"
+            itemprop="datePublished">February 8, 2021</time></div>
+</div>
+</div>        </div>
+                <div class="u-sizeFull lg:u-size1of3">
+            <div id="post-10854" class="u-marginBottomMedium">
+    <a href="https://vn.got-it.ai/blog/8-luu-y-khi-thuc-hien-cach-viet-css-tieu-chuan" title="8 lưu ý khi thực hiện cách viết CSS tiêu chuẩn">
+        <div class="Media u-positionRelative u-block u-paddingNone u-overflowHidden Media--16by9 u-marginBottomSmall">
+            <img width="640" height="348" class="u-transitionOpacity u-easeInOut u-duration200 hover:u-opacityThreeQuarter wp-post-image" alt="8 lưu ý khi thực hiện cách viết CSS tiêu chuẩn" sizes="(max-width: 640px) 100vw, 640px" data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191234/0001-1024x557.png" data-srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191234/0001-1024x557.png 1024w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191234/0001-300x163.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191234/0001-768x418.png 768w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191234/0001-1536x836.png 1536w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25191234/0001.png 1916w" />        </div>
+    </a>
+    <h3 class="u-block u-text500 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/8-luu-y-khi-thuc-hien-cach-viet-css-tieu-chuan"
+            class="u-textDark hover:u-textDecorationNone">8 lưu ý khi thực hiện cách viết CSS tiêu chuẩn</a>
+    </h3>
+    <div class="u-textGray u-marginBottomExtraSmall u-textTruncate-2">Để người dùng có những trải nghiệm tốt nhất, các developer luôn cần phải tìm hiểu và biết cách tối ưu hóa tốc độ xử lý dữ liệu website thông qua cách viết CSS tốt nhất. Bên cạnh đó, các yếu tố cơ bản như HTML, Javascript cũng như các hình ảnh cũng cần được [&hellip;]</div>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+        <div class="u-textDark u-opacity75 hover:u-opacityReset"><time
+            datetime="2021-02-08T01:53:22+07:00"
+            itemprop="datePublished">February 8, 2021</time></div>
+</div>
+</div>        </div>
+                <div class="u-sizeFull lg:u-size1of3">
+            <div id="post-9364" class="u-marginBottomMedium">
+    <a href="https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung" title="Thuộc tính in đậm trong CSS và cách sử dụng">
+        <div class="Media u-positionRelative u-block u-paddingNone u-overflowHidden Media--16by9 u-marginBottomSmall">
+            <img width="640" height="348" class="u-transitionOpacity u-easeInOut u-duration200 hover:u-opacityThreeQuarter wp-post-image" alt="Thuộc tính in đậm trong CSS và cách sử dụng" sizes="(max-width: 640px) 100vw, 640px" data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25185057/ThuE1BB99c-tC3ADnh-in-C491E1BAADm-trong-CSS-vC3A0-cC3A1ch-sE1BBAD-dE1BBA5ng-1536x836-1-1024x557.png" data-srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25185057/ThuE1BB99c-tC3ADnh-in-C491E1BAADm-trong-CSS-vC3A0-cC3A1ch-sE1BBAD-dE1BBA5ng-1536x836-1-1024x557.png 1024w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25185057/ThuE1BB99c-tC3ADnh-in-C491E1BAADm-trong-CSS-vC3A0-cC3A1ch-sE1BBAD-dE1BBA5ng-1536x836-1-300x163.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25185057/ThuE1BB99c-tC3ADnh-in-C491E1BAADm-trong-CSS-vC3A0-cC3A1ch-sE1BBAD-dE1BBA5ng-1536x836-1-768x418.png 768w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25185057/ThuE1BB99c-tC3ADnh-in-C491E1BAADm-trong-CSS-vC3A0-cC3A1ch-sE1BBAD-dE1BBA5ng-1536x836-1.png 1536w" />        </div>
+    </a>
+    <h3 class="u-block u-text500 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/thuoc-tinh-in-dam-trong-css-va-cach-su-dung"
+            class="u-textDark hover:u-textDecorationNone">Thuộc tính in đậm trong CSS và cách sử dụng</a>
+    </h3>
+    <div class="u-textGray u-marginBottomExtraSmall u-textTruncate-2">Có rất nhiều cách khác nhau để in đậm một đoạn text trên trang web. Ngoài việc sử dụng thẻ bold hoặc strong, bạn có thể sử dụng thẻ in đậm trong CSS. Thuộc tính in đậm của CSS giúp bạn có nhiều lựa chọn hơn so với HTML. Hãy cùng Got It tìm hiểu [&hellip;]</div>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+        <div class="u-textDark u-opacity75 hover:u-opacityReset"><time
+            datetime="2021-02-08T01:37:32+07:00"
+            itemprop="datePublished">February 8, 2021</time></div>
+</div>
+</div>        </div>
+                <div class="u-sizeFull lg:u-size1of3">
+            <div id="post-10798" class="u-marginBottomMedium">
+    <a href="https://vn.got-it.ai/blog/nhung-kien-thuc-hoc-css-co-ban-ban-can-biet" title="Những kiến thức học CSS cơ bản bạn cần biết">
+        <div class="Media u-positionRelative u-block u-paddingNone u-overflowHidden Media--16by9 u-marginBottomSmall">
+            <img width="640" height="348" class="u-transitionOpacity u-easeInOut u-duration200 hover:u-opacityThreeQuarter wp-post-image" alt="Những kiến thức học CSS cơ bản bạn cần biết" sizes="(max-width: 640px) 100vw, 640px" data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25143124/Uyen-Wordpress-featured-image-84-1024x557-1.png" data-srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25143124/Uyen-Wordpress-featured-image-84-1024x557-1.png 1024w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25143124/Uyen-Wordpress-featured-image-84-1024x557-1-300x163.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25143124/Uyen-Wordpress-featured-image-84-1024x557-1-768x418.png 768w" />        </div>
+    </a>
+    <h3 class="u-block u-text500 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/nhung-kien-thuc-hoc-css-co-ban-ban-can-biet"
+            class="u-textDark hover:u-textDecorationNone">Những kiến thức học CSS cơ bản bạn cần biết</a>
+    </h3>
+    <div class="u-textGray u-marginBottomExtraSmall u-textTruncate-2">Học CSS cơ bản bao gồm nhiều vấn đề như: cú pháp, màu sắc, font, hình ảnh… Liệu bạn đã nắm được những kiến thức cơ bản này chưa? Bài viết dưới đây sẽ giúp bạn nắm được một số vấn đề nền tảng nhất! Mục lụcCú pháp của CSS cơ bảnTìm hiểu về đơn [&hellip;]</div>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+        <div class="u-textDark u-opacity75 hover:u-opacityReset"><time
+            datetime="2021-02-07T22:45:17+07:00"
+            itemprop="datePublished">February 7, 2021</time></div>
+</div>
+</div>        </div>
+                <div class="u-sizeFull lg:u-size1of3">
+            <div id="post-11652" class="u-marginBottomMedium">
+    <a href="https://vn.got-it.ai/blog/cach-su-dung-css-trong-html-va-thuoc-tinh-cua-css" title="Cách sử dụng CSS trong HTML và thuộc của tính CSS">
+        <div class="Media u-positionRelative u-block u-paddingNone u-overflowHidden Media--16by9 u-marginBottomSmall">
+            <img width="640" height="348" class="u-transitionOpacity u-easeInOut u-duration200 hover:u-opacityThreeQuarter wp-post-image" alt="Cách sử dụng CSS trong HTML và thuộc của tính CSS" sizes="(max-width: 640px) 100vw, 640px" data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25143154/Uyen-Wordpress-featured-image-83-1024x557-1.png" data-srcset="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25143154/Uyen-Wordpress-featured-image-83-1024x557-1.png 1024w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25143154/Uyen-Wordpress-featured-image-83-1024x557-1-300x163.png 300w, https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2021/02/25143154/Uyen-Wordpress-featured-image-83-1024x557-1-768x418.png 768w" />        </div>
+    </a>
+    <h3 class="u-block u-text500 u-fontMedium u-marginBottomExtraSmall">
+        <a href="https://vn.got-it.ai/blog/cach-su-dung-css-trong-html-va-thuoc-tinh-cua-css"
+            class="u-textDark hover:u-textDecorationNone">Cách sử dụng CSS trong HTML và thuộc của tính CSS</a>
+    </h3>
+    <div class="u-textGray u-marginBottomExtraSmall u-textTruncate-2">CSS là ngôn ngữ tạo phong cách cho trang web. Biết cách sử dụng CSS trong HTML, ta có thể định dạng ra các phần tử HTML thật đặc biệt và chuyên nghiệp. Bài viết sau đây sẽ giúp bạn hiểu hơn về CSS cũng như cách sử dụng nó. Mục lụcKhái niệm về CSSLý [&hellip;]</div>
+    <div class="u-marginBottomExtraSmall u-flex u-text200">
+        <div class="u-textDark u-opacity75 hover:u-opacityReset"><time
+            datetime="2021-02-07T22:40:31+07:00"
+            itemprop="datePublished">February 7, 2021</time></div>
+</div>
+</div>        </div>
+            </div>
+</div></div>
+            <div class="clear"></div>
+            <div class="gi-LayoutFooter">
+                                <div class="u-heightSmall u-backgroundPrimaryLighter"></div>
+<div class="gi-Footer u-marginTopMedium">
+    <div class="Container">
+        <div class="Grid">
+            <div class="u-sizeFull lg:u-size7of12 u-flexOrderLast lg:u-flexOrderFirst">
+                <div class="gi-Footer-brand u-lineHeightNone u-textCenter lg:u-textLeft u-marginBottomExtraSmall">
+                    <a class="u-inlineBlock" href="https://vn.got-it.ai/" rel="home" title="" itemprop="url"><span class="u-srOnly"></span> <img width="212" height="72" class="custom-logo" alt="" data-src="https://d1iv5z3ivlqga1.cloudfront.net/wp-content/uploads/2023/07/13121326/logo-header%402x.png" /></a>                </div>
+                <div class="menu-footer-container"><ul id="menu-footer" class="gi-Footer-menu u-flex u-text200 u-justifyContentCenter u-flexWrap lg:u-justifyContentStart u-paddingBottomSmall"><li id="menu-item-3257" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3257"><a href="https://vn.got-it.ai">Home</a></li>
+<li id="menu-item-3258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3258"><a href="https://vn.got-it.ai/teams.html">Teams</a></li>
+<li id="menu-item-3259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3259"><a href="https://vn.got-it.ai/internship.html">Internship</a></li>
+<li id="menu-item-3260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3260"><a href="https://vn.got-it.ai/career.html">Career</a></li>
+<li id="menu-item-3262" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3262"><a href="https://vn.got-it.ai/visit-us.html">Visit Us</a></li>
+<li id="menu-item-4942" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4942"><a href="https://vn.got-it.ai/blog">Blog</a></li>
+<li id="menu-item-3263" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3263"><a href="https://www.got-it.ai/">Global Site<svg class="u-marginLeftTiny u-marginBottomTiny" width="16px" height="16px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="display: inline-block; vertical-align: middle;"><path d="m4.88303461 7.31550802-.649263.5145149.50886632.33346066h1.01142912l1.50138486-.26757067.94552864 1.53724217v1.43640182l1.28993028 1.7486631h.2189042v-.6170741l.49683237 1.039343 1.4968004.3357525.6756232.6783804.6017001.1799084-.6017001 1.2536287.6555665 1.2152406s.4131674 1.3980138.4137405 1.4535906c0 .051566-.3631354 1.4778919-.4085273 1.6559812l-.0046401.0181975.0939798 1.0903362c-.3713349.0446906-.7466811.078495-1.1294769.078495-4.97061541 0-8.9997135-4.0301757-8.9997135-8.999427 0-1.5381016.39232129-2.98134973 1.0732719-4.24671216l.16221885-.28881118zm9.09713159-2.50038197.8463914.16558442.7174556.6434301.2217695.57066462.1656108.53514133 1.1415109 1.0290298.2939734.0933919.4051447-.64686784 1.4343383-.12776929.2693324-.08537051c.961574 1.43067227 1.5231607 3.15469822 1.5243068 5.00706642 0 4.1488276-2.811664 7.6336443-6.6313411 8.673615l-.2561187.0656899.1644647-.5947288 1.5449365-1.0313217.4051447-1.1040871 1.0675877-.4961802 1.0114292-1.9320092-1.5638471-.9195951-.8102894-.9195951-.4779217-.0561498-.9569896-.2572574-.8240426-.1300611-.721467.2028266-.4418197-.4961803-.4423928-.1294882.0372481-.6611917-.5340804.0166157-.3037153.3500764-.1736334-.7362491.697972-.3311688.7186018.3311688h.3856611l.1398236-.5706646 1.0744644-1.28857905 1.4922161-.75343774.8635828.11000764.0785075-.42226891-1.0710261-1.08632544-.4039986-.80901451h-.5902391l-.3678966-.21543163-.7913788-.11688312-.1656107.94022154-.9587088-.18449197-.072777-.58842628.7357932-.16673033.2423991-1.05481284.7300627.30022919-.0189105.4486249.5564292.23204737.3713349.10943468.456146-.23834989-.4057178-.47784568-.8291999-.80901452zm-1.9810258-1.81512605c1.3724492 0 2.6675369.31684492 3.8313967.86459129l-.3220528.0487013-.8836395-.1329259-.6246219.4171123-.4429659.4881589-1.6073987.15068755-.66187-.10886173-.4538538.71333079-1.32488615.07333843-.82919996-.23892285-.73693929.40393431-1.59880297.22288006-1.28133456.37012987c1.64464678-1.99904508 4.14256152-3.27215432 6.93616883-3.27215432zm-1.4051128.96886937-.5312152.16902215-.40571775-.16902215c-.0131801.10714285-.59023909.47841864-.58966647.47841864l.58966647.34491978 1.22632195-.32200153zm2.7047849-.57983194-.9191684.50592055-.52835.32887701.3673236.23834988.8160198-.08193277.8544141-.65030558z" style="fill: currentcolor;"></path></svg></a></li>
+</ul></div>                <div class="u-text200 u-textGray u-textCenter lg:u-textLeft">
+                    <div class="u-marginBottomSmall">Email: vnteam@got-it.ai | Phone: ​+(84) 2432 321 448<br>Address:
+                        9th and 12th floor, HCMCC Building, 249A Thuy Khue, Tay Ho, Hanoi, Vietnam</div>
+                    <div class="">© 2023 Got It, Inc. All rights reserved.</div>
+                </div>
+            </div>
+            <div
+                class="u-sizeFull lg:u-size5of12 u-flexOrderFirst lg:u-flexOrderLast u-marginBottomMedium lg:u-marginBottomNone">
+                                <div class="u-marginBottomMedium">
+                    <div class="u-text400 u-marginBottomSmall u-textCenter lg:u-textLeft">
+                        Sign up for our monthly newsletter<br/> to learn about Got It & discover valuable information.</div>
+                    <div id="mc_embed_signup">
+                        <script>(function() {
+	window.mc4wp = window.mc4wp || {
+		listeners: [],
+		forms: {
+			on: function(evt, cb) {
+				window.mc4wp.listeners.push(
+					{
+						event   : evt,
+						callback: cb
+					}
+				);
+			}
+		}
+	}
+})();
+</script><!-- Mailchimp for WordPress v4.8.6 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-3264" method="post" data-id="3264" data-name="Subscribe" ><div class="mc4wp-form-fields"><div class="FormGroup u-block u-marginBottomSmall">
+    <div class="FormInputGroup u-flex u-positionRelative u-flexWrap u-alignItemsStretch">
+        <input class="FormInput u-block u-widthFull u-webkitScrollbar email" type="email" id="mce-EMAIL" required="" placeholder="Email address" value="" name="EMAIL" placeholder="Search box" />
+        <div class="FormInputGroup-append u-flex">
+            <button type="submit" class="Button u-flexInline u-justifyContentCenter u-alignItemsCenter u-textDecorationNone u-roundedMedium u-textDark hover:u-textDark u-backgroundWhite hover:u-backgroundUltraLight u-border hover:u-textDecorationNone u-cursorPointer u-textUppercase">
+            Subscribe    
+            </button>
+        </div>
+    </div>
+</div>
+</div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1698639411" /><input type="hidden" name="_mc4wp_form_id" value="3264" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin -->                    </div>
+                </div>
+                                <div class="u-flex u-justifyContentCenter lg:u-justifyContentStart u-marginBottomExtraSmall">
+                    <a href="https://fb.com/gotitvietnam" title="Facebook" class="u-flex u-heightLarge u-lineHeightSmall u-widthLarge u-roundedCircle u-alignItemsCenter u-justifyContentCenter u-flexShrink-0 hover:u-backgroundPrimary u-border hover:u-borderPrimary u-marginRightExtraSmall gi-Footer-icon-facebook" target="_blank" rel="noreferrer"><i class="gi-Footer-icon-svg"></i></a><a href="https://www.instagram.com/lifeatgotit/" title="Instagram" class="u-flex u-heightLarge u-lineHeightSmall u-widthLarge u-roundedCircle u-alignItemsCenter u-justifyContentCenter u-flexShrink-0 hover:u-backgroundPrimary u-border hover:u-borderPrimary u-marginRightExtraSmall gi-Footer-icon-instagram" target="_blank" rel="noreferrer"><i class="gi-Footer-icon-svg"></i></a><a href="https://www.linkedin.com/company/got-it-vietnam/" title="Linkedin" class="u-flex u-heightLarge u-lineHeightSmall u-widthLarge u-roundedCircle u-alignItemsCenter u-justifyContentCenter u-flexShrink-0 hover:u-backgroundPrimary u-border hover:u-borderPrimary u-marginRightExtraSmall gi-Footer-icon-linkedin" target="_blank" rel="noreferrer"><i class="gi-Footer-icon-svg"></i></a><a href="https://www.youtube.com/channel/UCeivZRA4QJzNbz9vnOeG5RA" title="Youtube" class="u-flex u-heightLarge u-lineHeightSmall u-widthLarge u-roundedCircle u-alignItemsCenter u-justifyContentCenter u-flexShrink-0 hover:u-backgroundPrimary u-border hover:u-borderPrimary u-marginRightExtraSmall gi-Footer-icon-youtube" target="_blank" rel="noreferrer"><i class="gi-Footer-icon-svg"></i></a>                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-textCenter">
+        <img class="u-maxWidthFull" data-lazy
+            data-src="https://vn.got-it.ai/blog/wp-content/themes/gotitblog/assets/images/footer-top.svg"
+            alt="Footer bottom image" />
+    </div>
+    <div class="u-positionFixed u-positionBottom u-positionRight u-marginRightSmall u-marginBottomSmall">
+        <div
+            class="js-backToTop u-roundedCircle u-backgroundWhite hover:u-backgroundPrimary u-duration500 u-easeInOut u-transitionColors u-shadowMedium u-flex u-alignItemsCenter u-justifyContentCenter u-widthLarge u-heightLarge u-cursorPointer u-textPrimary hover:u-textWhite">
+            <svg width="16px" height="16px" class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" focusable="false" style="display: inline-block; vertical-align: middle;">
+                <path
+                    d="m12.002343 10.0145413 6.8053427 6.6183511c.5037025.4894768 1.3182002.4894768 1.8165442 0 .5037025-.4894768.498344-1.2809712 0-1.770448l-7.7109355-7.49836789c-.4876269-.4738552-1.2699734-.4842696-1.7736759-.0364504l-7.76452087 7.52961109c-.25185127.2447384-.37509763.5675848-.37509763.885224s.12324636.6404856.37509763.885224c.50370252.4894768 1.31820022.4894768 1.81654421 0z"
+                    style="fill: currentcolor;"></path>
+            </svg>
+        </div>
+    </div>
+</div>                <script type="application/ld+json" name="seo-gotit-schema">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://vn.got-it.ai/blog/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://vn.got-it.ai/blog/results/{search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+      </script><script>
+var cb = function() {
+    const stylesheetList = [...document.querySelectorAll('[rel="stylesheet"]')];
+    if (stylesheetList && stylesheetList.length > 0) {
+        stylesheetList.forEach(item => {
+            if (item.disabled) {
+                item.removeAttribute('disabled')
+            }
+        })
+    }
+};
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+    webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf) raf(cb);
+else window.addEventListener('load', cb);
+</script>            </div>
+        </div>
+    </div>
+</div>
+<div id='wpd-editor-source-code-wrapper-bg'></div><div id='wpd-editor-source-code-wrapper'><textarea id='wpd-editor-source-code'></textarea><button id='wpd-insert-source-code'>Insert</button><input type='hidden' id='wpd-editor-uid' /></div><script>(function() {function maybePrefixUrlField() {
+	if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+		this.value = "http://" + this.value;
+	}
+}
+
+var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+if (urlFields) {
+	for (var j=0; j < urlFields.length; j++) {
+		urlFields[j].addEventListener('blur', maybePrefixUrlField);
+	}
+}
+})();</script><script type='text/javascript' src='https://vn.got-it.ai/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='https://vn.got-it.ai/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.9b'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://vn.got-it.ai/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "https://vn.got-it.ai/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tocplus = {"smooth_scroll":"1","visibility_show":"show","visibility_hide":"hide","width":"100%","smooth_scroll_offset":"90"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://vn.got-it.ai/blog/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2106'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpdiscuzAjaxObj = {"wc_hide_replies_text":"Hide Replies","wc_show_replies_text":"View Replies","wc_msg_required_fields":"Please fill out required fields","wc_invalid_field":"Some of field value is invalid","wc_error_empty_text":"please fill out this field to comment","wc_error_url_text":"url is invalid","wc_error_email_text":"email address is invalid","wc_invalid_captcha":"Invalid Captcha Code","wc_login_to_vote":"You Must Be Logged In To Vote","wc_deny_voting_from_same_ip":"You are not allowed to vote for this comment","wc_self_vote":"You cannot vote for your comment","wc_vote_only_one_time":"You've already voted for this comment","wc_voting_error":"Voting Error","wc_comment_edit_not_possible":"Sorry, this comment is no longer possible to edit","wc_comment_not_updated":"Sorry, the comment was not updated","wc_comment_not_edited":"You've not made any changes","wc_msg_input_min_length":"Input is too short","wc_msg_input_max_length":"Input is too long","wc_spoiler_title":"Spoiler Title","wc_cannot_rate_again":"You cannot rate again","wc_not_allowed_to_rate":"You're not allowed to rate here","wc_follow_user":"Follow this user","wc_unfollow_user":"Unfollow this user","wc_follow_success":"You started following this comment author","wc_follow_canceled":"You stopped following this comment author.","wc_follow_email_confirm":"Please check your email and confirm the user following request.","wc_follow_email_confirm_fail":"Sorry, we couldn't send confirmation email.","wc_follow_login_to_follow":"Please login to follow users.","wc_follow_impossible":"We are sorry, but you can't follow this user.","wc_follow_not_added":"Following failed. Please try again later.","is_user_logged_in":"","commentListLoadType":"0","commentListUpdateType":"0","commentListUpdateTimer":"30","liveUpdateGuests":"0","wordpressThreadCommentsDepth":"5","wordpressIsPaginate":"0","commentTextMaxLength":"250","replyTextMaxLength":"0","commentTextMinLength":"1","replyTextMinLength":"1","storeCommenterData":"100000","socialLoginAgreementCheckbox":"1","enableFbLogin":"1","fbUseOAuth2":"1","enableFbShare":"0","facebookAppID":"386559939466133","facebookUseOAuth2":"1","enableGoogleLogin":"1","googleClientID":"125304549215-bukhgvtb28nhtnnt3cdk1o6j3j87ndkp.apps.googleusercontent.com","googleClientSecret":"zO-pj2vBNC6ZR3cJbK7-RWAH","cookiehash":"f07fe74544aac6bfe4c159a02bd1a1c0","isLoadOnlyParentComments":"0","scrollToComment":"1","commentFormView":"collapsed","enableDropAnimation":"1","isNativeAjaxEnabled":"1","enableBubble":"0","bubbleLiveUpdate":"0","bubbleHintTimeout":"45","bubbleHintHideTimeout":"10","cookieHideBubbleHint":"wpdiscuz_hide_bubble_hint","bubbleShowNewCommentMessage":"1","bubbleLocation":"content_left","firstLoadWithAjax":"0","wc_copied_to_clipboard":"Copied to clipboard!","inlineFeedbackAttractionType":"blink","loadRichEditor":"1","wpDiscuzReCaptchaSK":"","wpDiscuzReCaptchaTheme":"light","wpDiscuzReCaptchaVersion":"2.0","wc_captcha_show_for_guest":"0","wc_captcha_show_for_members":"0","wpDiscuzIsShowOnSubscribeForm":"0","wmuEnabled":"0","wmuInput":"wmu_files","wmuMaxFileCount":"1","wmuMaxFileSize":"2097152","wmuPostMaxSize":"29360128","wmuIsLightbox":"0","wmuMimeTypes":[],"wmuPhraseConfirmDelete":"Are you sure you want to delete this attachment?","wmuPhraseNotAllowedFile":"Not allowed file type","wmuPhraseMaxFileCount":"Maximum number of uploaded files is 1","wmuPhraseMaxFileSize":"Maximum upload file size is 2MB","wmuPhrasePostMaxSize":"Maximum post size is 28MB","msgEmptyFile":"File is empty. Please upload something more substantial. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.","msgPostIdNotExists":"Post ID not exists","msgUploadingNotAllowed":"Sorry, uploading not allowed for this post","msgPermissionDenied":"You do not have sufficient permissions to perform this action","wmuSecurity":"9dfe76e8e4","wmuKeyImages":"images","wmuSingleImageWidth":"auto","wmuSingleImageHeight":"200","version":"7.2.2","wc_post_id":"9364","loadLastCommentId":"0","isCookiesEnabled":"1","dataFilterCallbacks":[],"phraseFilters":[],"is_email_field_required":"1","url":"https:\/\/vn.got-it.ai\/blog\/wp-admin\/admin-ajax.php","customAjaxUrl":"https:\/\/vn.got-it.ai\/blog\/wp-content\/plugins\/wpdiscuz\/utils\/ajax\/wpdiscuz-ajax.php","bubbleUpdateUrl":"https:\/\/vn.got-it.ai\/blog\/wp-json\/wpdiscuz\/v1\/update","restNonce":"2f8c1e5bba"};
+var wpdiscuzUCObj = {"msgConfirmDeleteComment":"Are you sure you want to delete this comment?","msgConfirmCancelSubscription":"Are you sure you want to cancel this subscription?","msgConfirmCancelFollow":"Are you sure you want to cancel this follow?","additionalTab":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+        var wpdiscuzEditorOptions = {
+        modules: {
+        toolbar: "",
+        counter: {
+        uniqueID: "",
+        commentmaxcount : 250,
+        replymaxcount : 0,
+        commentmincount : 1,
+        replymincount : 1,
+        },
+		        },
+        wc_be_the_first_text: "Be the First to Comment!",
+        wc_comment_join_text: "Join the discussion",
+        theme: 'snow',
+        debug: 'error'
+        };
+		
+</script>
+<script type='text/javascript' src='https://vn.got-it.ai/blog/wp-content/plugins/wpdiscuz/assets/js/wpdiscuz-combo.min.js?ver=7.2.2'></script>
+<script defer type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.min.js?ver=1.7.11'></script>
+<script defer type='text/javascript' src='https://vn.got-it.ai/blog/wp-content/themes/gotitblog/assets/js/vendors.js?ver=2.1.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var app = {"ajaxurl":"https:\/\/vn.got-it.ai\/blog\/wp-admin\/admin-ajax.php","env":"prod","root_domain":"got-it.ai","loading_gif":"https:\/\/vn.got-it.ai\/blog\/wp-content\/themes\/gotitblog\/assets\/images\/loading.gif"};
+/* ]]> */
+</script>
+<script defer type='text/javascript' src='https://vn.got-it.ai/blog/wp-content/themes/gotitblog/assets/js/app.js?ver=2.1.3'></script>
+<script type='text/javascript' src='https://vn.got-it.ai/blog/wp-includes/js/wp-embed.min.js?ver=5.4'></script>
+<script type='text/javascript' defer src='https://vn.got-it.ai/blog/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.8.6'></script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N962JSR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --></body>
+</html>
+<!-- Cached in //got-it-cache/9364/I -->
