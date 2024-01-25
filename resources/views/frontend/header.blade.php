@@ -3,7 +3,7 @@
     <h1 class="logo">
         <a href="{{ route('frontend.index') }}" title="{{ \App\Helpers::getSettings($settings, 'website_name') }}">
             <img src="{{ url(\App\Helpers::getSettings($settings, 'website_logo_header')) }}" alt="" class="lazyload" style="width:100px;height:40px">
-            <span>{{ \App\Helpers::getSettings($settings, 'website_name') }}</span>
+            <span style="color: #f0c132">{{ \App\Helpers::getSettings($settings, 'website_name') }}</span>
         </a>
     </h1>
     <nav id="menu-primary-menu" class="header__nav">
@@ -22,7 +22,7 @@
                         <div class="submenu">
                             <ul>
                                 @foreach ($category->children as $childCate)
-                                    <li class="{{ (isset($subPageId) && ($subPageId == $childCate->id))? 'active' : "" }}"><a href="{{ route('frontend.main', $childCate->slug) }}?id={{$childCate->id}}"  title="{{ $childCate->name }}">
+                                    <li class="{{ (isset($subPageId) && ($subPageId == $childCate->id))? 'active' : "" }}"><a href="{{ route('frontend.main', $childCate->slug) }}"  title="{{ $childCate->name }}">
                                             {{ $childCate->name }}
                                         </a></li>
                                 @endforeach
@@ -31,7 +31,7 @@
                     </li>
                 @else
                     <li class="menu {{ $page == $category->identify? '
-            is-active' : "" }}"><a href="{{ route('frontend.main', $category->slug) }}?id={{$category->id}}" title="{{ $category->name }}">
+            is-active' : "" }}"><a href="{{ route('frontend.main', $category->slug) }}" title="{{ $category->name }}">
                             @if ($category->identify == \App\Helpers::IDENTIFY_FIRST_PAGE_SHOW_TOTAL_STATIC)
                                 <i class="icon-wallet-1"><img src="{{ url(\App\Helpers::getSettings($settings, 'wallet_icon_header_menu')) }}" alt="" class="lazyload"></i>
                             @endif
@@ -46,7 +46,7 @@
             <li class="menu {{ $page == 'feedback' ? 'is-active' : "" }}"><a href="{{ route('frontend.feedback') }}" title="{{ trans('home.menu_feedback_name') }}">{{ trans('home.menu_feedback_name') }}</a></li>
         </ul>
         <div class="lg:hidden block block-info">
-        <div class="group-1">
+        <!-- <div class="group-1">
             <div>
                 <h2>{{ trans('home.footer_tai_ung_dung_tren_dt') }}</h2>
                 <div class="content">
@@ -58,7 +58,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="group-2">
             <div class="content">
                 <h2>{{ trans('home.footer_cham_soc_khach_hang') }}</h2>

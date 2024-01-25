@@ -14,9 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //mới nhưng chỉ làm demo
-Route::get('graphic-design.html','App\Http\Controllers\NewController@detail_course_1')->name('raphic-design.html');
+//phần name đặt theo cú pháp [tên thư mục].[tên file] để dễ tìm tới file tương ứng
+//(ví dụ routing cho file feedback.blade.php ở thư mục frontend thì đặt name là frontend.feedback)
+
+
+Route::get('programming-fundamentals','App\Http\Controllers\CourseController@programmingFundamentalsCourse')->name('frontend.programming-fundamentals');
+Route::get('graphic-design','App\Http\Controllers\CourseController@graphicDesignCourse')->name('frontend.graphic-design');
 //===============================
 Route::get('/', 'App\Http\Controllers\FrontendController@index')->name('frontend.index');
+Route::get('home', 'App\Http\Controllers\FrontendController@index')->name('frontend.index');
 Route::get('feedback', 'App\Http\Controllers\FrontendController@feedback')->name('frontend.feedback');
 Route::get('privacy', 'App\Http\Controllers\FrontendController@privacy')->name('frontend.privacy');
 Route::get('doi-tac-dong-hanh', 'App\Http\Controllers\FrontendController@partner')->name('frontend.partner');

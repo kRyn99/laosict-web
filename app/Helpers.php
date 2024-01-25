@@ -86,7 +86,7 @@ class Helpers
             'key'         => 'website_logo_header',
             'name'        => 'Header Website Logo',
             'description' => 'For SEO',
-            'value'       => 'image/logo_laos_center.jpg',
+            'value'       => 'image/logo.png',
             'field'       => '{"name":"value","label":"Value","type":"browse"}', //text, textarea
             'active'      => 1,
         ],
@@ -94,7 +94,7 @@ class Helpers
             'key'         => 'website_name',
             'name'        => 'Website Name',
             'description' => 'For SEO',
-            'value'       => 'LaoApp Funds',
+            'value'       => 'LaosICT Center',
             'field'       => '{"name":"value","label":"Value","type":"text"}', //text, textarea
             'active'      => 1,
         ],
@@ -103,7 +103,7 @@ class Helpers
             'key'         => 'website_logo_footer',
             'name'        => 'Footer Website Logo',
             'description' => 'For SEO',
-            'value'       => 'uploads/logo.webp',
+            'value'       => 'uploads/logo-white.png',
             'field'       => '{"name":"value","label":"Value","type":"browse"}', //text, textarea
             'active'      => 1,
         ],

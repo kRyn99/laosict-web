@@ -38,7 +38,7 @@
             <div class="mt-5 d-flex align-items-center">
                 <button class="btn btn-register mr-3" onclick="register()">Register</button>
                 <img src="/new-front-end/image/circle-yellow-right-arrow.png" width="32px" height="32px">
-                <label class="ff-inter fw-700 fs-18 m-0 align-middle ml-2">3 months to become an expert</label>
+                <label class="ff-popins fw-700 fs-18 m-0 align-middle ml-2">3 months to become an expert</label>
             </div>
         </section>
         <div>
@@ -48,7 +48,7 @@
 </section>
 <section class="container-fluid about-course">
     <section class="container about-course-content">
-        <p class="fs-18 ff-inter text-purple">ABOUT COURSE</p>
+        <p class="fs-18 ff-popins text-purple">ABOUT COURSE</p>
         <div class="row">
             <div class="col-4">
                 <p class="ff-popins fw-700 fs-40">What Do You Get From Us</p>
@@ -57,17 +57,17 @@
             <div class="col-8 benefit-wrapper">
                 <div class="card-benefit">
                     <div class="icon"><i class="fa-regular fa-user"></i></div>
-                    <p class="ff-inter fw-700 fs-18 text-white">Professional Teacher</p>
+                    <p class="ff-popins fw-700 fs-18 text-white">Professional Teacher</p>
                     <p class="ff-popins fs-14 text-gainsboro">Learn from experienced instructors dedicated to your success.<br>Receive personalized guidance and feedback.</p>
                 </div>
                 <div class="card-benefit">
                     <div class="icon"><i class="fa-regular fa-user"></i></div>
-                    <p class="ff-inter fw-700 fs-18 text-white">Course Certificate</p>
+                    <p class="ff-popins fw-700 fs-18 text-white">Course Certificate</p>
                     <p class="ff-popins fs-14 text-gainsboro">Earn a valuable certificate upon completion.<br>Showcase your skills to advance your career.</p>
                 </div>
                 <div class="card-benefit">
                     <div class="icon"><i class="fa-regular fa-user"></i></div>
-                    <p class="ff-inter fw-700 fs-18 text-white">Interesting Learning</p>
+                    <p class="ff-popins fw-700 fs-18 text-white">popinsesting Learning</p>
                     <p class="ff-popins fs-14 text-gainsboro">Enjoy dynamic and engaging lessons.<br>Explore real-world examples for practical understanding.</p>
                 </div>
             </div>
@@ -82,21 +82,21 @@
     <section class="container career-opportunities-content">
         <img src="/new-front-end/image/img-career-oppotunities.png">
         <div class="d-flex flex-column justify-content-center">
-            <p class="ff-inter fs-18 text-yellow">CAREER OPPOTUNITIES</p>
+            <p class="ff-popins fs-18 text-yellow">CAREER OPPOTUNITIES</p>
             <p class="ff-popins fs-40 fw-700 text-white">Human resource needs in the ICT</p>
             <p class="ff-popins fs-18 text-gainsboro">Explore the evolving landscape of Information and Communication Technology (ICT) employment demands. Uncover the essential skills and expertise sought after in today's dynamic job market.</p>
             <div class="row mt-4">
                 <div class="col-4">
-                    <div class="ff-inter fs-24 fw-700 text-center text-yellow">6,000</div>
-                    <div class="ff-inter fs-18 text-center text-gainsboro">ICT Jobs / year</div>
+                    <div class="ff-popins fs-24 fw-700 text-center text-yellow">6,000</div>
+                    <div class="ff-popins fs-18 text-center text-gainsboro">ICT Jobs / year</div>
                 </div>
                 <div class="col-4">
-                    <div class="ff-inter fs-24 fw-700 text-center text-yellow">4,000</div>
-                    <div class="ff-inter fs-18 text-center text-gainsboro">ShortageUser</div>
+                    <div class="ff-popins fs-24 fw-700 text-center text-yellow">4,000</div>
+                    <div class="ff-popins fs-18 text-center text-gainsboro">ShortageUser</div>
                 </div>
                 <div class="col-4">
-                    <div class="ff-inter fs-24 fw-700 text-center text-yellow">500 USD</div>
-                    <div class="ff-inter fs-18 text-center text-gainsboro">Salary</div>
+                    <div class="ff-popins fs-24 fw-700 text-center text-yellow">500 USD</div>
+                    <div class="ff-popins fs-18 text-center text-gainsboro">Salary</div>
                 </div>
             </div>
         </div>
@@ -160,18 +160,18 @@
         </div>
         <div class="course-description">
             <div>
-                <p class="ff-inter fs-18 text-purple">COURSE CONTENT</p>
+                <p class="ff-popins fs-18 text-purple">COURSE CONTENT</p>
                 <p class="ff-popins fs-40 fw-700">Main subjects in this course</p>
                 <p class="ff-popins fs-18 text-lightgrey">Master coding languages, algorithmic thinking, and problem-solving techniques — the core pillars of our programming fundamentals course.</p>
             </div>
             <form class="register-form" action="register.php">
-                <p class="ff-inter fs-18 text-center text-yellow">Register now!</p>
+                <p class="ff-popins fs-18 text-center text-yellow">Register now!</p>
                 <input type="text" placeholder="Full name" id="fullname">
                 <input type="text" placeholder="Email" id="email">
                 <input type="text" placeholder="Handphone" id="handphone">
                 <input type="text" placeholder="Address" id="address">
                 <textarea placeholder="Message" id="message"></textarea>
-                <input type="submit" value="Register" class="btn btn-register-form ff-inter fw-700 fs-18">
+                <input type="submit" value="Register" class="btn btn-register-form ff-popins fw-700 fs-18">
             </form>
         </div>
     </section>
