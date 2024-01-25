@@ -59,9 +59,16 @@
                 </div>
             </div>
             <div class="grow">
+                @if ($project->name=='Programming Fundamentals' || $project->name=='Graphic Design')
                 <a title="{{ $project->name }}" class="stretched-link" href="{{ route('frontend.main', $project->slug) }}">
                     <span>{{ trans('home.button_quyen_gop') }}</span>
                 </a>
+                @else
+                <a title="{{ $project->name }}" class="stretched-link" href="">
+                    <span>{{ trans('home.button_quyen_gop') }}</span>
+                </a>
+                @endif
+                
             </div>
         </div>
         <div class="dn-result">
