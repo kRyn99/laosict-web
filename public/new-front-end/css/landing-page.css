@@ -1,3 +1,13 @@
+/* FIX CONFLICT CSS WITH SOURCE */
+.course-landing-page p {
+    margin: 0px 0px 16px 0px;
+}
+
+.course-landing-page img {
+    max-width: none;
+}
+
+
 /* PROGRAMMING FUNDAMENTALS COURSE */
 .course-banner {
     padding: 50px 0px;
@@ -7,6 +17,10 @@
 .course-banner-content {
     display: flex;
     justify-content: space-between;
+}
+
+.course-banner-image {
+    min-width: 50%;
 }
 
 .about-course {
@@ -301,6 +315,10 @@ footer {
 /* Custom shorten CSS */
 /* ----------------------------------------------------------------- */
 
+.text-red {
+    color: #CE2029;
+}
+
 .text-purple {
     color: #545BE8;
 }
@@ -317,16 +335,28 @@ footer {
     color: #F0C932;
 }
 
+.ff-lexend {
+    font-family: 'Lexend', sans-serif;
+}
+
 .ff-popins {
     font-family: 'Poppins', sans-serif;
 }
 
 .ff-inter {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
 }
 
 .fs-64 {
     font-size: 64px;
+}
+
+.fs-60 {
+    font-size: 60px;
+}
+
+.fs-46 {
+    font-size: 46px;
 }
 
 .fs-40 {
@@ -339,6 +369,10 @@ footer {
 
 .fs-22 {
     font-size: 22px;
+}
+
+.fs-20 {
+    font-size: 20px;
 }
 
 .fs-18 {
@@ -359,6 +393,10 @@ footer {
 
 .fw-700 {
     font-weight: 700;
+}
+
+.fw-600 {
+    font-weight: 600;
 }
 
 .fw-400 {

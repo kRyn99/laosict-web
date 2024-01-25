@@ -50,12 +50,12 @@
         </div> -->
         <div class="dn-result">
             <div class="grow">
-                <div>{{ trans('home.section_article1_turn') }}</div>
-                <div>{{ number_format($project->program->total_collect_turn) }}</div>
+                <div>{{ trans('home.section_article1_date') }}</div>
+                <div>{{ trans('home.thu_2') }}, {{ trans('home.thu_4') }}, {{ trans('home.thu_6') }}</div>
             </div>
             <div class="grow">
-                <div>{{ trans('home.section_article1_get') }}</div>
-                <div>{{ number_format($project->program->collect_percent) }}
+                <div>{{ trans('home.section_article1_time') }}</div>
+                <div>18:30 - 21:00
                 </div>
             </div>
             <div class="grow">
@@ -63,7 +63,19 @@
                     <span>{{ trans('home.button_quyen_gop') }}</span>
                 </a>
             </div>
-
+        </div>
+        <div class="dn-result">
+            <div class="grow">
+                <div>{{ trans('home.section_article1_place') }}</div>
+                <div>Online</div>
+            </div>
+            <div class="grow">
+                <div>{{ trans('home.section_article1_fee') }}</div>
+                <div>{{ number_format(200) }} USD
+                </div>
+            </div>
+            <div class="grow">
+            </div>
         </div>
     </div>
 </div>

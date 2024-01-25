@@ -5909,8 +5909,8 @@ div[role=tabpanel] {
   min-width: 100%;
   max-width: 100%;
   border-width: 0px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: fill;
+     object-fit: fill;
   padding: 0px;
 }
 

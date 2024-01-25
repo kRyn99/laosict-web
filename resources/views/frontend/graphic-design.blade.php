@@ -4,7 +4,7 @@
 @section('content')
     <div class="wrapper">
         @include('frontend.header')
-
+    <div class="course-landing-page">
         <section class="container-fluid design-course-banner">
             <section class="design-course-banner-content">
                 <div class="pt-4">
@@ -12,7 +12,7 @@
                         <img src="/new-front-end/image/banner-light-bulb.png">
                     </div>
                     <p class="fs-60 ff-popins fw-600">Start <span class="text-red">learning</span> design skill From your favorite Expert</p>
-                    <p class="ff-popins fs-22 text-lightgrey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis molestie.</p>
+                    <p class="ff-popins fs-22 text-lightgrey">Embark on your design journey with guidance from industry experts. Unlock creativity and master design skills with our acclaimed courses.</p>
                     <div class="mt-5">
                         <button class="btn btn-register mr-3" onclick="register()">Explore Course</button>
                         <!-- <img src="/new-front-end/image/circle-yellow-right-arrow.png" width="32px" height="32px">
@@ -23,7 +23,7 @@
             <img src="/new-front-end/image/banner-graphic-design-course.png">
         </section>
         <section class="container-fluid suitable-subject">
-            <section class="container suitable-subject-content">
+            <section class="section-wrapper suitable-subject-content">
                 <img class="mb-5" src="/new-front-end/image/course-samples.png" width="100%" height="100%">
                 <div class="d-flex">
                     <div class="subjects-info">
@@ -46,7 +46,7 @@
             </section>
         </section>
         <section class="container-fluid career-opportunities">
-            <section class="container career-opportunities-content">
+            <section class="section-wrapper career-opportunities-content">
                 <img src="/new-front-end/image/result-after-study.png" width="50%">
                 <div class="d-flex flex-column justify-content-center">
                     <p class="ff-popins fs-40 fw-700 text-white">Results after studying our COURSE</p>
@@ -61,14 +61,14 @@
             </section>
         </section>
         <section class="container-fluid list-course" id="list-course">
-            <section class="container list-course-content">
+            <section class="section-wrapper list-course-content">
                 <div>
                     <div class="row-items">
                         <div class="course-card">
                             <img src="/new-front-end/image/course-design-1.png" width="328">
                             <div class="course-info">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="ff-popins fw-700 fs-22">PHOTOSHOP/CANVA</span>
+                                    <span class="ff-popins fw-700 fs-20">PHOTOSHOP/CANVA</span>
                                     <a class="ff-popins text-purple" href="#">See more</a>
                                 </div>
                                 <div class="ff-popins fs-16 text-lightgrey">
@@ -80,7 +80,7 @@
                             <img src="/new-front-end/image/course-design-2.png" width="328">
                             <div class="course-info">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="ff-popins fw-700 fs-22">ILLUSTRATOR</span>
+                                    <span class="ff-popins fw-700 fs-20">ILLUSTRATOR</span>
                                     <a class="ff-popins text-purple" href="#">See more</a>
                                 </div>
                                 <div class="ff-popins fs-16 text-lightgrey">
@@ -94,7 +94,7 @@
                             <img src="/new-front-end/image/course-design-3.png" width="328">
                             <div class="course-info">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="ff-popins fw-700 fs-22">DESIGN PRINCIPLES</span>
+                                    <span class="ff-popins fw-700 fs-20">DESIGN PRINCIPLES</span>
                                     <a class="ff-popins text-purple" href="#">See more</a>
                                 </div>
                                 <div class="ff-popins fs-16 text-lightgrey">
@@ -106,7 +106,7 @@
                             <img src="/new-front-end/image/course-design-4.png" width="328">
                             <div class="course-info">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="ff-popins fw-700 fs-22">PROJECT</span>
+                                    <span class="ff-popins fw-700 fs-20">PROJECT</span>
                                     <a class="ff-popins text-purple" href="#">See more</a>
                                 </div>
                                 <div class="ff-popins fs-16 text-lightgrey">
@@ -133,7 +133,7 @@
             </section>
         </section>
         <section class="container-fluid experts">
-            <section class="container experts-content">
+            <section class="section-wrapper experts-content">
                 <p class="ff-popins fs-40 fw-700 text-center">Our Experts</p>
                 <p class="ff-popins fs-16 text-center text-lightgrey">Guided by a team of experienced experts using a hands-on approach</p>
                 <div class="row">
@@ -185,7 +185,7 @@
             </section>
         </section>
         <section class="container-fluid students">
-            <section class="container students-content">
+            <section class="section-wrapper students-content">
                 <p class="ff-popins fs-40 fw-700 text-center">Student says About Course</p>
                 <p class="ff-popins fs-16 text-center text-lightgrey">Get a feel for the course through the reviews of thousands of students who have attended our Course</p>
                 <div class="row">
@@ -237,10 +237,41 @@
                 </div>
             </section>
         </section>
-
-
-
-
-        @include('frontend.footer')
     </div>
+@include('frontend.footer')
+    </div>
+@endsection
+@section('after_scripts')
+<script type="text/javascript">
+    let currentCardIndex = 0;
+    const cards = document.querySelectorAll(".card-benefit");
+    const totalCards = cards.length;
+
+    function focusOnCard(index) {
+    if (index < 0) {
+        currentCardIndex = totalCards - 1;
+    } else if (index >= totalCards) {
+        currentCardIndex = 0;
+    } else {
+        currentCardIndex = index;
+    }
+    cards.forEach((card) => {
+        card.style.transform = "translateX(-" + currentCardIndex +  "00%)";
+    });
+    }
+
+    function prevCard() {
+    focusOnCard(currentCardIndex - 1);
+    }
+
+    function nextCard() {
+    focusOnCard(currentCardIndex + 1);
+    }
+
+    function register() {
+    // Scroll to the form
+    const form = document.getElementById('list-course');
+    form.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
 @endsection

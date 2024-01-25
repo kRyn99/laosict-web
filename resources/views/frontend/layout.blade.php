@@ -62,7 +62,7 @@
 
 
     <link rel="stylesheet" href="/new-front-end/css/landing-page.css">
-    <script type="text/javascript" src="/new-front-end/js/landing-page.js"></script>
+    <!-- <script type="text/javascript" src="/new-front-end/js/landing-page.js"></script> -->
     @yield('after_styles')
 </head>
 

@@ -4,9 +4,9 @@
 @section('content')
     <div class="wrapper">
         @include('frontend.header')
-
+    <div class="course-landing-page">
         <section class="container-fluid course-banner">
-            <section class="container course-banner-content">
+            <section class="section-wrapper course-banner-content">
                 <section class="pt-4">
                     <p class="fs-18 text-purple">Let's <b>Begins</b></p>
                     <p class="fs-64 ff-popins fw-700">Programming Fundamentals <span class="text-purple">Course</span> For you</p>
@@ -17,13 +17,13 @@
                         <label class="ff-popins fw-700 fs-18 m-0 align-middle ml-2">3 months to become an expert</label>
                     </div>
                 </section>
-                <div>
+                <div class="course-banner-image">
                     <img src="/new-front-end/image/banner-programming-course.png">
                 </div>
             </section>
         </section>
         <section class="container-fluid about-course">
-            <section class="container about-course-content">
+            <section class="section-wrapper about-course-content">
                 <p class="fs-18 ff-popins text-purple">ABOUT COURSE</p>
                 <div class="row">
                     <div class="col-4">
@@ -55,7 +55,7 @@
             </section>
         </section>
         <section class="container-fluid career-opportunities">
-            <section class="container career-opportunities-content">
+            <section class="section-wrapper career-opportunities-content">
                 <img src="/new-front-end/image/img-career-oppotunities.png">
                 <div class="d-flex flex-column justify-content-center">
                     <p class="ff-popins fs-18 text-yellow">CAREER OPPOTUNITIES</p>
@@ -79,7 +79,7 @@
             </section>
         </section>
         <section class="container-fluid list-course" id="list-course">
-            <section class="container list-course-content">
+            <section class="section-wrapper list-course-content">
                 <div>
                     <div class="row-items">
                         <div class="course-card">
@@ -153,7 +153,7 @@
             </section>
         </section>
         <section class="container-fluid testimonials">
-            <section class="container testimonials-content">
+            <section class="section-wrapper testimonials-content">
                 <p class="ff-popins fs-40 fw-700 text-center">Testimonials</p>
                 <div class="row">
                     <div class="col-6 p-2">
@@ -202,7 +202,41 @@
                 </div>
             </section>
         </section>
-
+    </div>
 @include('frontend.footer')
     </div>
+@endsection
+@section('after_scripts')
+<script type="text/javascript">
+    let currentCardIndex = 0;
+    const cards = document.querySelectorAll(".card-benefit");
+    const totalCards = cards.length;
+
+    function focusOnCard(index) {
+    if (index < 0) {
+        currentCardIndex = totalCards - 1;
+    } else if (index >= totalCards) {
+        currentCardIndex = 0;
+    } else {
+        currentCardIndex = index;
+    }
+    cards.forEach((card) => {
+        card.style.transform = "translateX(-" + currentCardIndex +  "00%)";
+    });
+    }
+
+    function prevCard() {
+    focusOnCard(currentCardIndex - 1);
+    }
+
+    function nextCard() {
+    focusOnCard(currentCardIndex + 1);
+    }
+
+    function register() {
+    // Scroll to the form
+    const form = document.getElementById('list-course');
+    form.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
 @endsection
