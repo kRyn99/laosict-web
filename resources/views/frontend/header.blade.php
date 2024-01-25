@@ -12,6 +12,7 @@
                 @if ($category->identify == \App\Helpers::IDENTIFY_HOAN_CANH_QUYEN_GOP)
                     <li class="menu {{ $page == $category->identify? '
             is-active' : "" }}" data-reach-accordion-item>
+                        
                         <a href="/vi-tre-em?id=7" title="{{ $category->name }}" class="parent-tap">
 
                             {{ $category->name }}
@@ -22,17 +23,35 @@
                         <div class="submenu">
                             <ul>
                                 @foreach ($category->children as $childCate)
-                                    <li class="{{ (isset($subPageId) && ($subPageId == $childCate->id))? 'active' : "" }}"><a href="{{ route('frontend.main', $childCate->slug) }}"  title="{{ $childCate->name }}">
-                                            {{ $childCate->name }}
-                                        </a></li>
+                                
+                                <li class="{{ (isset($subPageId) && ($subPageId == $childCate->id))? 'active' : "" }}">
+                                    @if ($childCate->name=='Programming fundamentals' || $childCate->name=='Graphic design')
+                                        <a href="{{ route('frontend.main', $childCate->slug) }}"  title="{{ $childCate->name }}">
+                                        {{ $childCate->name }}
+                                        </a>
+                                    @else
+                                        <a href="#"  title="{{ $childCate->name }}">
+                                        {{ $childCate->name }}
+                                        </a>
+                                    @endif
+                                </li>
+
                                 @endforeach
                             </ul>
                         </div>
                     </li>
+                @elseif ($category->name=='Home')    
+                <li class="menu {{ $page == $category->identify? '
+                    is-active' : "" }}"><a href="{{ route('frontend.main', $category->slug) }}" title="{{ $category->name }}">
+                                    @if ($category->identify == \App\Helpers::IDENTIFY_FIRST_PAGE_SHOW_TOTAL_STATIC)
+                                        <i class="icon-wallet-1"><img src="{{ url(\App\Helpers::getSettings($settings, 'wallet_icon_header_menu')) }}" alt="" class="lazyload"></i>
+                                    @endif
+                                    {{ $category->name }}
+                                </a></li>
                 @else
                     <li class="menu {{ $page == $category->identify? '
-            is-active' : "" }}"><a href="{{ route('frontend.main', $category->slug) }}" title="{{ $category->name }}">
-                            @if ($category->identify == \App\Helpers::IDENTIFY_FIRST_PAGE_SHOW_TOTAL_STATIC)
+            is-active' : "" }}"><a href="#" title="{{ $category->name }}">
+                            @if ($category->identify == \App\Helpers::IDENTIFY_FIRST_PAGE_SHOW_TOTAL_STATIC )
                                 <i class="icon-wallet-1"><img src="{{ url(\App\Helpers::getSettings($settings, 'wallet_icon_header_menu')) }}" alt="" class="lazyload"></i>
                             @endif
                             {{ $category->name }}
@@ -41,9 +60,9 @@
 
             @endforeach
 
-            <li class="menu {{ $page == 'partner' ? 'is-active' : ""}}"><a href="{{ route('frontend.partner') }}" title="{{ trans('home.doi_tac_dong_hanh') }}">{{ trans('home.doi_tac_dong_hanh') }}</a></li>
+            <li class="menu {{ $page == 'partner' ? 'is-active' : ""}}"><a href="#" title="{{ trans('home.doi_tac_dong_hanh') }}">{{ trans('home.doi_tac_dong_hanh') }}</a></li>
 
-            <li class="menu {{ $page == 'feedback' ? 'is-active' : "" }}"><a href="{{ route('frontend.feedback') }}" title="{{ trans('home.menu_feedback_name') }}">{{ trans('home.menu_feedback_name') }}</a></li>
+            <li class="menu {{ $page == 'feedback' ? 'is-active' : "" }}"><a href="#" title="{{ trans('home.menu_feedback_name') }}">{{ trans('home.menu_feedback_name') }}</a></li>
         </ul>
         <div class="lg:hidden block block-info">
         <!-- <div class="group-1">
