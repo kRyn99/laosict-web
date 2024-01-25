@@ -14,8 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //mới nhưng chỉ làm demo
-Route::get('detail-course-1','App\Http\Controllers\NewController@detail_course_1')->name('detail-course-1');
-Route::get('detail-course-2','App\Http\Controllers\NewController@detail_course_2')->name('detail-course-2');
+Route::get('graphic-design.html','App\Http\Controllers\NewController@detail_course_1')->name('raphic-design.html');
 //===============================
 Route::get('/', 'App\Http\Controllers\FrontendController@index')->name('frontend.index');
 Route::get('feedback', 'App\Http\Controllers\FrontendController@feedback')->name('frontend.feedback');

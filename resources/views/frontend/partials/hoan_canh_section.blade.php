@@ -17,8 +17,14 @@
                     @foreach ($programDonationTypeKeys as $index => $donationType)
                         <div aria-labelledby="tabs--tab--{{$index}}" role="tabpanel" aria-selected="{{ $index == 0? 'true' : 'false' }}" tabindex="{{ $index == 0? '0' : '-1' }}" data-reach-tab-panel="" id="tabs--panel--{{$index}}">
                             <div class="tabpanel-container" id="projectContent-{{$donationType}}">
+                                @php
+                                    $stt=0;
+                                @endphp
                                 @foreach (\App\Helpers::getIndexProjects($donationType) as $project)
-                                    @include('frontend.partials.index_project', ['project' => $project])
+                                @php
+                                    $stt=$stt+1;
+                                @endphp
+                                    @include('frontend.partials.index_project', ['project' => $project,'stt' => $stt])
                                 @endforeach
                             </div>
                             <div class="btn-more">

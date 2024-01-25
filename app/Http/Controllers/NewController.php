@@ -3,17 +3,40 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Helpers;
+use App\Models\Category;
+use App\Models\District;
+use App\Models\Feedback;
+use App\Models\Partner;
+use App\Models\Payment;
+use App\Models\Post;
+use App\Models\Project;
+use App\Models\Province;
+use Backpack\Settings\app\Models\Setting;
+use Doctrine\DBAL\Driver\Exception;
+use Illuminate\Support\Facades\App;
 class NewController extends Controller
 {
     public function detail_course_1()
     {
-        return view('new/chi-tiet-khoa-hoc-1');
-    }
+        if (session()->has('locale')) {
+            App::setLocale(session()->get('locale'));
+        }
+        $page = 'index';
+        $settings = Setting::pluck('value', 'key')->all();
 
-    public function detail_course_2()
-    {
-        return view('new/chi-tiet-khoa-hoc-2');
+        $meta = [];
+        $meta['meta_title'] = trans('settings.meta_index_title');
+        $meta['meta_desc'] = trans('settings.meta_index_desc');
+        $meta['meta_keywords'] = trans('settings.meta_index_keywords');
+        $meta['meta_image'] = url($settings['website_logo_header']);
+        $meta['meta_url'] = url('/');
+
+        $currentLocale = App::getLocale();
+        $banner_pc = url($settings['index_banner_pc_'.$currentLocale]);
+        $banner_mobile = url($settings['index_banner_mobile_'.$currentLocale]);
+
+        return view('frontend.chi-tiet-khoa-hoc-1', compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
     }
 
 }
