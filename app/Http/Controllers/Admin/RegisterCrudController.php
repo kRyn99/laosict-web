@@ -22,8 +22,8 @@ class RegisterCrudController extends CrudController
     public function setup()
     {
         CRUD::setModel(\App\Models\Register::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/register');
-        CRUD::setEntityNameStrings(trans('app.register'), trans('app.register'));
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/registers');
+        CRUD::setEntityNameStrings(trans('app.registers'), trans('app.registers'));
         CRUD::denyAccess('create');
         CRUD::denyAccess('delete');
         CRUD::denyAccess('update');
@@ -36,7 +36,7 @@ class RegisterCrudController extends CrudController
         CRUD::column('work')->label('Công việc');
         CRUD::column('message')->label('Ghi chú');
         CRUD::column('course_name')->label('Tên khóa học');
-        CRUD::column('created_at')->type('date')->label('Thời gian');
+        CRUD::column('created_at')->label('Thời gian');
     }
 
     /**
@@ -53,7 +53,7 @@ class RegisterCrudController extends CrudController
         CRUD::column('work')->label('Công Việc');
         CRUD::column('message')->label('Ghi chú');
         CRUD::column('course_name')->label('Tên khóa học');
-        CRUD::column('created_at')->type('date')->label('Thời gian');
+        CRUD::column('created_at')->label('Thời gian');
     }
 
     /**

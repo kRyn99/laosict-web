@@ -23,7 +23,7 @@ Route::group([
     Route::crud('program', 'ProgramCrudController');
     Route::crud('project', 'ProjectCrudController');
     Route::crud('feedback', 'FeedbackCrudController');
-    Route::crud('register', 'RegisterCrudController');
+    Route::crud('registers', 'RegisterCrudController');
     Route::crud('payment', 'PaymentCrudController');
     Route::get('lang/{value}', function ($value){
         App::setLocale($value);
