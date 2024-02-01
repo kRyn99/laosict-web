@@ -1,4 +1,3 @@
-
 @extends('frontend.layout')
 
 @section('content')
@@ -134,15 +133,66 @@
                             <p class="ff-popins fs-40 fw-700">Main subjects in this course</p>
                             <p class="ff-popins fs-18 text-lightgrey">Explore visual communication, design principles, typography, and software skills. Master the art of creating impactful and engaging designs.</p>
                         </div>
-                        <form class="register-form" action="register.php">
+                        <!-- form gửi thông tin -->
+                        <form id="myForm" class="register-form" action="{{ route('frontend.graphic-design-post') }}"
+                            method="POST" id="feedbackForm">
+                            {{ csrf_field() }}
+
                             <p class="ff-popins fs-18 text-center text-yellow">Register now!</p>
-                            <input type="text" placeholder="Full name" id="fullname">
-                            <input type="text" placeholder="Email" id="email">
-                            <input type="text" placeholder="Handphone" id="handphone">
-                            <input type="text" placeholder="Address" id="address">
-                            <textarea placeholder="Message" id="message"></textarea>
-                            <input type="submit" value="Register" class="btn btn-register-form ff-popins fw-700 fs-18">
+                            <input type="text" placeholder="{{ trans('home.feedback_name') }}" id="name"
+                                name="name" required>
+                            <input type="number" placeholder="{{ trans('home.feedback_phone') }}" id="phone"
+                                name="phone" required>
+                            <input type="email" placeholder="{{ trans('home.feedback_email') }}" id="email"
+                                name="email" required>
+
+                            <select id="options" onchange="updateInputValue()" name="options" required>
+                                <option value="">{{ trans('home.ban_la') }}</option>
+                                <option value="{{ trans('home.doi_tuong') }}">{{ trans('home.doi_tuong') }}</option>
+                                <option value="{{ trans('home.nguoi_di_lam') }}">{{ trans('home.nguoi_di_lam') }}
+                                </option>
+                                <option value="{{ trans('home.hoc_sinh') }}">{{ trans('home.hoc_sinh') }}</option>
+                                <option value="{{ trans('home.doi_tuong_khac') }}">{{ trans('home.doi_tuong_khac') }}
+                                </option>
+                            </select>
+                            <input type="hidden" name="work" id="work" readonly required>
+
+                            <script>
+                                function updateInputValue() {
+                                    var selectElement = document.getElementById("options");
+                                    var selectedOption = selectElement.options[selectElement.selectedIndex].text;
+                                    var check = document.getElementById("work").value;
+
+                                    document.getElementById("work").value = selectedOption;
+                                }
+                            </script>
+
+                            <textarea placeholder="{{ trans('home.feedback_content') }}" id="message" name="message"></textarea>
+
+                            <div class="mb-4" id="feedback_form_message" style="display: none;">
+                                <span style="color: red">{{ trans('home.fill_all_info') }}</span>
+                            </div>
+
+
+                            <button id="buttonSubmitFeedback" type="submit"
+                                class="btn btn-register-form ff-popins fw-700 fs-18">{{ trans('home.feedback_gui') }}</button>
                         </form>
+
+
+                        @if (Session::has('success'))
+                            <div class="alert alert-success">
+                                {{ Session::get('success') }}
+                            </div>
+
+                            <script>
+                                // Cuộn đến form sau khi trang tải lại
+                                window.onload = function() {
+                                    document.getElementById('myForm').scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                };
+                            </script>
+                        @endif
                     </div>
                 </div>
             </section>
@@ -165,78 +215,86 @@
                         </div>
                     </div>
 
-                    <div class="card-expert">
-                        <div class="card-expert-image mb-3">
-                            <img src="/new-front-end/image/user_thumbnail_2.png" width="320" height="220">
-                        </div>
-                        <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
-                        <p class="ff-popins fw-600 fs-18">Ms. Thao Le Vu</p>
-                        <hr>
-                        <div class="d-flex justify-content-between">
-                            <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
-                            <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
+                    <div class="col-4 p-2">
+                        <div class="card-expert">
+                            <div>
+                                <img src="/new-front-end/image/user_thumbnail_2.png" width="320" height="220">
+                            </div>
+                            <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
+                            <p class="ff-popins fw-600 fs-18">Ms. Thao Le Vu</p>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
+                                <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="card-expert">
-                        <div class="card-expert-image mb-3">
-                            <img src="/new-front-end/image/user_thumbnail_3.png" width="320" height="220">
-                        </div>
-                        <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
-                        <p class="ff-popins fw-600 fs-18">Mrs. Hanh Nguyen Hong</p>
-                        <hr>
-                        <div class="d-flex justify-content-between">
-                            <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
-                            <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
+                    <div class="col-4 p-2">
+                        <div class="card-expert">
+                            <div>
+                                <img src="/new-front-end/image/user_thumbnail_3.png" width="320" height="220">
+                            </div>
+                            <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
+                            <p class="ff-popins fw-600 fs-18">Mrs. Hanh Nguyen Hong</p>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
+                                <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </section>
-        <section class="article-wrapper">
-            <section class="section-wrapper">
+        <section class="container-fluid students">
+            <section class="section-wrapper students-content">
                 <p class="ff-popins fs-40 fw-700 text-center">Student says About Course</p>
                 <p class="ff-popins fs-16 text-center text-lightgrey">Get a feel for the course through the reviews of thousands of students who have attended our Course</p>
-                <div class="grid-items-container student-list">
-                    <div class="card-student">
-                        <div>
-                            <img src="/new-front-end/image/student-thumbnail-1.png" style="width:160px;height:200px">
-                        </div>
-                        <div class="d-flex flex-column justify-content-between">
-                            <ul class="rate">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <h4 class="ff-popins fw-600">Best learning platform</h4>
-                            <q class="ff-popins fs-14 text-lightgrey">
-                                This course is absolutely fantastic! It delivers high-quality content, has professional instructors, and offers a flexible and engaging learning approach.
-                            </q>
-                            <div class="ff-popins fw-700 fs-14">Maurice Cain</div>
-                            <div class="ff-popins fs-14 text-lightgrey">Student</div>
+                <div class="row">
+                    <div class="col-6 p-2">
+                        <div class="card-student">
+                            <div>
+                                <img src="/new-front-end/image/student-thumbnail-1.png" style="width:160px;height:200px">
+                            </div>
+                            <div class="d-flex flex-column justify-content-between">
+                                <ul class="rate">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <h4 class="ff-popins fw-600">Best learning platform</h4>
+                                <q class="ff-popins fs-14 text-lightgrey">
+                                    This course is absolutely fantastic! It delivers high-quality content, has professional instructors, and offers a flexible and engaging learning approach.
+                                </q>
+                                <div class="ff-popins fw-700 fs-14">Maurice Cain</div>
+                                <div class="ff-popins fs-14 text-lightgrey">Student</div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="card-student">
-                        <div>
-                            <img src="/new-front-end/image/student-thumbnail-2.png" width="160" height="200">
-                        </div>
-                        <div class="d-flex flex-column justify-content-between">
-                            <ul class="rate">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <h4 class="ff-popins fw-600">Amazing Course</h4>
-                            <q class="ff-popins fs-14 text-lightgrey">
-                                The course exceeded my expectations. The well-structured curriculum and popinsactive lessons make learning enjoyable and highly effective.
-                            </q>
-                            <div class="ff-popins fw-700 fs-14">Lila Henderson</div>
-                            <div class="ff-popins fs-14 text-lightgrey">Student</div>
+                    <div class="col-6 p-2">
+                        <div class="card-student">
+                            <div>
+                                <img src="/new-front-end/image/student-thumbnail-2.png" width="160" height="200">
+                            </div>
+                            <div class="d-flex flex-column justify-content-between">
+                                <ul class="rate">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <h4 class="ff-popins fw-600">Amazing Course</h4>
+                                <q class="ff-popins fs-14 text-lightgrey">
+                                    The course exceeded my expectations. The well-structured curriculum and popinsactive lessons make learning enjoyable and highly effective.
+                                </q>
+                                <div class="ff-popins fw-700 fs-14">Lila Henderson</div>
+                                <div class="ff-popins fs-14 text-lightgrey">Student</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -247,35 +305,35 @@
     </div>
 @endsection
 @section('after_scripts')
-<script type="text/javascript">
-    let currentCardIndex = 0;
-    const cards = document.querySelectorAll(".card-benefit");
-    const totalCards = cards.length;
+    <script type="text/javascript">
+        let currentCardIndex = 0;
+        const cards = document.querySelectorAll(".card-benefit");
+        const totalCards = cards.length;
 
-    function focusOnCard(index) {
-    if (index < 0) {
-        currentCardIndex = totalCards - 1;
-    } else if (index >= totalCards) {
-        currentCardIndex = 0;
-    } else {
-        currentCardIndex = index;
-    }
-    cards.forEach((card) => {
-        card.style.transform = "translateX(-" + currentCardIndex +  "00%)";
-    });
-    }
+        function focusOnCard(index) {
+            if (index < 0) {
+                currentCardIndex = totalCards - 1;
+            } else if (index >= totalCards) {
+                currentCardIndex = 0;
+            } else {
+                currentCardIndex = index;
+            }
+            cards.forEach((card) => {
+                card.style.transform = "translateX(-" + currentCardIndex + "00%)";
+            });
+        }
 
-    function prevCard() {
-    focusOnCard(currentCardIndex - 1);
-    }
+        function prevCard() {
+            focusOnCard(currentCardIndex - 1);
+        }
 
-    function nextCard() {
-    focusOnCard(currentCardIndex + 1);
-    }
+        function nextCard() {
+            focusOnCard(currentCardIndex + 1);
+        }
 
     function register() {
     // Scroll to the form
-    const form = document.getElementById('register-form');
+    const form = document.getElementById('list-course');
     form.scrollIntoView({ behavior: 'smooth' });
     }
 </script>

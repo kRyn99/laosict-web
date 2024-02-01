@@ -1,16 +1,16 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\FeedbackRequest;
+use App\Http\Requests\RegisterRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
-
 /**
  * Class FeedbackCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class FeedbackCrudController extends CrudController
+class RegisterCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -18,30 +18,24 @@ class FeedbackCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
-    /**
-     * Configure the CrudPanel object. Apply settings to all operations.
-     *
-     * @return void
-     */
+
     public function setup()
     {
-        CRUD::setModel(\App\Models\Feedback::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/feedback');
-        CRUD::setEntityNameStrings(trans('app.feedback'), trans('app.feedback'));
+        CRUD::setModel(\App\Models\Register::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/register');
+        CRUD::setEntityNameStrings(trans('app.register'), trans('app.register'));
         CRUD::denyAccess('create');
         CRUD::denyAccess('delete');
         CRUD::denyAccess('update');
     }
-
     protected function setupShowOperation()
     {
         CRUD::column('name')->label('Họ tên');
         CRUD::column('phone')->label('Số điện thoại');
         CRUD::column('email')->label('Email');
-        CRUD::column('address')->label('Địa chỉ')->limit(2000);
-        CRUD::column('province_name')->label('Tỉnh/Thành');
-        CRUD::column('district_name')->label('Quận/Huyện');
-        CRUD::column('message')->label('Nội dung góp ý')->limit(2000);
+        CRUD::column('work')->label('Công việc');
+        CRUD::column('message')->label('Ghi chú');
+        CRUD::column('course_name')->label('Tên khóa học');
         CRUD::column('created_at')->type('date')->label('Thời gian');
     }
 
@@ -56,10 +50,9 @@ class FeedbackCrudController extends CrudController
         CRUD::column('name')->label('Họ tên');
         CRUD::column('phone')->label('Số điện thoại');
         CRUD::column('email')->label('Email');
-        CRUD::column('address')->label('Địa chỉ');
-        CRUD::column('province_name')->label('Tỉnh/Thành');
-        CRUD::column('district_name')->label('Quận/Huyện');
-        CRUD::column('message')->label('Nội dung góp ý');
+        CRUD::column('work')->label('Công Việc');
+        CRUD::column('message')->label('Ghi chú');
+        CRUD::column('course_name')->label('Tên khóa học');
         CRUD::column('created_at')->type('date')->label('Thời gian');
     }
 
@@ -71,9 +64,7 @@ class FeedbackCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(FeedbackRequest::class);
-
-
+        CRUD::setValidation(RegisterRequest::class);
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

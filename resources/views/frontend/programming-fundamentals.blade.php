@@ -133,17 +133,67 @@
                         <div>
                             <p class="ff-popins fs-18 text-purple">COURSE CONTENT</p>
                             <p class="ff-popins fs-40 fw-700">Main subjects in this course</p>
-                            <p class="ff-popins fs-18 text-lightgrey">Master coding languages, algorithmic thinking, and problem-solving techniques — the core pillars of our programming fundamentals course.</p>
+                            <p class="ff-popins fs-18 text-lightgrey">Explore visual communication, design principles, typography, and software skills. Master the art of creating impactful and engaging designs.</p>
                         </div>
-                        <form class="register-form" action="register.php">
+                        <!-- form gửi thông tin -->
+                        <form id="myForm" class="register-form" action="{{ route('frontend.graphic-design-post') }}"
+                            method="POST" id="feedbackForm">
+                            {{ csrf_field() }}
+
                             <p class="ff-popins fs-18 text-center text-yellow">Register now!</p>
-                            <input type="text" placeholder="Full name" id="fullname">
-                            <input type="text" placeholder="Email" id="email">
-                            <input type="text" placeholder="Handphone" id="handphone">
-                            <input type="text" placeholder="Address" id="address">
-                            <textarea placeholder="Message" id="message"></textarea>
-                            <input type="submit" value="Register" class="btn btn-register-form ff-popins fw-700 fs-18">
+                            <input type="text" placeholder="{{ trans('home.feedback_name') }}" id="name"
+                                name="name" required>
+                            <input type="number" placeholder="{{ trans('home.feedback_phone') }}" id="phone"
+                                name="phone" required>
+                            <input type="email" placeholder="{{ trans('home.feedback_email') }}" id="email"
+                                name="email" required>
+
+                            <select id="options" onchange="updateInputValue()" name="options" required>
+                                <option value="">{{ trans('home.ban_la') }}</option>
+                                <option value="{{ trans('home.doi_tuong') }}">{{ trans('home.doi_tuong') }}</option>
+                                <option value="{{ trans('home.nguoi_di_lam') }}">{{ trans('home.nguoi_di_lam') }}
+                                </option>
+                                <option value="{{ trans('home.hoc_sinh') }}">{{ trans('home.hoc_sinh') }}</option>
+                                <option value="{{ trans('home.doi_tuong_khac') }}">{{ trans('home.doi_tuong_khac') }}
+                                </option>
+                            </select>
+                            <input type="hidden" name="work" id="work" readonly required>
+
+                            <script>
+                                function updateInputValue() {
+                                    var selectElement = document.getElementById("options");
+                                    var selectedOption = selectElement.options[selectElement.selectedIndex].text;
+                                    var check = document.getElementById("work").value;
+
+                                    document.getElementById("work").value = selectedOption;
+                                }
+                            </script>
+
+                            <textarea placeholder="{{ trans('home.feedback_content') }}" id="message" name="message"></textarea>
+
+                            <div class="mb-4" id="feedback_form_message" style="display: none;">
+                                <span style="color: red">{{ trans('home.fill_all_info') }}</span>
+                            </div>
+
+
+                            <button id="buttonSubmitFeedback" type="submit"
+                                class="btn btn-register-form ff-popins fw-700 fs-18">{{ trans('home.feedback_gui') }}</button>
                         </form>
+
+                        @if (Session::has('success'))
+                            <div class="alert alert-success">
+                                {{ Session::get('success') }}
+                            </div>
+
+                            <script>
+                                // Cuộn đến form sau khi trang tải lại
+                                window.onload = function() {
+                                    document.getElementById('myForm').scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                };
+                            </script>
+                        @endif
                     </div>
                 </div>
             </section>

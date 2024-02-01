@@ -1,6 +1,7 @@
 <?php
-
 use App\Http\Controllers\NewController;
+
+use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +19,12 @@ use Illuminate\Support\Facades\Route;
 //(ví dụ routing cho file feedback.blade.php ở thư mục frontend thì đặt name là frontend.feedback)
 
 
-Route::get('programming-fundamentals','App\Http\Controllers\CourseController@programmingFundamentalsCourse')->name('frontend.programming-fundamentals');
+
+
+Route::post('graphic-design','App\Http\Controllers\CourseController@graphic_design_post')->name('frontend.graphic-design-post');
 Route::get('graphic-design','App\Http\Controllers\CourseController@graphicDesignCourse')->name('frontend.graphic-design');
+Route::post('programming-fundamentals','App\Http\Controllers\CourseController@programming_fundamentalsCourse_post')->name('frontend.programming-fundamentals-post');
+Route::get('programming-fundamentals','App\Http\Controllers\CourseController@programmingFundamentalsCourse')->name('frontend.programming-fundamentals');
 //===============================
 Route::get('/', 'App\Http\Controllers\FrontendController@index')->name('frontend.index');
 Route::get('home', 'App\Http\Controllers\FrontendController@index')->name('frontend.index');
