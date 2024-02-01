@@ -142,32 +142,31 @@
                         <p class="ff-popins fs-40 fw-700">Main subjects in this course</p>
                         <p class="ff-popins fs-18 text-lightgrey">Explore visual communication, design principles,
                             typography, and software skills. Master the art of creating impactful and engaging designs.</p>
-                        <form class="register-form" action="{{ route('frontend.post_feedback') }}" method="POST"
+                        <!-- form gửi thông tin -->
+                            <form class="register-form" action="{{ route('frontend.graphic-design-post') }}" method="POST"
                             id="feedbackForm">
                             {{ csrf_field() }}
 
                             <p class="ff-popins fs-18 text-center text-yellow">Register now!</p>
                             <input type="text" placeholder="{{ trans('home.feedback_name') }}" id="name"
-                                name="name">
-                            <input type="text" placeholder="{{ trans('home.feedback_phone') }}" id="phone"
-                                name="phone">
-                            <input type="text" placeholder="{{ trans('home.feedback_email') }}" id="email"
-                                name="email">
+                                name="name" required>
+                            <input type="number" placeholder="{{ trans('home.feedback_phone') }}" id="phone"
+                                name="phone" required>
+                            <input type="email" placeholder="{{ trans('home.feedback_email') }}" id="email"
+                                name="email" required>
 
-                            <div class="select-wrapper">
-                                <select id="options" onchange="updateInputValue()" name="options">
-                                    <option value="{{ trans('home.ban_la') }}">{{ trans('home.ban_la') }}</option>
-                                    <option value="{{ trans('home.doi_tuong') }}">{{ trans('home.doi_tuong') }}</option>
-                                    <option value="{{ trans('home.nguoi_di_lam') }}">{{ trans('home.nguoi_di_lam') }}
-                                    </option>
-                                    <option value="{{ trans('home.hoc_sinh') }}">{{ trans('home.hoc_sinh') }}</option>
-                                    <option value="{{ trans('home.doi_tuong_khac') }}">{{ trans('home.doi_tuong_khac') }}
-                                    </option>
-                                </select>
-                            </div>
+                            <select id="options" onchange="updateInputValue()" name="options">
+                                <option value="{{ trans('home.ban_la') }}">{{ trans('home.ban_la') }}</option>
+                                <option value="{{ trans('home.doi_tuong') }}">{{ trans('home.doi_tuong') }}</option>
+                                <option value="{{ trans('home.nguoi_di_lam') }}">{{ trans('home.nguoi_di_lam') }}
+                                </option>
+                                <option value="{{ trans('home.hoc_sinh') }}">{{ trans('home.hoc_sinh') }}</option>
+                                <option value="{{ trans('home.doi_tuong_khac') }}">{{ trans('home.doi_tuong_khac') }}
+                                </option>
+                            </select>
 
-                            <input type="hidden" placeholder="{{ trans('home.feedback_address') }}" id="address" name="address" readonly>
-                            
+                            <input type="hidden" name="work" readonly>
+
                             <script>
                                 function updateInputValue() {
                                     // Lấy phần tử select
@@ -178,6 +177,7 @@
                                     document.getElementById("address").value = selectedOption;
                                 }
                             </script>
+
                             <textarea placeholder="{{ trans('home.feedback_content') }}" id="message" name="message"></textarea>
 
                             <div class="mb-4" id="feedback_form_message" style="display: none;">
