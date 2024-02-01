@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Register extends Model
 {
-    use HasFactory;
+    use CrudTrait;
 
     protected $table = 'register';
     protected $primaryKey = 'id';
@@ -18,7 +19,7 @@ class Register extends Model
         'email',
         'work',
         'message',
-        'courese_name',
+        'course_name',
     ];
     protected static function boot()
     {

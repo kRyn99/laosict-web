@@ -3,22 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Helpers;
-use App\Http\Requests\FeedbackRequest;
+use App\Models\Post;
+use App\Models\Partner;
+use App\Models\Payment;
+use App\Models\Project;
 use App\Models\Category;
 use App\Models\District;
 use App\Models\Feedback;
-use App\Models\Partner;
-use App\Models\Payment;
-use App\Models\Post;
-use App\Models\Project;
 use App\Models\Province;
 use App\Models\Register;
+use Illuminate\Http\Request;
+use Doctrine\DBAL\Driver\Exception;
+use Illuminate\Support\Facades\App;
+use App\Http\Requests\FeedbackRequest;
+use Illuminate\Support\Facades\Session;
+use Backpack\Settings\app\Models\Setting;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
-use Backpack\Settings\app\Models\Setting;
-use Doctrine\DBAL\Driver\Exception;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
 
 class CourseController extends Controller
 {
@@ -54,7 +55,24 @@ class CourseController extends Controller
     }
 
     public function graphic_design_post(Request $request)
-    {
+    {   if (session()->has('locale')) {
+        App::setLocale(session()->get('locale'));
+    }
+    $page = 'index';
+    $settings = Setting::pluck('value', 'key')->all();
+
+    $meta = [];
+    $meta['meta_title'] = trans('settings.meta_index_title');
+    $meta['meta_desc'] = trans('settings.meta_index_desc');
+    $meta['meta_keywords'] = trans('settings.meta_index_keywords');
+    $meta['meta_image'] = url($settings['website_logo_header']);
+    $meta['meta_url'] = url('/');
+
+    $currentLocale = App::getLocale();
+    $banner_pc = url($settings['index_banner_pc_' . $currentLocale]);
+    $banner_mobile = url($settings['index_banner_mobile_' . $currentLocale]);
+
+
         $data = [
             'name' => $request->input('name'),
             'phone' => $request->input('phone'),
@@ -64,8 +82,44 @@ class CourseController extends Controller
             'course_name' => 'graphic design',
         ];
 
+
         Register::create($data);
-        return redirect("frontend.graphic-design")->with("success", trans(""));
+        Session::flash('success', trans('home.message_register'));
+        return view('frontend.graphic-design', compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
+    }
+
+    public function programming_fundamentalsCourse_post(Request $request)
+    {   if (session()->has('locale')) {
+        App::setLocale(session()->get('locale'));
+    }
+    $page = 'index';
+    $settings = Setting::pluck('value', 'key')->all();
+
+    $meta = [];
+    $meta['meta_title'] = trans('settings.meta_index_title');
+    $meta['meta_desc'] = trans('settings.meta_index_desc');
+    $meta['meta_keywords'] = trans('settings.meta_index_keywords');
+    $meta['meta_image'] = url($settings['website_logo_header']);
+    $meta['meta_url'] = url('/');
+
+    $currentLocale = App::getLocale();
+    $banner_pc = url($settings['index_banner_pc_' . $currentLocale]);
+    $banner_mobile = url($settings['index_banner_mobile_' . $currentLocale]);
+
+
+        $data = [
+            'name' => $request->input('name'),
+            'phone' => $request->input('phone'),
+            'email' => $request->input('email'),
+            'work' => $request->input('work'),
+            'message' => $request->input('message'),
+            'course_name' => 'programming fundamentalscourse',
+        ];
+
+
+        Register::create($data);
+        Session::flash('success', trans('home.message_register'));
+        return view('frontend.programming-fundamentals', compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
     }
 
     public function graphicDesignCourse()

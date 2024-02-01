@@ -17,7 +17,7 @@
                         <div class="mt-5">
                             <button class="btn btn-register mr-3" onclick="register()">Explore Course</button>
                             <!-- <img src="/new-front-end/image/circle-yellow-right-arrow.png" width="32px" height="32px">
-                                                        <label class="ff-popins fw-700 fs-18 m-0 align-middle">3 months to become an expert</label> -->
+                                                                                        <label class="ff-popins fw-700 fs-18 m-0 align-middle">3 months to become an expert</label> -->
                         </div>
                     </div>
                 </section>
@@ -143,8 +143,8 @@
                         <p class="ff-popins fs-18 text-lightgrey">Explore visual communication, design principles,
                             typography, and software skills. Master the art of creating impactful and engaging designs.</p>
                         <!-- form gửi thông tin -->
-                            <form class="register-form" action="{{ route('frontend.graphic-design-post') }}" method="POST"
-                            id="feedbackForm">
+                        <form id="myForm" class="register-form" action="{{ route('frontend.graphic-design-post') }}"
+                            method="POST" id="feedbackForm">
                             {{ csrf_field() }}
 
                             <p class="ff-popins fs-18 text-center text-yellow">Register now!</p>
@@ -155,8 +155,8 @@
                             <input type="email" placeholder="{{ trans('home.feedback_email') }}" id="email"
                                 name="email" required>
 
-                            <select id="options" onchange="updateInputValue()" name="options">
-                                <option value="{{ trans('home.ban_la') }}">{{ trans('home.ban_la') }}</option>
+                            <select id="options" onchange="updateInputValue()" name="options" required>
+                                <option value="">{{ trans('home.ban_la') }}</option>
                                 <option value="{{ trans('home.doi_tuong') }}">{{ trans('home.doi_tuong') }}</option>
                                 <option value="{{ trans('home.nguoi_di_lam') }}">{{ trans('home.nguoi_di_lam') }}
                                 </option>
@@ -164,17 +164,15 @@
                                 <option value="{{ trans('home.doi_tuong_khac') }}">{{ trans('home.doi_tuong_khac') }}
                                 </option>
                             </select>
-
-                            <input type="hidden" name="work" readonly>
+                            <input type="hidden" name="work" id="work" readonly required>
 
                             <script>
                                 function updateInputValue() {
-                                    // Lấy phần tử select
                                     var selectElement = document.getElementById("options");
-                                    // Lấy giá trị của option đã chọn
                                     var selectedOption = selectElement.options[selectElement.selectedIndex].text;
-                                    // Đặt giá trị vào input
-                                    document.getElementById("address").value = selectedOption;
+                                    var check = document.getElementById("work").value;
+
+                                    document.getElementById("work").value = selectedOption;
                                 }
                             </script>
 
@@ -184,9 +182,26 @@
                                 <span style="color: red">{{ trans('home.fill_all_info') }}</span>
                             </div>
 
+
                             <button id="buttonSubmitFeedback" type="submit"
                                 class="btn btn-register-form ff-popins fw-700 fs-18">{{ trans('home.feedback_gui') }}</button>
                         </form>
+
+
+                        @if (Session::has('success'))
+                            <div class="alert alert-success">
+                                {{ Session::get('success') }}
+                            </div>
+
+                            <script>
+                                // Cuộn đến form sau khi trang tải lại
+                                window.onload = function() {
+                                    document.getElementById('myForm').scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                };
+                            </script>
+                        @endif
                     </div>
                 </section>
             </section>

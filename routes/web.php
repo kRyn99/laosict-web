@@ -20,12 +20,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('programming-fundamentals',[CourseController::class,'programmingFundamentalsCourse'])->name('frontend.programming-fundamentals');
-Route::post('programming-fundamentals-post',[CourseController::class,'programmingFundamentalsCourse_post'])->name('frontend.frontend.programming-fundamentals-post');
 
-Route::get('graphic-design',[CourseController::class,'graphicDesignCourse'])->name('frontend.graphic-design');
-Route::post('graphic-design-post',[CourseController::class,'graphic_design_post'])->name('frontend.graphic-design-post');
-
+Route::post('graphic-design','App\Http\Controllers\CourseController@graphic_design_post')->name('frontend.graphic-design-post');
+Route::get('graphic-design','App\Http\Controllers\CourseController@graphicDesignCourse')->name('frontend.graphic-design');
+Route::post('programming-fundamentals','App\Http\Controllers\CourseController@programming_fundamentalsCourse_post')->name('frontend.programming-fundamentals-post');
+Route::get('programming-fundamentals','App\Http\Controllers\CourseController@programmingFundamentalsCourse')->name('frontend.programming-fundamentals');
 //===============================
 Route::get('/', 'App\Http\Controllers\FrontendController@index')->name('frontend.index');
 Route::get('home', 'App\Http\Controllers\FrontendController@index')->name('frontend.index');
