@@ -215,86 +215,78 @@
                         </div>
                     </div>
 
-                    <div class="col-4 p-2">
-                        <div class="card-expert">
-                            <div>
-                                <img src="/new-front-end/image/user_thumbnail_2.png" width="320" height="220">
-                            </div>
-                            <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
-                            <p class="ff-popins fw-600 fs-18">Ms. Thao Le Vu</p>
-                            <hr>
-                            <div class="d-flex justify-content-between">
-                                <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
-                                <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
-                            </div>
+                    <div class="card-expert">
+                        <div class="card-expert-image mb-3">
+                            <img src="/new-front-end/image/user_thumbnail_2.png" width="320" height="220">
+                        </div>
+                        <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
+                        <p class="ff-popins fw-600 fs-18">Ms. Thao Le Vu</p>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
+                            <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
                         </div>
                     </div>
 
-                    <div class="col-4 p-2">
-                        <div class="card-expert">
-                            <div>
-                                <img src="/new-front-end/image/user_thumbnail_3.png" width="320" height="220">
-                            </div>
-                            <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
-                            <p class="ff-popins fw-600 fs-18">Mrs. Hanh Nguyen Hong</p>
-                            <hr>
-                            <div class="d-flex justify-content-between">
-                                <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
-                                <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
-                            </div>
+                    <div class="card-expert">
+                        <div class="card-expert-image mb-3">
+                            <img src="/new-front-end/image/user_thumbnail_3.png" width="320" height="220">
+                        </div>
+                        <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
+                        <p class="ff-popins fw-600 fs-18">Mrs. Hanh Nguyen Hong</p>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
+                            <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
                         </div>
                     </div>
                 </div>
             </section>
         </section>
-        <section class="container-fluid students">
-            <section class="section-wrapper students-content">
+        <section class="article-wrapper">
+            <section class="section-wrapper">
                 <p class="ff-popins fs-40 fw-700 text-center">Student says About Course</p>
                 <p class="ff-popins fs-16 text-center text-lightgrey">Get a feel for the course through the reviews of thousands of students who have attended our Course</p>
-                <div class="row">
-                    <div class="col-6 p-2">
-                        <div class="card-student">
-                            <div>
-                                <img src="/new-front-end/image/student-thumbnail-1.png" style="width:160px;height:200px">
-                            </div>
-                            <div class="d-flex flex-column justify-content-between">
-                                <ul class="rate">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <h4 class="ff-popins fw-600">Best learning platform</h4>
-                                <q class="ff-popins fs-14 text-lightgrey">
-                                    This course is absolutely fantastic! It delivers high-quality content, has professional instructors, and offers a flexible and engaging learning approach.
-                                </q>
-                                <div class="ff-popins fw-700 fs-14">Maurice Cain</div>
-                                <div class="ff-popins fs-14 text-lightgrey">Student</div>
-                            </div>
+                <div class="grid-items-container student-list">
+                    <div class="card-student">
+                        <div>
+                            <img src="/new-front-end/image/student-thumbnail-1.png" style="width:160px;height:200px">
+                        </div>
+                        <div class="d-flex flex-column justify-content-between">
+                            <ul class="rate">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <h4 class="ff-popins fw-600">Best learning platform</h4>
+                            <q class="ff-popins fs-14 text-lightgrey">
+                                This course is absolutely fantastic! It delivers high-quality content, has professional instructors, and offers a flexible and engaging learning approach.
+                            </q>
+                            <div class="ff-popins fw-700 fs-14">Maurice Cain</div>
+                            <div class="ff-popins fs-14 text-lightgrey">Student</div>
                         </div>
                     </div>
 
-                    <div class="col-6 p-2">
-                        <div class="card-student">
-                            <div>
-                                <img src="/new-front-end/image/student-thumbnail-2.png" width="160" height="200">
-                            </div>
-                            <div class="d-flex flex-column justify-content-between">
-                                <ul class="rate">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <h4 class="ff-popins fw-600">Amazing Course</h4>
-                                <q class="ff-popins fs-14 text-lightgrey">
-                                    The course exceeded my expectations. The well-structured curriculum and popinsactive lessons make learning enjoyable and highly effective.
-                                </q>
-                                <div class="ff-popins fw-700 fs-14">Lila Henderson</div>
-                                <div class="ff-popins fs-14 text-lightgrey">Student</div>
-                            </div>
+                    <div class="card-student">
+                        <div>
+                            <img src="/new-front-end/image/student-thumbnail-2.png" width="160" height="200">
+                        </div>
+                        <div class="d-flex flex-column justify-content-between">
+                            <ul class="rate">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                            <h4 class="ff-popins fw-600">Amazing Course</h4>
+                            <q class="ff-popins fs-14 text-lightgrey">
+                                The course exceeded my expectations. The well-structured curriculum and popinsactive lessons make learning enjoyable and highly effective.
+                            </q>
+                            <div class="ff-popins fw-700 fs-14">Lila Henderson</div>
+                            <div class="ff-popins fs-14 text-lightgrey">Student</div>
                         </div>
                     </div>
                 </div>
