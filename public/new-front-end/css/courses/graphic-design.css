@@ -1,0 +1,91 @@
+/* ###################################################################### */
+/* GRAPHIC DESIGN COURSE */
+/* ###################################################################### */
+.design-course-banner {
+    background: #F5F5F5;
+}
+
+.design-course-banner-content {
+    padding-top: 100px;
+}
+
+.design-course-banner-content .text-part {
+    padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .design-course-banner {
+        background-image: url("../../image/banner-graphic-design-course.png") !important;
+        background-repeat: no-repeat !important;
+        background-position: right !important;
+        background-size: cover !important;
+        background-size: contain !important;
+    }
+    .design-course-banner-content {
+        padding-top: 100px;
+    }
+    .design-course-banner-content .image-part {
+        width: 50%;
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .design-course-banner {
+        background-size: contain !important;
+    }
+    .design-course-banner-content {
+        padding-top: 100px;
+    }
+    .design-course-banner-content .image-part {
+        width: 50%;
+        display: block;
+    }
+}
+
+.image-part {
+    display: none;
+}
+
+.subject-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.result-list td {
+    border: none;
+}
+
+.result-list img {
+    min-width: 30px;
+}
+
+.card-expert {
+    box-shadow: 0px 20px 20px 0px #0000001A;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.card-expert-image {
+    border-radius: 20px;
+}
+
+.button-view-expert {
+    background: #FF6F06;
+    color: #fff;
+    width: 60px;
+    height: 37px;
+}
+
+.button-view-expert:hover {
+    background: #fa944b;
+    color: #fff;
+}
+
+.card-student {
+    box-shadow: 0px 20px 20px 0px #0000001A;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}

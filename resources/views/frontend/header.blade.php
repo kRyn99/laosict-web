@@ -2,7 +2,7 @@
 <header class="header">
     <h1 class="logo">
         <a href="{{ route('frontend.index') }}" title="{{ \App\Helpers::getSettings($settings, 'website_name') }}">
-            <img src="{{ url(\App\Helpers::getSettings($settings, 'website_logo_header')) }}" alt="" class="lazyload" style="width:100px;height:40px">
+            <img src="{{ url(\App\Helpers::getSettings($settings, 'website_logo_header')) }}" alt="" class="lazyload" style="width:100px;height:40px;margin-bottom:1rem">
             <span style="color: #f0c132">{{ \App\Helpers::getSettings($settings, 'website_name') }}</span>
         </a>
     </h1>
@@ -12,7 +12,7 @@
                 @if ($category->identify == \App\Helpers::IDENTIFY_HOAN_CANH_QUYEN_GOP)
                     <li class="menu {{ $page == $category->identify? '
             is-active' : "" }}" data-reach-accordion-item>
-                        
+
                         <a href="/vi-tre-em?id=7" title="{{ $category->name }}" class="parent-tap">
 
                             {{ $category->name }}
@@ -23,7 +23,7 @@
                         <div class="submenu">
                             <ul>
                                 @foreach ($category->children as $childCate)
-                                
+
                                 <li class="{{ (isset($subPageId) && ($subPageId == $childCate->id))? 'active' : "" }}">
                                     @if ($childCate->name=='Programming fundamentals' || $childCate->name=='Graphic design')
                                         <a href="{{ route('frontend.main', $childCate->slug) }}"  title="{{ $childCate->name }}">
@@ -40,7 +40,7 @@
                             </ul>
                         </div>
                     </li>
-                @elseif ($category->name=='Home')    
+                @elseif ($category->name=='Home')
                 <li class="menu {{ $page == $category->identify? '
                     is-active' : "" }}"><a href="{{ route('frontend.main', $category->slug) }}" title="{{ $category->name }}">
                                     @if ($category->identify == \App\Helpers::IDENTIFY_FIRST_PAGE_SHOW_TOTAL_STATIC)
