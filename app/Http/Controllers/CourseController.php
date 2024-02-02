@@ -85,7 +85,7 @@ class CourseController extends Controller
 
         Register::create($data);
         Session::flash('success', trans('home.message_register'));
-        return view('frontend.graphic-design', compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
+        return back()->with(compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
     }
 
     public function programming_fundamentalsCourse_post(Request $request)
@@ -119,7 +119,7 @@ class CourseController extends Controller
 
         Register::create($data);
         Session::flash('success', trans('home.message_register'));
-        return view('frontend.programming-fundamentals', compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
+        return back()->with(compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
     }
 
     public function graphicDesignCourse()
