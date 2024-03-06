@@ -3,7 +3,7 @@
 /* ###################################################################### */
 .course-banner {
     padding: 50px 0px;
-    background: #F5F5F5;
+    background: #f5f5f5;
 }
 
 .course-banner-image {
@@ -42,7 +42,7 @@
 }
 
 .card-benefit {
-    background-color: #545BE8;
+    background-color: #545be8;
     min-height: 267px;
     min-width: 267px;
     padding: 40px 16px;
@@ -55,7 +55,7 @@
     width: 48px;
     border-radius: 50%;
     background-color: #fff;
-    color: #F0C932;
+    color: #f0c932;
     text-align: center;
     line-height: 48px;
     font-size: 20px;
@@ -63,10 +63,18 @@
 
 .benefit-wrapper {
     display: flex;
-    overflow: hidden;
-    gap: 40px;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+    gap: 20px;
 }
-
+.card-benefit {
+    flex: 1;
+}
+@media (max-width: 900px) {
+    .card-benefit:last-child {
+        flex: 2;
+    }
+}
 .btn-carousel-benefit {
     border-radius: 50%;
     color: #fff;
@@ -80,9 +88,9 @@
 }
 
 .course-card {
-    box-shadow: 0px 18.05851173400879px 18.05851173400879px 0px #0000000D;
+    box-shadow: 0px 18.05851173400879px 18.05851173400879px 0px #0000000d;
     border-radius: 10px;
-    width: 328px;
+    padding: 5px;
 }
 
 .course-info {
@@ -90,15 +98,79 @@
 }
 
 .course-description {
-    margin-top: 30px;
+    position: relative;
+    margin-top: 50px;
 }
 
 .card-testimonial {
-    box-shadow: 0px 20px 20px 0px #0000001A;
+    box-shadow: 0px 20px 20px 0px #0000001a;
     padding: 40px;
     height: 100%;
 }
 
 .card-testimonial img {
     margin: 0px 20px 20px 0px;
+}
+.section-wrapper .course-description {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section-wrapper .course-description .register-form {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 20px 20px 0px #0000001a;
+}
+.section-wrapper .course-description .register-form input,
+.section-wrapper .course-description .register-form textarea,
+.section-wrapper .course-description .register-form select {
+    border: 1px solid #ccc;
+}
+.section-wrapper .course-description .register-form input:focus,
+.section-wrapper .course-description .register-form textarea:focus,
+.section-wrapper .course-description .register-form select:focus {
+    outline: none;
+}
+.course-card {
+    width: 100%;
+}
+.course-card .course-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+@media (max-width: 680px) {
+    .section-wrapper .course-description {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+    .section-wrapper .course-description .register-form {
+        width: 100%;
+    }
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s, transform 1s;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.reveal-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s, transform 1s;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
 }
