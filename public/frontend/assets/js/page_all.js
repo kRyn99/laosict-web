@@ -6,32 +6,32 @@
  * @version
  * Copyright 2023. MIT licensed.
  */$(function () {
-  const swiper = new Swiper('.swiper', {
-    modules: [myPlugin],
-    slidesPerView: 'auto',
-    spaceBetween: 20,
-    // Navigation arrows
-    speed: 700,
-    threshold: "10px",
-    slidesPerGroup: 1,
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 1,
-        spaceBetween: 20
-      },
-      1024: {
-        slidesPerView: 3,
-        slidesPerGroup: 1,
-        spaceBetween: 20
-      }
-    },
-    navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev'
-    },
-    debugger: true
-  });
+  // const swiper = new Swiper('.swiper', {
+  //   modules: [myPlugin],
+  //   slidesPerView: 'auto',
+  //   spaceBetween: 20,
+  //   // Navigation arrows
+  //   speed: 700,
+  //   threshold: "10px",
+  //   slidesPerGroup: 1,
+  //   breakpoints: {
+  //     768: {
+  //       slidesPerView: 2,
+  //       slidesPerGroup: 1,
+  //       spaceBetween: 20
+  //     },
+  //     1024: {
+  //       slidesPerView: 3,
+  //       slidesPerGroup: 1,
+  //       spaceBetween: 20
+  //     }
+  //   },
+  //   navigation: {
+  //     nextEl: '.button-next',
+  //     prevEl: '.button-prev'
+  //   },
+  //   debugger: true
+  // });
   $('div[role=tablist] button').click(function () {
     var tabControl = $(this).data('reach-tab');
     $(this).attr('aria-selected', true);

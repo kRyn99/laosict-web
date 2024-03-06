@@ -80,61 +80,69 @@
             <section class="section-wrapper">
                 <div class="grid-items-container list-course-content">
                     <div class="course-card">
-                        <img src="/new-front-end/image/course-design-1.png" width="328">
+                        <img class="course-img" src="/new-front-end/image/course-design-1.png" width="328">
                         <div class="course-info">
-                            <div class="d-flex justify-content-between align-items-center">
+                           <div class="d-flex flex-col">
                                 <span class="ff-popins fw-700 fs-20">PHOTOSHOP/CANVA</span>
-                                <a class="ff-popins text-purple" href="#">See more</a>
-                            </div>
-                            <div class="ff-popins fs-16 text-lightgrey">
+                                <div class="ff-popins fs-16 text-lightgrey mt-1">
                                 <span class="mr-3">10 Sesstions</span>20 Hours
                             </div>
+
+                            </div>
+                            <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
                         </div>
                     </div>
                     <div class="course-card">
-                        <img src="/new-front-end/image/course-design-2.png" width="328">
+                        <img class="course-img" src="/new-front-end/image/course-design-2.png" width="328">
                         <div class="course-info">
-                            <div class="d-flex justify-content-between align-items-center">
+                           <div class="d-flex flex-col">
                                 <span class="ff-popins fw-700 fs-20">ILLUSTRATOR</span>
-                                <a class="ff-popins text-purple" href="#">See more</a>
-                            </div>
-                            <div class="ff-popins fs-16 text-lightgrey">
+                                <div class="ff-popins fs-16 text-lightgrey mt-1">
                                 <span class="mr-3">10 Sesstions</span>20 Hours
                             </div>
+
+                            </div>
+                           <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
                         </div>
                     </div>
-                    <div class="course-card">
-                        <img src="/new-front-end/image/course-design-3.png" width="328">
+                    <div  class="course-card">
+                        <img class="course-img" src="/new-front-end/image/course-design-3.png" width="328">
                         <div class="course-info">
-                            <div class="d-flex justify-content-between align-items-center">
+                           <div class="d-flex flex-col">
                                 <span class="ff-popins fw-700 fs-20">DESIGN PRINCIPLES</span>
-                                <a class="ff-popins text-purple" href="#">See more</a>
-                            </div>
-                            <div class="ff-popins fs-16 text-lightgrey">
+                                 <div class="ff-popins fs-16 text-lightgrey mt-1">
                                 <span class="mr-3">8 Sesstions</span>16 Hours
                             </div>
+
+                            </div>
+                                 <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
                         </div>
                     </div>
                     <div class="course-card">
-                        <img src="/new-front-end/image/course-design-4.png" width="328">
+                        <img class="course-img" src="/new-front-end/image/course-design-4.png" >
                         <div class="course-info">
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-col">
                                 <span class="ff-popins fw-700 fs-20">PROJECT</span>
-                                <a class="ff-popins text-purple" href="#">See more</a>
-                            </div>
-                            <div class="ff-popins fs-16 text-lightgrey">
+                                <div class="ff-popins fs-16 text-lightgrey mt-1">
                                 <span class="mr-3">8 Sesstions</span>16 Hours
                             </div>
+
+                            </div>
+                                <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
                         </div>
                     </div>
-                    <div class="course-description" id="register-form">
-                        <div>
+
+                </div>
+            </section>
+             <section class="section-wrapper">
+                <div class="course-description" id="register-form">
+                        <div class="course-detail reveal-left">
                             <p class="ff-popins fs-18 text-purple">COURSE CONTENT</p>
                             <p class="ff-popins fs-40 fw-700">Main subjects in this course</p>
                             <p class="ff-popins fs-18 text-lightgrey">Explore visual communication, design principles, typography, and software skills. Master the art of creating impactful and engaging designs.</p>
                         </div>
                         <!-- form gửi thông tin -->
-                        <form id="myForm" class="register-form" action="{{ route('frontend.graphic-design-post') }}"
+                        <form id="myForm" class="register-form reveal-right" action="{{ route('frontend.graphic-design-post') }}"
                             method="POST" id="feedbackForm">
                             {{ csrf_field() }}
 
@@ -178,7 +186,6 @@
                                 class="btn btn-register-form ff-popins fw-700 fs-18">{{ trans('home.feedback_gui') }}</button>
                         </form>
 
-
                         @if (Session::has('success'))
                             <div class="alert alert-success">
                                 {{ Session::get('success') }}
@@ -194,8 +201,8 @@
                             </script>
                         @endif
                     </div>
-                </div>
             </section>
+        </section>
         </section>
         <section class="article-wrapper">
             <section class="section-wrapper">
@@ -298,35 +305,21 @@
 @endsection
 @section('after_scripts')
     <script type="text/javascript">
-        let currentCardIndex = 0;
-        const cards = document.querySelectorAll(".card-benefit");
-        const totalCards = cards.length;
-
-        function focusOnCard(index) {
-            if (index < 0) {
-                currentCardIndex = totalCards - 1;
-            } else if (index >= totalCards) {
-                currentCardIndex = 0;
-            } else {
-                currentCardIndex = index;
-            }
-            cards.forEach((card) => {
-                card.style.transform = "translateX(-" + currentCardIndex + "00%)";
-            });
+       const revealLeftElement = document.querySelector('.reveal-left');
+    window.addEventListener('scroll', () => {
+        const revealPosition = revealLeftElement.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (revealPosition < windowHeight) {
+            revealLeftElement.classList.add('active');
         }
-
-        function prevCard() {
-            focusOnCard(currentCardIndex - 1);
+    });
+    const revealRightElement = document.querySelector('.reveal-right');
+    window.addEventListener('scroll', () => {
+        const revealPosition = revealRightElement.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (revealPosition < windowHeight) {
+            revealRightElement.classList.add('active');
         }
-
-        function nextCard() {
-            focusOnCard(currentCardIndex + 1);
-        }
-
-    function register() {
-    // Scroll to the form
-    const form = document.getElementById('list-course');
-    form.scrollIntoView({ behavior: 'smooth' });
-    }
+    });
 </script>
 @endsection

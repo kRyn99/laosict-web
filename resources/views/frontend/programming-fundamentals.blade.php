@@ -24,34 +24,34 @@
         </section>
         <section class="article-wrapper">
             <section class="section-wrapper">
-                <p class="fs-18 ff-popins text-purple">ABOUT COURSE</p>
-                <div class="flex-items-container">
+                <p class="fs-18 ff-popins text-purple text-center">ABOUT COURSE</p>
+                <div class="flex-items-container" style="justify-content: center; text-align:center">
                     <div>
-                        <p class="ff-popins fw-700 fs-40">What Do You Get From Us</p>
+                        <p class="ff-popins fw-700 fs-40">What Do You Get From Us?</p>
                         <p class="ff-popins fs-18 text-lightgrey">We provide excellent conditions for your development</p>
                     </div>
-                    <div class="benefit-wrapper">
-                        <div class="card-benefit">
-                            <div class="icon"><i class="fa-regular fa-user"></i></div>
-                            <p class="ff-popins fw-700 fs-18 text-white">Professional Teacher</p>
-                            <p class="ff-popins fs-14 text-gainsboro">Learn from experienced instructors dedicated to your success.<br>Receive personalized guidance and feedback.</p>
-                        </div>
-                        <div class="card-benefit">
-                            <div class="icon"><i class="fa-regular fa-user"></i></div>
-                            <p class="ff-popins fw-700 fs-18 text-white">Course Certificate</p>
-                            <p class="ff-popins fs-14 text-gainsboro">Earn a valuable certificate upon completion.<br>Showcase your skills to advance your career.</p>
-                        </div>
-                        <div class="card-benefit">
-                            <div class="icon"><i class="fa-regular fa-user"></i></div>
-                            <p class="ff-popins fw-700 fs-18 text-white">Interesting Learning</p>
-                            <p class="ff-popins fs-14 text-gainsboro">Enjoy dynamic and engaging lessons.<br>Explore real-world examples for practical understanding.</p>
-                        </div>
+                </div>
+                <div class="benefit-wrapper text-white">
+                    <div class="card-benefit">
+                        <div class="icon"><i class="fa-regular fa-user"></i></div>
+                        <p></p>
+                        <p class="ff-popins fw-700 fs-18">Professional Teacher</p>
+                        <p class="ff-popins fs-14 text-gray">Learn from experienced instructors dedicated to your success.<br>Receive personalized guidance and feedback.</p>
+                    </div>
+                    <div class="card-benefit">
+                        <div class="icon"><i class="fa-regular fa-user"></i></div>
+                        <p></p>
+                        <p class="ff-popins fw-700 fs-18">Course Certificate</p>
+                        <p class="ff-popins fs-14 text-gray">Earn a valuable certificate upon completion.<br>Showcase your skills to advance your career.</p>
+                    </div>
+                    <div class="card-benefit">
+                        <div class="icon"><i class="fa-regular fa-user"></i></div>
+                        <p></p>
+                        <p class="ff-popins fw-700 fs-18">Interesting Learning</p>
+                        <p class="ff-popins fs-14 text-gray">Enjoy dynamic and engaging lessons.<br>Explore real-world examples for practical understanding.</p>
                     </div>
                 </div>
-                <div class="d-flex justify-content-end mt-4">
-                    <button class="btn btn-warning btn-carousel-benefit" onclick="prevCard()"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="btn btn-warning btn-carousel-benefit ml-4" onclick="nextCard()"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
+
             </section>
         </section>
         <section class="article-wrapper bg-purple">
@@ -82,61 +82,70 @@
             <section class="section-wrapper">
                 <div class="grid-items-container list-course-content">
                     <div class="course-card">
-                        <img src="/new-front-end/image/course_1.png">
+                        <img class="course-img" src="/new-front-end/image/course_1.png">
                         <div class="course-info">
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-col">
                                 <span class="ff-popins fw-700 fs-22">LEARN HTML</span>
-                                <a class="ff-popins text-purple" href="#">See more</a>
-                            </div>
-                            <div class="ff-popins fs-16 text-lightgrey">
+                                 <div class="ff-popins fs-16 text-lightgrey">
                                 <span class="mr-3">3 Sesstions</span>9 Hours
                             </div>
+
+                            </div>
+
+                             <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
                         </div>
                     </div>
                     <div class="course-card">
-                        <img src="/new-front-end/image/course_2.png">
+                        <img class="course-img" src="/new-front-end/image/course_2.png">
                         <div class="course-info">
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-col">
                                 <span class="ff-popins fw-700 fs-22">LEARN CSS</span>
-                                <a class="ff-popins text-purple" href="#">See more</a>
-                            </div>
-                            <div class="ff-popins fs-16 text-lightgrey">
+                                <div class="ff-popins fs-16 text-lightgrey">
                                 <span class="mr-3">6 Sesstions</span>18 Hours
                             </div>
+
+                            </div>
+
+                            <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
                         </div>
                     </div>
                     <div class="course-card">
-                        <img src="/new-front-end/image/course_3.png">
+                        <img class="course-img" src="/new-front-end/image/course_3.png">
                         <div class="course-info">
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-col">
                                 <span class="ff-popins fw-700 fs-22">JavaScript</span>
-                                <a class="ff-popins text-purple" href="#">See more</a>
-                            </div>
-                            <div class="ff-popins fs-16 text-lightgrey">
+                                <div class="ff-popins fs-16 text-lightgrey">
                                 <span class="mr-3">9 Sesstions</span>27 Hours
                             </div>
+                            </div>
+
+                            <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
                         </div>
                     </div>
                     <div class="course-card">
-                        <img src="/new-front-end/image/course_4.png">
+                        <img class="course-img" src="/new-front-end/image/course_4.png">
                         <div class="course-info">
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-col">
                                 <span class="ff-popins fw-700 fs-22">Project</span>
-                                <a class="ff-popins text-purple" href="#">See more</a>
-                            </div>
-                            <div class="ff-popins fs-16 text-lightgrey">
+                               <div class="ff-popins fs-16 text-lightgrey">
                                 <span class="mr-3">5 Sesstions</span>15 Hours
                             </div>
+                            </div>
+
+                            <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
                         </div>
                     </div>
-                    <div class="course-description" id="register-form">
-                        <div>
+                </div>
+            </section>
+            <section class="section-wrapper">
+                <div class="course-description" id="register-form">
+                        <div class="course-detail reveal-left">
                             <p class="ff-popins fs-18 text-purple">COURSE CONTENT</p>
                             <p class="ff-popins fs-40 fw-700">Main subjects in this course</p>
                             <p class="ff-popins fs-18 text-lightgrey">Explore visual communication, design principles, typography, and software skills. Master the art of creating impactful and engaging designs.</p>
                         </div>
                         <!-- form gửi thông tin -->
-                        <form id="myForm" class="register-form" action="{{ route('frontend.graphic-design-post') }}"
+                        <form id="myForm" class="register-form reveal-right" action="{{ route('frontend.graphic-design-post') }}"
                             method="POST" id="feedbackForm">
                             {{ csrf_field() }}
 
@@ -195,7 +204,6 @@
                             </script>
                         @endif
                     </div>
-                </div>
             </section>
         </section>
         <section class="article-wrapper">
@@ -249,35 +257,23 @@
 @endsection
 @section('after_scripts')
 <script type="text/javascript">
-    let currentCardIndex = 0;
-    const cards = document.querySelectorAll(".card-benefit");
-    const totalCards = cards.length;
-
-    function focusOnCard(index) {
-    if (index < 0) {
-        currentCardIndex = totalCards - 1;
-    } else if (index >= totalCards) {
-        currentCardIndex = 0;
-    } else {
-        currentCardIndex = index;
-    }
-    cards.forEach((card) => {
-        card.style.transform = "translateX(-" + currentCardIndex +  "00%)";
+    const revealLeftElement = document.querySelector('.reveal-left');
+    window.addEventListener('scroll', () => {
+        const revealPosition = revealLeftElement.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (revealPosition < windowHeight) {
+            revealLeftElement.classList.add('active');
+        }
     });
-    }
+    const revealRightElement = document.querySelector('.reveal-right');
+    window.addEventListener('scroll', () => {
+        const revealPosition = revealRightElement.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (revealPosition < windowHeight) {
+            revealRightElement.classList.add('active');
+        }
+    });
 
-    function prevCard() {
-    focusOnCard(currentCardIndex - 1);
-    }
-
-    function nextCard() {
-    focusOnCard(currentCardIndex + 1);
-    }
-
-    function register() {
-    // Scroll to the form
-    const form = document.getElementById('register-form');
-    form.scrollIntoView({ behavior: 'smooth' });
-    }
 </script>
 @endsection
+
