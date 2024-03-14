@@ -1,29 +1,32 @@
 <footer>
     <div class="footer-container">
         <div class="group-1">
-            <div class="logo">
-                <a href="javascript:void(0)" title="{{ \App\Helpers::getSettings($settings, 'website_name') }}">
-                    <img src="{{ url(\App\Helpers::getSettings($settings, 'website_logo_footer')) }}" alt="" class="lazyload">
-                </a>
-            </div>
             <div class="content">
                 <h2 class="title">{{ trans('home.footer_cham_soc_khach_hang') }}</h2>
-                <h3>{{ trans('settings.company_name') }}</h3>
                 <p><span class="text-white text-opacity-50">{{ trans('home.footer_dia_chi') }}: </span>{{ trans('settings.company_address') }}</p>
-                <p><span class="text-white text-opacity-50">{{ trans('home.footer_hotline') }}: </span> <a href="tel:{{ \App\Helpers::getSettings($settings, 'company_tel') }}" title="Tel">{{ \App\Helpers::getSettings($settings, 'company_tel') }}</a></p>
-                <p><span class="text-white text-opacity-50">Email: </span> <a href="mailto:{{ \App\Helpers::getSettings($settings, 'company_email') }}">{{ \App\Helpers::getSettings($settings, 'company_email') }}</a></p>
-                <p><span class="text-white text-opacity-50">{{ trans('home.footer_tong_dai_goi_ra') }}: </span> <a href="whatapp:{{ \App\Helpers::getSettings($settings, 'company_whatsapp') }}" title="Whatapp">{{ \App\Helpers::getSettings($settings, 'company_whatsapp') }}</a></p>
+                <p><span class="text-white text-opacity-50">{{ trans('home.footer_hotline') }}: </span> <a class="none_hover" href="tel:{{ \App\Helpers::getSettings($settings, 'company_tel') }}" title="Tel">{{ \App\Helpers::getSettings($settings, 'company_tel') }}</a></p>
+                <p><span class="text-white text-opacity-50">Email: </span> <a  class="none_hover" href="mailto:{{ \App\Helpers::getSettings($settings, 'company_email') }}">{{ \App\Helpers::getSettings($settings, 'company_email') }}</a></p>
+
             </div>
         </div>
-        <!-- <div class="group-2">
+        <div class="foot-center">
+             <h2 class="title">TƯ VẤN TUYỂN SINH</h2>
+             <div class="content">
+                <!-- Phạm Thị Mẫn - 0963023185 - phamman@techmaster.vn -->
+                <p><span class="text-white text-opacity-50">Minh Tran - <a  class="none_hover" href="mailto:{{ \App\Helpers::getSettings($settings, 'company_email') }}">{{ \App\Helpers::getSettings($settings, 'company_email') }}</a> - <a class="none_hover" href="tel:020 9432 1223" title="Tel">020 9432 1223</a></p>
+                <p><span class="text-white text-opacity-50">Phạm Thị Mẫn - <a  class="none_hover" href="mailto:{{ \App\Helpers::getSettings($settings, 'company_email') }}">{{ \App\Helpers::getSettings($settings, 'company_email') }}</a> - <a class="none_hover" href="tel:{{ \App\Helpers::getSettings($settings, 'company_tel') }}" title="Tel">{{ \App\Helpers::getSettings($settings, 'company_tel') }}</a></p>
+                <p><span class="text-white text-opacity-50">Phạm Thị Mẫn - <a  class="none_hover" href="mailto:{{ \App\Helpers::getSettings($settings, 'company_email') }}">{{ \App\Helpers::getSettings($settings, 'company_email') }}</a> - <a class="none_hover" href="tel:{{ \App\Helpers::getSettings($settings, 'company_tel') }}" title="Tel">{{ \App\Helpers::getSettings($settings, 'company_tel') }}</a></p>
+            </div>
+        </div>
+        <div class="group-2">
             <div>
-                <h2 class="title">{{ trans('home.footer_tai_ung_dung_tren_dt') }}</h2>
+            <h2 class="title">{{ trans('home.footer_tai_ung_dung_tren_dt') }}</h2>
                 <div class="content">
                     <a target="_blank" rel="noreferrer" href="{{ \App\Helpers::getSettings($settings, 'company_ios_link') }}">
-                        <img alt="" aria-hidden="true" src="/frontend/assets/img/btn-appstore.jpg">
+                        <img alt="" style="border-radius:8px" aria-hidden="true" src="/frontend/assets/img/btn-appstore.jpg">
                     </a>
                     <a target="_blank" rel="noreferrer" href="{{ \App\Helpers::getSettings($settings, 'company_android_link') }}">
-                        <img alt="Google Play" src="/frontend/assets/img/btn-ggplay.jpg" decoding="async" data-nimg="intrinsic">
+                        <img alt="Google Play" style="border-radius:8px" src="/frontend/assets/img/btn-ggplay.jpg" decoding="async" data-nimg="intrinsic">
                     </a>
                 </div>
             </div>
@@ -35,7 +38,7 @@
                     <a href="{{ \App\Helpers::getSettings($settings, 'company_wechat_link') }}" target="_blank"><img src="/frontend/assets/img/icon-wechat.png" alt="" class="lazyload"></a>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 </footer>
 

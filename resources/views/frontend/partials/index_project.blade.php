@@ -1,4 +1,6 @@
-<div class="donation-item">
+<div style="position: relative;height:388px">
+    <div class="ribbon"><span>Coming soon</span></div>
+    <div class="donation-item">
     <div class="dn-img aspect-w-15 aspect-h-8">
         <span>
             <!-- assets/img/demo-img-post.jpg => 345 x 184 -->
@@ -68,13 +70,13 @@
                     <span>{{ trans('home.button_quyen_gop') }}</span>
                 </a>
                 @endif
-                
+
             </div>
         </div>
         <div class="dn-result">
             <div class="grow">
                 <div>{{ trans('home.section_article1_place') }}</div>
-                <div>Online</div>
+                <div>Onlab/Online</div>
             </div>
             <div class="grow">
                 <div>{{ trans('home.section_article1_fee') }}</div>
@@ -87,3 +89,4 @@
     </div>
 </div>
 
+</div>
