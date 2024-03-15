@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="group-2">
-            <div>
+            <!-- <div>
             <h2 class="title">{{ trans('home.footer_tai_ung_dung_tren_dt') }}</h2>
                 <div class="content">
                     <a target="_blank" rel="noreferrer" href="{{ \App\Helpers::getSettings($settings, 'company_ios_link') }}">
@@ -28,16 +28,16 @@
                     <a target="_blank" rel="noreferrer" href="{{ \App\Helpers::getSettings($settings, 'company_android_link') }}">
                         <img alt="Google Play" style="border-radius:8px" src="/frontend/assets/img/btn-ggplay.jpg" decoding="async" data-nimg="intrinsic">
                     </a>
-                </div>
+                </div> -->
             </div>
-            <div class="group-3 mt-6">
+            <!-- <div class="group-3 mt-6">
                 <h2 class="title">{{ trans('home.footer_ket_noi_voi_chung_toi') }}</h2>
                 <div class="content">
                     <a href="{{ \App\Helpers::getSettings($settings, 'company_whatapp_link') }}" target="_blank"><img src="/frontend/assets/img/icon-whatapp.png" alt="" class="lazyload"></a>
                     <a href="{{ \App\Helpers::getSettings($settings, 'facebook_link') }}"><img src="/frontend/assets/img/facebook.svg" alt="" class="lazyload"></a>
                     <a href="{{ \App\Helpers::getSettings($settings, 'company_wechat_link') }}" target="_blank"><img src="/frontend/assets/img/icon-wechat.png" alt="" class="lazyload"></a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </footer>
