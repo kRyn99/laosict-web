@@ -1,13 +1,13 @@
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="/uploads/banner1.png" />
+        <img src="/uploads/banner_dung.png" />
       </div>
       <div class="swiper-slide">
-       <img src="/uploads/banner2.png" />
+       <img src="/uploads/banner_dung_1.png" />
       </div>
       <div class="swiper-slide">
-        <img src="/uploads/banner3.png" />
+        <img src="/uploads/banner_dung_2.png" />
       </div>
     </div>
     <div class="swiper-button-next"></div>

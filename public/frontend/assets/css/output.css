@@ -6897,16 +6897,21 @@ div[role="tabpanel"] {
 .swiper-slide img {
     width: 100%;
     height: 100%;
-    object-fit: inherit;
 }
 @media (max-width: 640px) {
     .swiper {
         width: 100%;
-        height: 66vh;
+        height: 30vh;
     }
 }
 
 @media (min-width: 640px) {
+    .swiper {
+        width: 100%;
+        height: 50vh;
+    }
+}
+@media (min-width: 1024px) {
     .swiper {
         width: 100%;
         height: 70vh;
