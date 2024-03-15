@@ -30,14 +30,14 @@
                     </a>
                 </div>
             </div>
-            <div class="group-3 mt-6">
+            <!-- <div class="group-3 mt-6">
                 <h2 class="title">{{ trans('home.footer_ket_noi_voi_chung_toi') }}</h2>
                 <div class="content">
                     <a href="{{ \App\Helpers::getSettings($settings, 'company_whatapp_link') }}" target="_blank"><img src="/frontend/assets/img/icon-whatapp.png" alt="" class="lazyload"></a>
                     <a href="{{ \App\Helpers::getSettings($settings, 'facebook_link') }}"><img src="/frontend/assets/img/facebook.svg" alt="" class="lazyload"></a>
                     <a href="{{ \App\Helpers::getSettings($settings, 'company_wechat_link') }}" target="_blank"><img src="/frontend/assets/img/icon-wechat.png" alt="" class="lazyload"></a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </footer>
