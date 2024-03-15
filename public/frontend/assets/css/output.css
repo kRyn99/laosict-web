@@ -6029,7 +6029,7 @@ div[role="tabpanel"] {
 .tabpanel-container {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 5rem;
 }
 @media (min-width: 460px) {
     .tabpanel-container {
@@ -6050,12 +6050,13 @@ div[role="tabpanel"] {
 }
 @media (min-width: 1024px) {
     .tabpanel-container {
-        gap: 2rem;
+        gap: 3rem;
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 .donation-item {
+    cursor: pointer;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -6397,8 +6398,6 @@ div[role="tabpanel"] {
 
 .dn-result .grow:nth-child(3) {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
 }
 
 .dn-result .grow:nth-child(3) span {
@@ -6426,10 +6425,38 @@ div[role="tabpanel"] {
 }
 
 .btn-more {
-    padding-top: 1.5rem;
+    padding-top: 3rem;
     text-align: center;
 }
 
+@media (min-width: 768px) {
+    .btn-more.btn-padding-top {
+        padding-top: 4rem;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .btn-more {
+        padding-top: 0;
+        text-align: center;
+    }
+    .btn-more.btn-padding-top {
+        padding-top: 6rem;
+        text-align: center;
+    }
+}
+@media (min-width: 900px) {
+    .btn-more.btn-padding-top {
+        padding-top: 5rem;
+        text-align: center;
+    }
+}
+@media (min-width: 1024px) {
+    .btn-more.btn-padding-top {
+        padding-top: 3rem;
+        text-align: center;
+    }
+}
 .btn-more button {
     border-radius: 9999px;
     border-width: 1px;
@@ -6870,11 +6897,12 @@ div[role="tabpanel"] {
 .swiper-slide img {
     width: 100%;
     height: 100%;
+    object-fit: inherit;
 }
 @media (max-width: 640px) {
     .swiper {
         width: 100%;
-        height: 50vh;
+        height: 66vh;
     }
 }
 
@@ -7200,7 +7228,7 @@ div[role="tabpanel"] {
     position: relative;
     display: block;
 }
-.news-img-container .show-on-mobile a span img{
+.news-img-container .show-on-mobile a span img {
     height: 100%;
     object-fit: cover;
 }
@@ -9772,5 +9800,117 @@ video {
 
     .lg\:text-lg {
         font-size: 1.125rem;
+    }
+}
+
+/* microsoft office */
+.banner-microsoft-office {
+    width: 100%;
+    height: 80vh;
+    background-color: #ececec;
+    display: flex;
+}
+.banner-microsoft-office .left {
+    width: 30%;
+}
+.banner-microsoft-office .left div {
+    position: absolute;
+    top: 280px;
+}
+@media (min-width: 1024px) {
+    .banner-microsoft-office {
+        padding: 0 140px;
+    }
+}
+
+.banner-microsoft-office .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+@media (max-width: 900px) {
+    .banner-microsoft-office .right {
+        display: none;
+    }
+    .banner-microsoft-office .left {
+        width: 100%;
+    }
+    .banner-microsoft-office .left div {
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/* .mo-course-design {
+    display: flex;
+    gap: 10px;
+}
+
+.mo-course-design-left {
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 75px;
+}
+.mo-course-design-right {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+} */
+.mo-course-design {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 200px;
+}
+@media (max-width: 690px) {
+    .mo-course-design {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 30px;
+    }
+}
+.mo-course-design-left p {
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+}
+.mo-course-design-left span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #827a7a;
+}
+.mo-course-design-right {
+    display: flex;
+}
+.column {
+    flex: 1;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.column div {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 400;
+}
+.mo-desImage {
+    border-radius: 14% 60% 45% 25% / 43% 37% 41% 26%;
+    overflow: hidden;
+}
+.mo-desImage img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 690px) {
+    .mo-desImage {
+        height: 100%;
+        border-radius: 20%;
+        overflow: hidden;
     }
 }

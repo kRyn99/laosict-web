@@ -1,4 +1,4 @@
-<div style="position: relative;height:388px">
+<div style="position: relative;height:388px;cusor:pointer">
     <div class="ribbon"><span>Coming soon</span></div>
     <div class="donation-item">
     <div class="dn-img aspect-w-15 aspect-h-8">
@@ -60,18 +60,7 @@
                 <div>18:30 - 21:00
                 </div>
             </div>
-            <div class="grow">
-                @if ($project->name=='Programming Fundamentals' || $project->name=='Graphic Design')
-                <a title="{{ $project->name }}" class="stretched-link" href="{{ route('frontend.main', $project->slug) }}">
-                    <span>{{ trans('home.button_quyen_gop') }}</span>
-                </a>
-                @else
-                <a title="{{ $project->name }}" class="stretched-link" href="">
-                    <span>{{ trans('home.button_quyen_gop') }}</span>
-                </a>
-                @endif
 
-            </div>
         </div>
         <div class="dn-result">
             <div class="grow">
@@ -86,6 +75,33 @@
             <div class="grow">
             </div>
         </div>
+        <div class="grow">
+                @if ($project->name=='Programming Fundamentals' || $project->name=='Graphic Design' || $project->name=='Microsoft Office')
+                <a style="margin-top: 4px;
+                            width: 100%;
+                            text-align: center;
+                            text-decoration: none;
+                            border: 1px solid orange;
+                            padding: 4px 8px;
+                            border-radius: 8px;
+                            color: red"
+                            title="{{ $project->name }}" class="stretched-link" href="{{ route('frontend.main', $project->slug) }}">
+                    <span>{{ trans('home.button_quyen_gop') }}</span>
+                </a>
+                @else
+                <a  style="margin-top: 4px;
+                            width: 100%;
+                            text-align: center;
+                            text-decoration: none;
+                            border: 1px solid orange;
+                            padding: 4px 8px;
+                            border-radius: 8px;
+                            color: red;" title="{{ $project->name }}" class="stretched-link" href="">
+                    <span>{{ trans('home.button_quyen_gop') }}</span>
+                </a>
+                @endif
+
+            </div>
     </div>
 </div>
 

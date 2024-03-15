@@ -145,4 +145,28 @@ class CourseController extends Controller
 
         return view('frontend.graphic-design', compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
     }
+
+    public function microsoftOffice()
+    {
+        if (session()->has('locale')) {
+            App::setLocale(session()->get('locale'));
+        }
+        $page = 'index';
+        $settings = Setting::pluck('value', 'key')->all();
+
+        $meta = [];
+        $meta['meta_title'] = trans('settings.meta_index_title');
+        $meta['meta_desc'] = trans('settings.meta_index_desc');
+        $meta['meta_keywords'] = trans('settings.meta_index_keywords');
+        $meta['meta_image'] = url($settings['website_logo_header']);
+        $meta['meta_url'] = url('/');
+
+        $currentLocale = App::getLocale();
+        $banner_pc = url($settings['index_banner_pc_' . $currentLocale]);
+        $banner_mobile = url($settings['index_banner_mobile_' . $currentLocale]);
+
+
+
+        return view('frontend.microsoft-office', compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
+    }
 }
