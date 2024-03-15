@@ -36,4 +36,6 @@ Route::group([
     Route::crud('district', 'DistrictCrudController');
     Route::crud('language-line', 'LanguageLineCrudController');
     Route::get('language-line/reloadLanguages', 'LanguageLineCrudController@reloadLanguages');
+    Route::crud('teacher', 'TeacherCrudController');
+    Route::crud('course', 'CourseCrudController');
 }); // this should be the absolute last line of this file
