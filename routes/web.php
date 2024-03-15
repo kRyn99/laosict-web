@@ -20,7 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 
 
-
+Route::post('microsoft-office','App\Http\Controllers\CourseController@microsoft_office_post')->name('frontend.microsoft-ofice-post');
+Route::get('microsoft-office','App\Http\Controllers\CourseController@microsoftOffice')->name('frontend.microsoft-ofice');
 Route::post('graphic-design','App\Http\Controllers\CourseController@graphic_design_post')->name('frontend.graphic-design-post');
 Route::get('graphic-design','App\Http\Controllers\CourseController@graphicDesignCourse')->name('frontend.graphic-design');
 Route::post('programming-fundamentals','App\Http\Controllers\CourseController@programming_fundamentalsCourse_post')->name('frontend.programming-fundamentals-post');
