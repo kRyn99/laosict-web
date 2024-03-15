@@ -241,13 +241,13 @@
             <section class="section-wrapper">
                 <p class="ff-popins fs-40 fw-700 text-center">Requirements</p>
                 <div class="flex gap-10 justify-between align-center flex-wrap">
-                    <div class="flex gap-5 align-center justify-center">
-                        <img style="object-fit: contain" src="/new-front-end/image/mo_f_1.png" alt="" width="30">
-                        <span style="color:#827A7A">Students need a laptop when participating in this course</span>
-                    </div>
-                    <div class="flex gap-5 align-center justify-center">
+                    <div class="flex gap-5 justify-center flex-1" style="align-items:center">
                         <img style="object-fit: contain" src="/new-front-end/image/mo_f_2.png" alt="" width="30">
-                        <span style="color:#827A7A">Students need a laptop when participating in this course</span>
+                        <span style="color:#827A7A">Students need a laptop when participating in this course </span>
+                    </div>
+                    <div class="flex gap-5  justify-center flex-1" style="align-items:center">
+                        <img style="object-fit: contain" src="/new-front-end/image/mo_f_1.png" alt="" width="30">
+                        <span style="color:#827A7A">Microsoft Office Installed in your laptop</span>
                     </div>
                 </div>
             </section>
