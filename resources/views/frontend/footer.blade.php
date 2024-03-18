@@ -12,10 +12,7 @@
         <div class="foot-center">
              <h2 class="title">TƯ VẤN TUYỂN SINH</h2>
              <div class="content">
-                <!-- Phạm Thị Mẫn - 0963023185 - phamman@techmaster.vn -->
-                <p><span class="text-white text-opacity-50">Minh Tran - <a  class="none_hover" href="mailto:{{ \App\Helpers::getSettings($settings, 'company_email') }}">{{ \App\Helpers::getSettings($settings, 'company_email') }}</a> - <a class="none_hover" href="tel:020 9432 1223" title="Tel">020 9432 1223</a></p>
-                <p><span class="text-white text-opacity-50">Phạm Thị Mẫn - <a  class="none_hover" href="mailto:{{ \App\Helpers::getSettings($settings, 'company_email') }}">{{ \App\Helpers::getSettings($settings, 'company_email') }}</a> - <a class="none_hover" href="tel:{{ \App\Helpers::getSettings($settings, 'company_tel') }}" title="Tel">{{ \App\Helpers::getSettings($settings, 'company_tel') }}</a></p>
-                <p><span class="text-white text-opacity-50">Phạm Thị Mẫn - <a  class="none_hover" href="mailto:{{ \App\Helpers::getSettings($settings, 'company_email') }}">{{ \App\Helpers::getSettings($settings, 'company_email') }}</a> - <a class="none_hover" href="tel:{{ \App\Helpers::getSettings($settings, 'company_tel') }}" title="Tel">{{ \App\Helpers::getSettings($settings, 'company_tel') }}</a></p>
+                <p><span class="text-white text-opacity-50">Minh Tran - <a  class="none_hover" href="mailto:{{ \App\Helpers::getSettings($settings, 'company_email') }}">{{ \App\Helpers::getSettings($settings, 'company_email') }}</a> - <a class="none_hover" href="tel:02094088866" title="Tel">02094088866</a></p>
             </div>
         </div>
         <div class="group-2">
