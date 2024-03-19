@@ -55,23 +55,7 @@ class CourseController extends Controller
     }
 
     public function graphic_design_post(Request $request)
-    {   if (session()->has('locale')) {
-        App::setLocale(session()->get('locale'));
-    }
-    $page = 'index';
-    $settings = Setting::pluck('value', 'key')->all();
-
-    $meta = [];
-    $meta['meta_title'] = trans('settings.meta_index_title');
-    $meta['meta_desc'] = trans('settings.meta_index_desc');
-    $meta['meta_keywords'] = trans('settings.meta_index_keywords');
-    $meta['meta_image'] = url($settings['website_logo_header']);
-    $meta['meta_url'] = url('/');
-
-    $currentLocale = App::getLocale();
-    $banner_pc = url($settings['index_banner_pc_' . $currentLocale]);
-    $banner_mobile = url($settings['index_banner_mobile_' . $currentLocale]);
-
+    {
 
         $data = [
             'name' => $request->input('name'),
@@ -85,27 +69,11 @@ class CourseController extends Controller
 
         Register::create($data);
         Session::flash('success', trans('home.message_register'));
-        return back()->with(compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
+        return back();
     }
 
     public function programming_fundamentalsCourse_post(Request $request)
-    {   if (session()->has('locale')) {
-        App::setLocale(session()->get('locale'));
-    }
-    $page = 'index';
-    $settings = Setting::pluck('value', 'key')->all();
-
-    $meta = [];
-    $meta['meta_title'] = trans('settings.meta_index_title');
-    $meta['meta_desc'] = trans('settings.meta_index_desc');
-    $meta['meta_keywords'] = trans('settings.meta_index_keywords');
-    $meta['meta_image'] = url($settings['website_logo_header']);
-    $meta['meta_url'] = url('/');
-
-    $currentLocale = App::getLocale();
-    $banner_pc = url($settings['index_banner_pc_' . $currentLocale]);
-    $banner_mobile = url($settings['index_banner_mobile_' . $currentLocale]);
-
+    {
 
         $data = [
             'name' => $request->input('name'),
@@ -119,8 +87,40 @@ class CourseController extends Controller
 
         Register::create($data);
         Session::flash('success', trans('home.message_register'));
-        return back()->with(compact('page', 'settings', 'banner_pc', 'banner_mobile'))->with($meta);
+        return back();
     }
+
+    public function microsoft_office_post(Request $request)
+    {
+        $data = [
+            'name' => $request->input('name'),
+            'phone' => $request->input('phone'),
+            'email' => $request->input('email'),
+            'work' => $request->input('work'),
+            'message' => $request->input('message'),
+            'course_name' => 'microsoft office',
+        ];
+
+        // Lưu dữ liệu
+        $register = Register::create($data);
+
+        if ($register) {
+            // Nếu thành công, trả về phản hồi JSON cho AJAX
+            if ($request->ajax()) {
+                return response()->json(['success' => trans('home.message_register'),'thank' => trans('home.message_register')]);
+            }
+            // Nếu không phải AJAX request, có thể chuyển hướng hoặc trả về view thông thường
+            return redirect()->back()->with('success', trans('home.message_register'));
+        } else {
+            // Nếu không thành công, trả về phản hồi JSON cho AJAX
+            if ($request->ajax()) {
+                return response()->json(['success' => false]);
+            }
+            // Nếu không phải AJAX request, có thể chuyển hướng hoặc trả về view thông thường
+            return redirect()->back()->with('error', trans('home.message_register_failed'));
+        }
+    }
+
 
     public function graphicDesignCourse()
     {

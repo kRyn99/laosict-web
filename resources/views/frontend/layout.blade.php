@@ -93,7 +93,8 @@
 <script src="/frontend/assets/js/swiper-bundle.esm.browser.min.js"></script>
 <script src="/frontend/assets/js/jquery-1.11.1.min.js"></script>
 <script src="/frontend/assets/js/lazysizes.min.js"></script>
-
+{{-- nam --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- lightgallery plugins -->
 <script src="/frontend/assets/js/lightgallery.umd.js"></script>
 <script src="/frontend/assets/js/lg-zoom.umd.js"></script>
