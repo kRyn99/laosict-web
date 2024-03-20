@@ -173,36 +173,47 @@
                         </div>
                         <!-- form gửi thông tin -->
                         <form id="myForm" class="register-form reveal-right" action="{{ route('frontend.graphic-design-post') }}"
-                            method="POST" id="feedbackForm">
+                            method="POST">
                             {{ csrf_field() }}
 
                             <p class="ff-popins fs-18 text-center text-yellow">Register now!</p>
-                            <input type="text" placeholder="{{ trans('home.feedback_name') }}" id="name"
-                                name="name" required>
-                            <input type="number" placeholder="{{ trans('home.feedback_phone') }}" id="phone"
-                                name="phone" required>
-                            <input type="email" placeholder="{{ trans('home.feedback_email') }}" id="email"
-                                name="email" required>
+                            <div class="form-group">
+                                <input id="name" name="name" type="text" placeholder="{{ trans('home.feedback_name') }}" class="form-control" />
+                                <span class="form-message"></span>
+                            </div>
 
-                            <select id="options" onchange="updateInputValue()" name="options" required>
-                                <option value="">{{ trans('home.ban_la') }}</option>
-                                <option value="{{ trans('home.doi_tuong') }}">{{ trans('home.doi_tuong') }}</option>
-                                <option value="{{ trans('home.nguoi_di_lam') }}">{{ trans('home.nguoi_di_lam') }}
-                                </option>
-                                <option value="{{ trans('home.hoc_sinh') }}">{{ trans('home.hoc_sinh') }}</option>
-                                <option value="{{ trans('home.doi_tuong_khac') }}">{{ trans('home.doi_tuong_khac') }}
-                                </option>
-                            </select>
+                            <div class="form-group">
+                                <input type="number" placeholder="{{ trans('home.feedback_phone') }}" id="phone"
+                                    name="phone"class="form-control"/>
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <input id="email" name="email" type="text" placeholder="{{ trans('home.feedback_email') }}" class="form-control" />
+                                <span class="form-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <select id="options" onchange="updateInputValue()" name="options">
+                                    <option value="">{{ trans('home.ban_la') }}</option>
+                                    <option value="{{ trans('home.doi_tuong') }}">{{ trans('home.doi_tuong') }}</option>
+                                    <option value="{{ trans('home.nguoi_di_lam') }}">{{ trans('home.nguoi_di_lam') }}
+                                    </option>
+                                    <option value="{{ trans('home.hoc_sinh') }}">{{ trans('home.hoc_sinh') }}</option>
+                                    <option value="{{ trans('home.doi_tuong_khac') }}">{{ trans('home.doi_tuong_khac') }}
+                                    </option>
+                                </select>
+                                <span class="form-message"></span>
+                            </div>
+
                             <input type="hidden" name="work" id="work" readonly required>
-
                             <script>
                                 function updateInputValue() {
                                     var selectElement = document.getElementById("options");
                                     var selectedOption = selectElement.options[selectElement.selectedIndex].text;
                                     var check = document.getElementById("work").value;
-
                                     document.getElementById("work").value = selectedOption;
                                 }
+
                             </script>
 
                             <textarea placeholder="{{ trans('home.feedback_content') }}" id="message" name="message"></textarea>
@@ -215,6 +226,46 @@
                             <button id="buttonSubmitFeedback" type="submit"
                                 class="btn btn-register-form ff-popins fw-700 fs-18">{{ trans('home.feedback_gui') }}</button>
                         </form>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        <script>
+                            document.getElementById("myForm").addEventListener("submit", function(event) {
+                                event.preventDefault(); // Ngăn chặn hành động mặc định của biểu mẫu
+                                var formData = new FormData(this);
+
+                                // Gửi dữ liệu bằng AJAX
+                                $.ajax({
+                                    url: "{{ route('frontend.programming-fundamentals-post') }}",
+                                    type: "POST",
+                                    data: formData,
+                                    processData: false,
+                                    contentType: false,
+                                    success: function(response) {
+                                        Swal.fire({
+                                            title: response.success,
+                                            text: "LaosICT Center " + response.thank,
+                                            icon: "success",
+                                            onClose: function() {
+                                                $('#myForm')[0].reset(); // Đặt lại form về trạng thái rỗng
+                                            }
+                                        });
+                                    },
+                                    error: function(xhr, status, error) {
+                                        // Xử lý lỗi (nếu có)
+                                    }
+                                });
+                            });
+                        </script>
+
+
 
                         @if (Session::has('success'))
                             <div class="alert alert-success">
@@ -283,6 +334,7 @@
     </div>
 @endsection
 @section('after_scripts')
+<script src="/new-front-end/js/validation.js"></script>
 <script type="text/javascript">
     const revealLeftElement = document.querySelector('.reveal-left');
     window.addEventListener('scroll', () => {
@@ -299,6 +351,20 @@
         if (revealPosition < windowHeight) {
             revealRightElement.classList.add('active');
         }
+    });
+
+
+    Validator({
+        form : '#myForm',
+        errorSelector: '.form-message',
+        formGroupSelector: '.form-group',
+        rules : [
+            Validator.isRequiered('#name','Vui lòng nhập tên'),
+            Validator.isRequiered('#email','Vui lòng nhập email'),
+            Validator.isEmail('#email','Vui lòng nhập đúng định dạng email'),
+            Validator.isNumberPhone('#phone','Vui lòng nhập số điện thoại hợp lệ (từ 8 đến 13 chữ số)'),
+            Validator.isRequiered('#options',"Vui lòng chọn trường này"),
+        ],
     });
 
 </script>
