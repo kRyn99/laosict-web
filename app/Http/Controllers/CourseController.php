@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Session;
 use Backpack\Settings\app\Models\Setting;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Illuminate\Support\Facades\Validator;
 
 class CourseController extends Controller
 {
@@ -69,54 +70,33 @@ class CourseController extends Controller
 
         $register = Register::create($data);
 
-        if ($register) {
-            // Nếu thành công, trả về phản hồi JSON cho AJAX
-            if ($request->ajax()) {
-                return response()->json(['success' => trans('home.message_register'),'thank' => trans('home.message_register')]);
-            }
-            // Nếu không phải AJAX request, có thể chuyển hướng hoặc trả về view thông thường
-            return redirect()->back()->with('success', trans('home.message_register'));
-        } else {
-            // Nếu không thành công, trả về phản hồi JSON cho AJAX
-            if ($request->ajax()) {
-                return response()->json(['success' => false]);
-            }
-            // Nếu không phải AJAX request, có thể chuyển hướng hoặc trả về view thông thường
-            return redirect()->back()->with('error', trans('home.message_register_failed'));
+        if ($request->ajax()) {
+            return response()->json(['success' => true, 'thank' => trans('home.message_register')]);
         }
+        return redirect()->back()->with('success', trans('home.message_register'));
     }
 
     public function programming_fundamentalsCourse_post(Request $request)
-    {
-
-        $data = [
-            'name' => $request->input('name'),
-            'phone' => $request->input('phone'),
-            'email' => $request->input('email'),
-            'work' => $request->input('work'),
-            'message' => $request->input('message'),
-            'course_name' => 'programming fundamentalscourse',
-        ];
+{
 
 
-        $register = Register::create($data);
+    // Dữ liệu hợp lệ, tạo đối tượng Register
+    $register = Register::create([
+        'name' => $request->input('name'),
+        'phone' => $request->input('phone'),
+        'email' => $request->input('email'),
+        'work' => $request->input('work'),
+        'message' => $request->input('message'),
+        'course_name' => 'programming fundamentalscourse',
+    ]);
 
-        if ($register) {
-            // Nếu thành công, trả về phản hồi JSON cho AJAX
-            if ($request->ajax()) {
-                return response()->json(['success' => trans('home.message_register'),'thank' => trans('home.message_register')]);
-            }
-            // Nếu không phải AJAX request, có thể chuyển hướng hoặc trả về view thông thường
-            return redirect()->back()->with('success', trans('home.message_register'));
-        } else {
-            // Nếu không thành công, trả về phản hồi JSON cho AJAX
-            if ($request->ajax()) {
-                return response()->json(['success' => false]);
-            }
-            // Nếu không phải AJAX request, có thể chuyển hướng hoặc trả về view thông thường
-            return redirect()->back()->with('error', trans('home.message_register_failed'));
-        }
+    // Trả về phản hồi thành công
+    if ($request->ajax()) {
+        return response()->json(['success' => true, 'thank' => trans('home.message_register')]);
     }
+    return redirect()->back()->with('success', trans('home.message_register'));
+}
+
 
     public function microsoft_office_post(Request $request)
     {
@@ -132,21 +112,10 @@ class CourseController extends Controller
         // Lưu dữ liệu
         $register = Register::create($data);
 
-        if ($register) {
-            // Nếu thành công, trả về phản hồi JSON cho AJAX
-            if ($request->ajax()) {
-                return response()->json(['success' => trans('home.message_register'),'thank' => trans('home.message_register')]);
-            }
-            // Nếu không phải AJAX request, có thể chuyển hướng hoặc trả về view thông thường
-            return redirect()->back()->with('success', trans('home.message_register'));
-        } else {
-            // Nếu không thành công, trả về phản hồi JSON cho AJAX
-            if ($request->ajax()) {
-                return response()->json(['success' => false]);
-            }
-            // Nếu không phải AJAX request, có thể chuyển hướng hoặc trả về view thông thường
-            return redirect()->back()->with('error', trans('home.message_register_failed'));
+        if ($request->ajax()) {
+            return response()->json(['success' => true, 'thank' => trans('home.message_register')]);
         }
+        return redirect()->back()->with('success', trans('home.message_register'));
     }
 
 
