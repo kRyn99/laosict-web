@@ -139,25 +139,28 @@ Validator.isRequiered = function (selector, message) {
     };
 };
 
+
 Validator.isEmail = function (selector, message) {
     return {
         selector: selector,
         test: function (value) {
-            var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return regex.test(value)
                 ? undefined
-                : message || "trường này là email";
+                : message || "Trường này không hợp lệ.";
         },
     };
 };
+
 Validator.isName = function (selector, message) {
     return {
         selector: selector,
         test: function (value) {
-            var regex = /^[a-zA-Z\s]+$/;
+            var regex = /[0-9!@#$%^&*(),.?":{}|<>]/;
             return regex.test(value)
-                ? undefined
-                : message || "trường này là tên ";
+                ? message ||
+                      "Trường này không được chứa số hoặc ký tự đặc biệt."
+                : undefined;
         },
     };
 };
