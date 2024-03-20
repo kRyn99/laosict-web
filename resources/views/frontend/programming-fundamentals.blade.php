@@ -145,7 +145,7 @@
                             <p class="ff-popins fs-18 text-lightgrey">Explore visual communication, design principles, typography, and software skills. Master the art of creating impactful and engaging designs.</p>
                         </div>
                         <!-- form gửi thông tin -->
-                        <form id="myForm" class="register-form reveal-right" action="{{ route('frontend.graphic-design-post') }}"
+                        <form id="myForm" class="register-form reveal-right" action="{{ route('frontend.programming-fundamentals-post') }}"
                             method="POST" id="feedbackForm">
                             {{ csrf_field() }}
 
@@ -188,6 +188,35 @@
                             <button id="buttonSubmitFeedback" type="submit"
                                 class="btn btn-register-form ff-popins fw-700 fs-18">{{ trans('home.feedback_gui') }}</button>
                         </form>
+
+                        <script>
+                            document.getElementById("myForm").addEventListener("submit", function(event) {
+                                event.preventDefault(); // Ngăn chặn hành động mặc định của biểu mẫu
+                                var formData = new FormData(this);
+
+                                // Gửi dữ liệu bằng AJAX
+                                $.ajax({
+                                    url: "{{ route('frontend.programming-fundamentals-post') }}",
+                                    type: "POST",
+                                    data: formData,
+                                    processData: false,
+                                    contentType: false,
+                                    success: function(response) {
+                                        Swal.fire({
+                                            title: response.success,
+                                            text: "LaosICT Center "+response.thank,
+                                            icon: "success",
+                                            onClose: function() {
+                                                $('#myForm')[0].reset(); // Đặt lại form về trạng thái rỗng
+                                            }
+                                        });
+                                    },
+                                    error: function(xhr, status, error) {
+                                        // Xử lý lỗi (nếu có)
+                                    }
+                                });
+                            });
+                        </script>
 
                         @if (Session::has('success'))
                             <div class="alert alert-success">
