@@ -1521,6 +1521,11 @@ div[role="tabpanel"][aria-selected="true"] {
     text-align: left;
     margin-block: 8px;
 }
+@media (max-width: 640px) {
+    .service-page-long-content .page-content .why-select p {
+        text-align: center;
+    }
+}
 .service-page-long-content .page-content .why-select .icon {
     width: 44px;
     height: 44px;

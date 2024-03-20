@@ -1,13 +1,19 @@
-<div class="swiper mySwiper">
+<div class="swiper swiper_banner mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="/uploads/banner_dung.png" />
+      <div class="swiper-slide banner" style="width: 100%;height:100%">
+        <img style=" width: 100%;
+        height: 100%;
+        object-fit: fill;" src="/uploads/banner_dung.png" />
       </div>
-      <div class="swiper-slide">
-       <img src="/uploads/banner_dung_1.png" />
+      <div class="swiper-slide banner"  style="width: 100%;height:100%" >
+       <img style=" width: 100%;
+        height: 100%;
+        object-fit: fill;" src="/uploads/banner_dung_1.png" />
       </div>
-      <div class="swiper-slide">
-        <img src="/uploads/banner_dung_2.png" />
+      <div class="swiper-slide banner"  style="width: 100%;height:100%">
+        <img style=" width: 100%;
+        height: 100%;
+        object-fit: fill;" src="/uploads/banner_dung_2.png" />
       </div>
     </div>
     <div class="swiper-button-next"></div>

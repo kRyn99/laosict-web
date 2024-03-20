@@ -147,11 +147,36 @@
                 <section class="section-wrapper">
                     <div class="course-description" id="register-form">
                         <div class="course-detail reveal-left">
-                            <p class="ff-popins fs-18 text-purple">COURSE CONTENT</p>
-                            <p class="ff-popins fs-40 fw-700">Main subjects in this course</p>
-                            <p class="ff-popins fs-18 text-lightgrey">Explore visual communication, design principles,
-                                typography, and software skills. Master the art of creating impactful and engaging designs.
-                            </p>
+                            <p class="ff-popins fs-40 text-purple">Liên Hệ</p>
+                            <p>Điền và gửi thông tin theo mẫu bên cạnh để nhận tư vấn miễn phí về khóa học, hoặc liên hệ trực tiếp với chúng tôi theo:</p>
+                            <div class="contact">
+                                <div class="contact_left">
+                                    <img src="/new-front-end/image/location2.svg" style="width:40%">
+                                </div>
+                                <div class="contact_right">
+                                    <span class="ff-popins fs-20 text-purple block">Địa Chỉ</span>
+                                    <span><span class="text-black text-opacity-50"> </span>{{ trans('settings.company_address') }}</span>
+                                </div>
+                            </div>
+
+                            <div class="contact">
+                                <div class="contact_left">
+                                    <img src="/new-front-end/image/phone-call.svg" style="width:40%">
+                                </div>
+                                <div class="contact_right">
+                                    <span class="ff-popins fs-20 text-purple block">Hotline/Zalo</span>
+                                    <p><span class="text-black text-opacity-50"> </span> {{ \App\Helpers::getSettings($settings, 'company_tel') }}</p>
+                                </div>
+                            </div>
+                            <div class="contact">
+                                <div class="contact_left">
+                                    <img src="/new-front-end/image/email.svg" style="width:40%">
+                                </div>
+                                <div class="contact_right">
+                                    <span class="ff-popins fs-20 text-purple block">Email</span>
+                                    <p><span class="text-black text-opacity-50"></span> {{ \App\Helpers::getSettings($settings, 'company_email') }}</p>
+                                </div>
+                            </div>
                         </div>
                         <!-- form gửi thông tin -->
                         <form id="myForm" class="register-form reveal-right" onsubmit="return validateForm()"
