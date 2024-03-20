@@ -397,6 +397,7 @@
         formGroupSelector: '.form-group',
         rules : [
             Validator.isRequiered('#name','Vui lòng nhập tên'),
+            Validator.isName('#name','Vui lòng nhập đúng định dạng tên (không chứa số, không chứa kí tự đặc biệt)'),
             Validator.isRequiered('#email','Vui lòng nhập email'),
             Validator.isEmail('#email','Vui lòng nhập đúng định dạng email'),
             Validator.isNumberPhone('#phone','Vui lòng nhập số điện thoại hợp lệ (từ 8 đến 13 chữ số)'),
