@@ -150,6 +150,17 @@ Validator.isEmail = function (selector, message) {
         },
     };
 };
+Validator.isName = function (selector, message) {
+    return {
+        selector: selector,
+        test: function (value) {
+            var regex = /^[a-zA-Z\s]+$/;
+            return regex.test(value)
+                ? undefined
+                : message || "trường này là tên ";
+        },
+    };
+};
 Validator.isNumberPhone = function (selector, message) {
     return {
         selector: selector,
