@@ -148,14 +148,16 @@
                     <div class="course-description" id="register-form">
                         <div class="course-detail reveal-left">
                             <p class="ff-popins fs-40 text-purple">Liên Hệ</p>
-                            <p>Điền và gửi thông tin theo mẫu bên cạnh để nhận tư vấn miễn phí về khóa học, hoặc liên hệ trực tiếp với chúng tôi theo:</p>
+                            <p>Điền và gửi thông tin theo mẫu bên cạnh để nhận tư vấn miễn phí về khóa học, hoặc liên hệ
+                                trực tiếp với chúng tôi theo:</p>
                             <div class="contact">
                                 <div class="contact_left">
                                     <img src="/new-front-end/image/location2.svg" style="width:40%">
                                 </div>
                                 <div class="contact_right">
                                     <span class="ff-popins fs-20 text-purple block">Địa Chỉ</span>
-                                    <span><span class="text-black text-opacity-50"> </span>{{ trans('settings.company_address') }}</span>
+                                    <span><span class="text-black text-opacity-50">
+                                        </span>{{ trans('settings.company_address') }}</span>
                                 </div>
                             </div>
 
@@ -165,7 +167,8 @@
                                 </div>
                                 <div class="contact_right">
                                     <span class="ff-popins fs-20 text-purple block">Hotline/Zalo</span>
-                                    <p><span class="text-black text-opacity-50"> </span> {{ \App\Helpers::getSettings($settings, 'company_tel') }}</p>
+                                    <p><span class="text-black text-opacity-50"> </span>
+                                        {{ \App\Helpers::getSettings($settings, 'company_tel') }}</p>
                                 </div>
                             </div>
                             <div class="contact">
@@ -174,28 +177,30 @@
                                 </div>
                                 <div class="contact_right">
                                     <span class="ff-popins fs-20 text-purple block">Email</span>
-                                    <p><span class="text-black text-opacity-50"></span> {{ \App\Helpers::getSettings($settings, 'company_email') }}</p>
+                                    <p><span class="text-black text-opacity-50"></span>
+                                        {{ \App\Helpers::getSettings($settings, 'company_email') }}</p>
                                 </div>
                             </div>
                         </div>
                         <!-- form gửi thông tin -->
-                        <form id="myForm" class="register-form reveal-right" action="{{ route('frontend.graphic-design-post') }}"
-                            method="POST">
+                        <form id="myForm" class="register-form reveal-right" method="POST">
                             {{ csrf_field() }}
 
                             <p class="ff-popins fs-18 text-center text-yellow">Register now!</p>
                             <div class="form-group">
-                                <input id="name" name="name" type="text" placeholder="{{ trans('home.feedback_name') }}" class="form-control" />
+                                <input id="name" name="name" type="text"
+                                    placeholder="{{ trans('home.feedback_name') }}" class="form-control" />
                                 <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
                                 <input type="number" placeholder="{{ trans('home.feedback_phone') }}" id="phone"
-                                    name="phone"class="form-control"/>
+                                    name="phone"class="form-control" />
                                 <span class="form-message"></span>
                             </div>
                             <div class="form-group">
-                                <input id="email" name="email" type="text" placeholder="{{ trans('home.feedback_email') }}" class="form-control" />
+                                <input id="email" name="email" type="text"
+                                    placeholder="{{ trans('home.feedback_email') }}" class="form-control" />
                                 <span class="form-message"></span>
                             </div>
 
@@ -220,7 +225,6 @@
                                     var check = document.getElementById("work").value;
                                     document.getElementById("work").value = selectedOption;
                                 }
-
                             </script>
 
 
@@ -273,23 +277,6 @@
                                 });
                             });
                         </script>
-
-
-
-                        @if (Session::has('success'))
-                            <div class="alert alert-success">
-                                {{ Session::get('success') }}
-                            </div>
-
-                            <script>
-                                // Cuộn đến form sau khi trang tải lại
-                                window.onload = function() {
-                                    document.getElementById('myForm').scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
-                                };
-                            </script>
-                        @endif
                     </div>
                 </section>
             </section>
@@ -345,39 +332,39 @@
     </div>
 @endsection
 @section('after_scripts')
-<script src="/new-front-end/js/validation.js"></script>
-<script type="text/javascript">
-    const revealLeftElement = document.querySelector('.reveal-left');
-    window.addEventListener('scroll', () => {
-        const revealPosition = revealLeftElement.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (revealPosition < windowHeight) {
-            revealLeftElement.classList.add('active');
-        }
-    });
-    const revealRightElement = document.querySelector('.reveal-right');
-    window.addEventListener('scroll', () => {
-        const revealPosition = revealRightElement.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (revealPosition < windowHeight) {
-            revealRightElement.classList.add('active');
-        }
-    });
+    <script src="/new-front-end/js/validation.js"></script>
+    <script type="text/javascript">
+        const revealLeftElement = document.querySelector('.reveal-left');
+        window.addEventListener('scroll', () => {
+            const revealPosition = revealLeftElement.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (revealPosition < windowHeight) {
+                revealLeftElement.classList.add('active');
+            }
+        });
+        const revealRightElement = document.querySelector('.reveal-right');
+        window.addEventListener('scroll', () => {
+            const revealPosition = revealRightElement.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (revealPosition < windowHeight) {
+                revealRightElement.classList.add('active');
+            }
+        });
 
 
-    Validator({
-        form : '#myForm',
-        errorSelector: '.form-message',
-        formGroupSelector: '.form-group',
-        rules : [
-            Validator.isRequiered('#name','Vui lòng nhập tên'),
-            Validator.isName('#name','Vui lòng nhập đúng định dạng tên (không chứa số, không chứa kí tự đặc biệt)'),
-            Validator.isRequiered('#email','Vui lòng nhập email'),
-            Validator.isEmail('#email','Vui lòng nhập đúng định dạng email'),
-            Validator.isNumberPhone('#phone','Vui lòng nhập số điện thoại hợp lệ (từ 8 đến 13 chữ số)'),
-            Validator.isRequiered('#options',"Vui lòng chọn trường này"),
-        ],
-    });
-
-</script>
+        Validator({
+            form: '#myForm',
+            errorSelector: '.form-message',
+            formGroupSelector: '.form-group',
+            rules: [
+                Validator.isRequiered('#name', 'Vui lòng nhập tên'),
+                Validator.isName('#name',
+                    'Vui lòng nhập đúng định dạng tên (không chứa số, không chứa kí tự đặc biệt)'),
+                Validator.isRequiered('#email', 'Vui lòng nhập email'),
+                Validator.isEmail('#email', 'Vui lòng nhập đúng định dạng email'),
+                Validator.isNumberPhone('#phone', 'Vui lòng nhập số điện thoại hợp lệ (từ 8 đến 13 chữ số)'),
+                Validator.isRequiered('#work', "Vui lòng chọn trường này"),
+            ],
+        });
+    </script>
 @endsection

@@ -172,20 +172,22 @@
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-next" style="display:none"></div>
                         <div class="swiper-button-prev " style="display:none"></div>
-                </div>
-            </section>
-             <section class="section-wrapper">
+                    </div>
+                </section>
+                <section class="section-wrapper">
                     <div class="course-description" id="register-form">
                         <div class="course-detail reveal-left">
                             <p class="ff-popins fs-40 text-purple">Liên Hệ</p>
-                            <p>Điền và gửi thông tin theo mẫu bên cạnh để nhận tư vấn miễn phí về khóa học, hoặc liên hệ trực tiếp với chúng tôi theo:</p>
+                            <p>Điền và gửi thông tin theo mẫu bên cạnh để nhận tư vấn miễn phí về khóa học, hoặc liên hệ
+                                trực tiếp với chúng tôi theo:</p>
                             <div class="contact">
                                 <div class="contact_left">
                                     <img src="/new-front-end/image/location2.svg" style="width:40%">
                                 </div>
                                 <div class="contact_right">
                                     <span class="ff-popins fs-20 text-purple block">Địa Chỉ</span>
-                                    <span><span class="text-black text-opacity-50"> </span>{{ trans('settings.company_address') }}</span>
+                                    <span><span class="text-black text-opacity-50">
+                                        </span>{{ trans('settings.company_address') }}</span>
                                 </div>
                             </div>
 
@@ -195,7 +197,8 @@
                                 </div>
                                 <div class="contact_right">
                                     <span class="ff-popins fs-20 text-purple block">Hotline/Zalo</span>
-                                    <p><span class="text-black text-opacity-50"> </span> {{ \App\Helpers::getSettings($settings, 'company_tel') }}</p>
+                                    <p><span class="text-black text-opacity-50"> </span>
+                                        {{ \App\Helpers::getSettings($settings, 'company_tel') }}</p>
                                 </div>
                             </div>
                             <div class="contact">
@@ -204,28 +207,30 @@
                                 </div>
                                 <div class="contact_right">
                                     <span class="ff-popins fs-20 text-purple block">Email</span>
-                                    <p><span class="text-black text-opacity-50"></span> {{ \App\Helpers::getSettings($settings, 'company_email') }}</p>
+                                    <p><span class="text-black text-opacity-50"></span>
+                                        {{ \App\Helpers::getSettings($settings, 'company_email') }}</p>
                                 </div>
                             </div>
                         </div>
                         <!-- form gửi thông tin -->
-                        <form id="myForm" class="register-form reveal-right"
-                            action="{{ route('frontend.microsoft-ofice-post') }}" method="POST" id="feedbackForm">
+                        <form id="myForm" class="register-form reveal-right" method="POST" id="feedbackForm">
                             {{ csrf_field() }}
 
                             <p class="ff-popins fs-18 text-center text-yellow">Register now!</p>
                             <div class="form-group">
-                                <input id="name" name="name" type="text" placeholder="{{ trans('home.feedback_name') }}" class="form-control" />
+                                <input id="name" name="name" type="text"
+                                    placeholder="{{ trans('home.feedback_name') }}" class="form-control" />
                                 <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
                                 <input type="number" placeholder="{{ trans('home.feedback_phone') }}" id="phone"
-                                    name="phone"class="form-control"/>
+                                    name="phone"class="form-control" />
                                 <span class="form-message"></span>
                             </div>
                             <div class="form-group">
-                                <input id="email" name="email" type="text" placeholder="{{ trans('home.feedback_email') }}" class="form-control" />
+                                <input id="email" name="email" type="text"
+                                    placeholder="{{ trans('home.feedback_email') }}" class="form-control" />
                                 <span class="form-message"></span>
                             </div>
 
@@ -250,7 +255,6 @@
                                     var check = document.getElementById("work").value;
                                     document.getElementById("work").value = selectedOption;
                                 }
-
                             </script>
 
                             <textarea placeholder="{{ trans('home.feedback_content') }}" id="message" name="message"></textarea>
@@ -263,6 +267,34 @@
                             <button id="buttonSubmitFeedback" type="submit"
                                 class="btn btn-register-form ff-popins fw-700 fs-18">{{ trans('home.feedback_gui') }}</button>
                         </form>
+
+                        <script>
+                            document.getElementById("myForm").addEventListener("submit", function(event) {
+                                event.preventDefault(); // Ngăn chặn hành động mặc định của biểu mẫu
+                                var formData = new FormData(this);
+
+                                // Gửi dữ liệu bằng AJAX
+                                $.ajax({
+                                    url: "{{ route('frontend.microsoft-ofice-post') }}",
+                                    type: "POST",
+                                    data: formData,
+                                    processData: false,
+                                    contentType: false,
+                                    success: function(response) {
+                                        Swal.fire({
+                                            title: response.success,
+                                            text: "LaosICT Center " + response.thank,
+                                            icon: "success",
+                                            onClose: function() {
+                                            }
+                                        });
+                                    },
+                                    error: function(xhr, status, error) {
+                                        // Xử lý lỗi (nếu có)
+                                    }
+                                });
+                            });
+                        </script>
 
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
@@ -285,69 +317,10 @@
                                 </div>
                             </div>
                         </div>
-
-                        <script>
-                            document.getElementById("myForm").addEventListener("submit", function(event) {
-                                event.preventDefault(); // Ngăn chặn hành động mặc định của biểu mẫu
-                                var formData = new FormData(this);
-
-                                // Gửi dữ liệu bằng AJAX
-                                $.ajax({
-                                    url: "{{ route('frontend.microsoft-ofice-post') }}",
-                                    type: "POST",
-                                    data: formData,
-                                    processData: false,
-                                    contentType: false,
-                                    success: function(response) {
-                                        Swal.fire({
-                                            title: response.success,
-                                            text: "LaosICT Center "+response.thank,
-                                            icon: "success",
-                                            onClose: function() {
-                                                $('#myForm')[0].reset(); // Đặt lại form về trạng thái rỗng
-                                            }
-                                        });
-                                    },
-                                    error: function(xhr, status, error) {
-                                        // Xử lý lỗi (nếu có)
-                                    }
-                                });
-                            });
-                        </script>
-
-
-                        @if (Session::has('success'))
-                            <div class="alert alert-success">
-                                {{ Session::get('success') }}
-                            </div>
-
-                            <script>
-                                // Cuộn đến form sau khi trang tải lại
-                                window.onload = function() {
-                                    document.getElementById('myForm').scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
-                                };
-                            </script>
-                        @endif
                     </div>
                 </section>
 
-        </section>
-        </section>
-        <section class="article-wrapper">
-            <section class="section-wrapper">
-                <p class="ff-popins fs-40 fw-700 text-center">Requirements</p>
-                <div class="flex gap-10 justify-between align-center flex-wrap">
-                    <div class="flex gap-5 justify-center flex-1" style="align-items:center">
-                        <img style="object-fit: contain" src="/new-front-end/image/mo_f_2.png" alt="" width="30">
-                        <span style="color:#827A7A">Students need a laptop when participating in this course </span>
-                    </div>
-                    <div class="flex gap-5  justify-center flex-1" style="align-items:center">
-                        <img style="object-fit: contain" src="/new-front-end/image/mo_f_1.png" alt="" width="30">
-                        <span style="color:#827A7A">Microsoft Office Installed in your laptop</span>
-                    </div>
-                </div>
+            </section>
             </section>
             <section class="article-wrapper">
                 <section class="section-wrapper">
@@ -365,99 +338,121 @@
                         </div>
                     </div>
                 </section>
-            </section>
-            <section class="article-wrapper">
-                <section class="section-wrapper">
-                    <p class="ff-popins fs-40 fw-700 text-center">Student says About Course</p>
-                    <p class="ff-popins fs-16 text-center text-lightgrey">Get a feel for the course through the reviews of
-                        thousands of students who have attended our Course</p>
-                    <div class="grid-items-container student-list">
-                        <div class="card-student">
-                            <div>
-                                <img src="/new-front-end/image/student-thumbnail-1.png" style="width:160px;height:200px">
+                <section class="article-wrapper">
+                    <section class="section-wrapper">
+                        <p class="ff-popins fs-40 fw-700 text-center">Requirements</p>
+                        <div class="flex gap-10 justify-between align-center flex-wrap">
+                            <div class="flex gap-5 justify-center flex-1" style="align-items:center">
+                                <img style="object-fit: contain" src="/new-front-end/image/mo_f_2.png" alt=""
+                                    width="30">
+                                <span style="color:#827A7A">Students need a laptop when participating in this course
+                                </span>
                             </div>
-                            <div class="d-flex flex-column justify-content-between">
-                                <ul class="rate">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <h4 class="ff-popins fw-600">Best learning platform</h4>
-                                <q class="ff-popins fs-14 text-lightgrey">
-                                    This course is absolutely fantastic! It delivers high-quality content, has professional
-                                    instructors, and offers a flexible and engaging learning approach.
-                                </q>
-                                <div class="ff-popins fw-700 fs-14">Maurice Cain</div>
-                                <div class="ff-popins fs-14 text-lightgrey">Student</div>
+                            <div class="flex gap-5  justify-center flex-1" style="align-items:center">
+                                <img style="object-fit: contain" src="/new-front-end/image/mo_f_1.png" alt=""
+                                    width="30">
+                                <span style="color:#827A7A">Microsoft Office Installed in your laptop</span>
                             </div>
                         </div>
-
-                        <div class="card-student">
-                            <div>
-                                <img src="/new-front-end/image/student-thumbnail-2.png" width="160" height="200">
-                            </div>
-                            <div class="d-flex flex-column justify-content-between">
-                                <ul class="rate">
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                    <li><i class="fa-solid fa-star"></i></li>
-                                </ul>
-                                <h4 class="ff-popins fw-600">Amazing Course</h4>
-                                <q class="ff-popins fs-14 text-lightgrey">
-                                    The course exceeded my expectations. The well-structured curriculum and popinsactive
-                                    lessons make learning enjoyable and highly effective.
-                                </q>
-                                <div class="ff-popins fw-700 fs-14">Lila Henderson</div>
-                                <div class="ff-popins fs-14 text-lightgrey">Student</div>
-                            </div>
-                        </div>
-                    </div>
+                    </section>
                 </section>
-            </section>
+                <section class="article-wrapper">
+                    <section class="section-wrapper">
+                        <p class="ff-popins fs-40 fw-700 text-center">Student says About Course</p>
+                        <p class="ff-popins fs-16 text-center text-lightgrey">Get a feel for the course through the reviews
+                            of
+                            thousands of students who have attended our Course</p>
+                        <div class="grid-items-container student-list">
+                            <div class="card-student">
+                                <div>
+                                    <img src="/new-front-end/image/student-thumbnail-1.png"
+                                        style="width:160px;height:200px">
+                                </div>
+                                <div class="d-flex flex-column justify-content-between">
+                                    <ul class="rate">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                    </ul>
+                                    <h4 class="ff-popins fw-600">Best learning platform</h4>
+                                    <q class="ff-popins fs-14 text-lightgrey">
+                                        This course is absolutely fantastic! It delivers high-quality content, has
+                                        professional
+                                        instructors, and offers a flexible and engaging learning approach.
+                                    </q>
+                                    <div class="ff-popins fw-700 fs-14">Maurice Cain</div>
+                                    <div class="ff-popins fs-14 text-lightgrey">Student</div>
+                                </div>
+                            </div>
+
+                            <div class="card-student">
+                                <div>
+                                    <img src="/new-front-end/image/student-thumbnail-2.png" width="160"
+                                        height="200">
+                                </div>
+                                <div class="d-flex flex-column justify-content-between">
+                                    <ul class="rate">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                    </ul>
+                                    <h4 class="ff-popins fw-600">Amazing Course</h4>
+                                    <q class="ff-popins fs-14 text-lightgrey">
+                                        The course exceeded my expectations. The well-structured curriculum and popinsactive
+                                        lessons make learning enjoyable and highly effective.
+                                    </q>
+                                    <div class="ff-popins fw-700 fs-14">Lila Henderson</div>
+                                    <div class="ff-popins fs-14 text-lightgrey">Student</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
         </div>
         @include('frontend.footer')
     </div>
 @endsection
 @section('after_scripts')
-<script src="/new-front-end/js/validation.js"></script>
+    <script src="/new-front-end/js/validation.js"></script>
     <script type="text/javascript">
-       const revealLeftElement = document.querySelector('.reveal-left');
-    window.addEventListener('scroll', () => {
-        const revealPosition = revealLeftElement.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (revealPosition < windowHeight) {
-            revealLeftElement.classList.add('active');
-        }
-    });
-    const revealRightElement = document.querySelector('.reveal-right');
-    window.addEventListener('scroll', () => {
-        const revealPosition = revealRightElement.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (revealPosition < windowHeight) {
-            revealRightElement.classList.add('active');
-        }
-    });
-     Validator({
-        form : '#myForm',
-        errorSelector: '.form-message',
-        formGroupSelector: '.form-group',
-        rules : [
-            Validator.isRequiered('#name','Vui lòng nhập tên'),
-            Validator.isName('#name','Vui lòng nhập đúng định dạng tên (không chứa số, không chứa kí tự đặc biệt)'),
-            Validator.isRequiered('#email','Vui lòng nhập email'),
-            Validator.isEmail('#email','Vui lòng nhập đúng định dạng email'),
-            Validator.isNumberPhone('#phone','Vui lòng nhập số điện thoại hợp lệ (từ 8 đến 13 chữ số)'),
-            Validator.isRequiered('#options',"Vui lòng chọn trường này"),
-        ],
-    });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        const revealLeftElement = document.querySelector('.reveal-left');
+        window.addEventListener('scroll', () => {
+            const revealPosition = revealLeftElement.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (revealPosition < windowHeight) {
+                revealLeftElement.classList.add('active');
+            }
+        });
+        const revealRightElement = document.querySelector('.reveal-right');
+        window.addEventListener('scroll', () => {
+            const revealPosition = revealRightElement.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (revealPosition < windowHeight) {
+                revealRightElement.classList.add('active');
+            }
+        });
+        Validator({
+            form: '#myForm',
+            errorSelector: '.form-message',
+            formGroupSelector: '.form-group',
+            rules: [
+                Validator.isRequiered('#name', 'Vui lòng nhập tên'),
+                Validator.isName('#name',
+                    'Vui lòng nhập đúng định dạng tên (không chứa số, không chứa kí tự đặc biệt)'),
+                Validator.isRequiered('#email', 'Vui lòng nhập email'),
+                Validator.isEmail('#email', 'Vui lòng nhập đúng định dạng email'),
+                Validator.isNumberPhone('#phone', 'Vui lòng nhập số điện thoại hợp lệ (từ 8 đến 13 chữ số)'),
+                Validator.isRequiered('#work', "Vui lòng chọn trường này"),
+            ],
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+    {{-- <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
@@ -485,5 +480,5 @@
             }
 
         });
-    </script>
+    </script> --}}
 @endsection

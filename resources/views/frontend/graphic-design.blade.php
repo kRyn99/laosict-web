@@ -3,149 +3,159 @@
 @section('content')
     <div class="wrapper">
         @include('frontend.header')
-    <div class="course-landing-page graphic-design-course">
-        <section class="design-course-banner">
-            <section class="section-wrapper flex-items-container design-course-banner-content">
-                <div class="text-part">
-                    <div class="d-flex justify-content-center">
-                        <img src="/new-front-end/image/banner-light-bulb.png" style="width:100px !important">
-                    </div>
-                    <p class="fs-46 ff-popins fw-600">Start <span class="text-red">learning</span> design skill<br>From your favorite Expert</p>
-                    <p class="ff-popins fs-22 text-lightgrey">Learn using the advanced hands-on method, and after learning, you can do the job</p>
-                    <div class="mt-5">
-                        <button class="btn btn-register mr-3" onclick="register()">Explore Course</button>
-                        <!-- <img src="/new-front-end/image/circle-yellow-right-arrow.png" width="32px" height="32px">
-                        <label class="ff-popins fw-700 fs-18 m-0 align-middle">3 months to become an expert</label> -->
-                    </div>
-                </div>
-                <div class="image-part">
-                    <img src="/new-front-end/image/banner-graphic-design-course-inside-part.png">
-                </div>
-            </section>
-        </section>
-        <section class="article-wrapper">
-            <section class="section-wrapper">
-                <img class="mb-5" src="/new-front-end/image/course-samples.png" width="100%" height="100%">
-                <div class="flex-items-container">
-                    <div class="subjects-info">
-                        <p class="fs-40 fw-700 ff-popins">Suitable Subjects</p>
-                        <p class="ff-popins fs-16 text-lightgrey">The following subjects are eligible to participate in this course</p>
-                        <ul class="subject-list">
-                            <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Graphic Designers</li>
-                            <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Website Designers</li>
-                            <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Logo Designers</li>
-                            <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>UI / UX Designers</li>
-                            <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Product Designers</li>
-                            <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>T-Shirt Designers</li>
-                            <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Businesses</li>
-                            <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Marketers</li>
-                            <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Social Media Experts</li>
-                        </ul>
-                    </div>
-                    <img src="/new-front-end/image/suitable-subjects-image.png" width="60%" height="60%">
-                </div>
-            </section>
-        </section>
-        <section class="article-wrapper bg-purple">
-            <section class="section-wrapper flex-items-container">
-                <img src="/new-front-end/image/result-after-study.png" width="50%">
-                <div class="d-flex flex-column justify-content-center">
-                    <p class="ff-popins fs-40 fw-700 text-white">Results after studying our COURSE</p>
-                    <table class="result-list">
-                        <tr>
-                            <td><img src="/new-front-end/image/bachelors-hat.png"></td>
-                            <td class="ff-popins fs-18 fw-600 text-white">Master and use the PS/Illustrator tool well</td>
-                        </tr>
-                        <tr>
-                            <td><img src="/new-front-end/image/bachelors-hat.png"></td>
-                            <td class="ff-popins fs-18 fw-600 text-white">Understand and practice good design thinking</td>
-                        </tr>
-                        <tr>
-                            <td><img src="/new-front-end/image/bachelors-hat.png"></td>
-                            <td class="ff-popins fs-18 fw-600 text-white">Master the principles of mixing and matching colors in design</td>
-                        </tr>
-                        <tr>
-                            <td><img src="/new-front-end/image/bachelors-hat.png"></td>
-                            <td class="ff-popins fs-18 fw-600 text-white">Basic understanding of letters in graphic design</td>
-                        </tr>
-                        <tr>
-                            <td><img src="/new-front-end/image/bachelors-hat.png"></td>
-                            <td class="ff-popins fs-18 fw-600 text-white">Can do well in products such as photo editing, marketing, and communication products, advertisement</td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-        </section>
-        <section class="article-wrapper">
-            <section class="section-wrapper">
-                <div class="grid-items-container list-course-content">
-                    <div class="course-card">
-                        <img class="course-img" src="/new-front-end/image/course-design-1.png" width="328">
-                        <div class="course-info">
-                           <div class="d-flex flex-col">
-                                <span class="ff-popins fw-700 fs-20">PHOTOSHOP/CANVA</span>
-                                <div class="ff-popins fs-16 text-lightgrey mt-1">
-                                <span class="mr-3">10 Sesstions</span>20 Hours
-                            </div>
-
-                            </div>
-                            <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
+        <div class="course-landing-page graphic-design-course">
+            <section class="design-course-banner">
+                <section class="section-wrapper flex-items-container design-course-banner-content">
+                    <div class="text-part">
+                        <div class="d-flex justify-content-center">
+                            <img src="/new-front-end/image/banner-light-bulb.png" style="width:100px !important">
+                        </div>
+                        <p class="fs-46 ff-popins fw-600">Start <span class="text-red">learning</span> design skill<br>From
+                            your favorite Expert</p>
+                        <p class="ff-popins fs-22 text-lightgrey">Learn using the advanced hands-on method, and after
+                            learning, you can do the job</p>
+                        <div class="mt-5">
+                            <button class="btn btn-register mr-3" onclick="register()">Explore Course</button>
+                            <!-- <img src="/new-front-end/image/circle-yellow-right-arrow.png" width="32px" height="32px">
+                            <label class="ff-popins fw-700 fs-18 m-0 align-middle">3 months to become an expert</label> -->
                         </div>
                     </div>
-                    <div class="course-card">
-                        <img class="course-img" src="/new-front-end/image/course-design-2.png" width="328">
-                        <div class="course-info">
-                           <div class="d-flex flex-col">
-                                <span class="ff-popins fw-700 fs-20">ILLUSTRATOR</span>
-                                <div class="ff-popins fs-16 text-lightgrey mt-1">
-                                <span class="mr-3">10 Sesstions</span>20 Hours
-                            </div>
-
-                            </div>
-                           <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
-                        </div>
+                    <div class="image-part">
+                        <img src="/new-front-end/image/banner-graphic-design-course-inside-part.png">
                     </div>
-                    <div  class="course-card">
-                        <img class="course-img" src="/new-front-end/image/course-design-3.png" width="328">
-                        <div class="course-info">
-                           <div class="d-flex flex-col">
-                                <span class="ff-popins fw-700 fs-20">DESIGN PRINCIPLES</span>
-                                 <div class="ff-popins fs-16 text-lightgrey mt-1">
-                                <span class="mr-3">8 Sesstions</span>16 Hours
-                            </div>
-
-                            </div>
-                                 <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
+                </section>
+            </section>
+            <section class="article-wrapper">
+                <section class="section-wrapper">
+                    <img class="mb-5" src="/new-front-end/image/course-samples.png" width="100%" height="100%">
+                    <div class="flex-items-container">
+                        <div class="subjects-info">
+                            <p class="fs-40 fw-700 ff-popins">Suitable Subjects</p>
+                            <p class="ff-popins fs-16 text-lightgrey">The following subjects are eligible to participate in
+                                this course</p>
+                            <ul class="subject-list">
+                                <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Graphic Designers</li>
+                                <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Website Designers</li>
+                                <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Logo Designers</li>
+                                <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>UI / UX Designers</li>
+                                <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Product Designers</li>
+                                <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>T-Shirt Designers</li>
+                                <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Businesses</li>
+                                <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Marketers</li>
+                                <li class="ff-popins fs-18"><i class="fas fa-check mr-4"></i>Social Media Experts</li>
+                            </ul>
                         </div>
+                        <img src="/new-front-end/image/suitable-subjects-image.png" width="60%" height="60%">
                     </div>
-                    <div class="course-card">
-                        <img class="course-img" src="/new-front-end/image/course-design-4.png" >
-                        <div class="course-info">
-                            <div class="d-flex flex-col">
-                                <span class="ff-popins fw-700 fs-20">PROJECT</span>
-                                <div class="ff-popins fs-16 text-lightgrey mt-1">
-                                <span class="mr-3">8 Sesstions</span>16 Hours
-                            </div>
+                </section>
+            </section>
+            <section class="article-wrapper bg-purple">
+                <section class="section-wrapper flex-items-container">
+                    <img src="/new-front-end/image/result-after-study.png" width="50%">
+                    <div class="d-flex flex-column justify-content-center">
+                        <p class="ff-popins fs-40 fw-700 text-white">Results after studying our COURSE</p>
+                        <table class="result-list">
+                            <tr>
+                                <td><img src="/new-front-end/image/bachelors-hat.png"></td>
+                                <td class="ff-popins fs-18 fw-600 text-white">Master and use the PS/Illustrator tool well
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="/new-front-end/image/bachelors-hat.png"></td>
+                                <td class="ff-popins fs-18 fw-600 text-white">Understand and practice good design thinking
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="/new-front-end/image/bachelors-hat.png"></td>
+                                <td class="ff-popins fs-18 fw-600 text-white">Master the principles of mixing and matching
+                                    colors in design</td>
+                            </tr>
+                            <tr>
+                                <td><img src="/new-front-end/image/bachelors-hat.png"></td>
+                                <td class="ff-popins fs-18 fw-600 text-white">Basic understanding of letters in graphic
+                                    design</td>
+                            </tr>
+                            <tr>
+                                <td><img src="/new-front-end/image/bachelors-hat.png"></td>
+                                <td class="ff-popins fs-18 fw-600 text-white">Can do well in products such as photo editing,
+                                    marketing, and communication products, advertisement</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </section>
+            <section class="article-wrapper">
+                <section class="section-wrapper">
+                    <div class="grid-items-container list-course-content">
+                        <div class="course-card">
+                            <img class="course-img" src="/new-front-end/image/course-design-1.png" width="328">
+                            <div class="course-info">
+                                <div class="d-flex flex-col">
+                                    <span class="ff-popins fw-700 fs-20">PHOTOSHOP/CANVA</span>
+                                    <div class="ff-popins fs-16 text-lightgrey mt-1">
+                                        <span class="mr-3">10 Sesstions</span>20 Hours
+                                    </div>
 
-                            </div>
+                                </div>
                                 <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
+                            </div>
                         </div>
-                    </div>
+                        <div class="course-card">
+                            <img class="course-img" src="/new-front-end/image/course-design-2.png" width="328">
+                            <div class="course-info">
+                                <div class="d-flex flex-col">
+                                    <span class="ff-popins fw-700 fs-20">ILLUSTRATOR</span>
+                                    <div class="ff-popins fs-16 text-lightgrey mt-1">
+                                        <span class="mr-3">10 Sesstions</span>20 Hours
+                                    </div>
 
-                </div>
-            </section>
-             <section class="section-wrapper">
-                <div class="course-description" id="register-form">
+                                </div>
+                                <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <img class="course-img" src="/new-front-end/image/course-design-3.png" width="328">
+                            <div class="course-info">
+                                <div class="d-flex flex-col">
+                                    <span class="ff-popins fw-700 fs-20">DESIGN PRINCIPLES</span>
+                                    <div class="ff-popins fs-16 text-lightgrey mt-1">
+                                        <span class="mr-3">8 Sesstions</span>16 Hours
+                                    </div>
+
+                                </div>
+                                <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <img class="course-img" src="/new-front-end/image/course-design-4.png">
+                            <div class="course-info">
+                                <div class="d-flex flex-col">
+                                    <span class="ff-popins fw-700 fs-20">PROJECT</span>
+                                    <div class="ff-popins fs-16 text-lightgrey mt-1">
+                                        <span class="mr-3">8 Sesstions</span>16 Hours
+                                    </div>
+
+                                </div>
+                                <a class="ff-popins text-purple mt-2 float-right" href="#">See more</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <section class="section-wrapper">
+                    <div class="course-description" id="register-form">
                         <div class="course-detail reveal-left">
                             <p class="ff-popins fs-40 text-purple">Liên Hệ</p>
-                            <p>Điền và gửi thông tin theo mẫu bên cạnh để nhận tư vấn miễn phí về khóa học, hoặc liên hệ trực tiếp với chúng tôi theo:</p>
+                            <p>Điền và gửi thông tin theo mẫu bên cạnh để nhận tư vấn miễn phí về khóa học, hoặc liên hệ
+                                trực tiếp với chúng tôi theo:</p>
                             <div class="contact">
                                 <div class="contact_left">
                                     <img src="/new-front-end/image/location2.svg" style="width:40%">
                                 </div>
                                 <div class="contact_right">
                                     <span class="ff-popins fs-20 text-purple block">Địa Chỉ</span>
-                                    <span><span class="text-black text-opacity-50"> </span>{{ trans('settings.company_address') }}</span>
+                                    <span><span class="text-black text-opacity-50">
+                                        </span>{{ trans('settings.company_address') }}</span>
                                 </div>
                             </div>
 
@@ -155,7 +165,8 @@
                                 </div>
                                 <div class="contact_right">
                                     <span class="ff-popins fs-20 text-purple block">Hotline/Zalo</span>
-                                    <p><span class="text-black text-opacity-50"> </span> {{ \App\Helpers::getSettings($settings, 'company_tel') }}</p>
+                                    <p><span class="text-black text-opacity-50"> </span>
+                                        {{ \App\Helpers::getSettings($settings, 'company_tel') }}</p>
                                 </div>
                             </div>
                             <div class="contact">
@@ -164,28 +175,30 @@
                                 </div>
                                 <div class="contact_right">
                                     <span class="ff-popins fs-20 text-purple block">Email</span>
-                                    <p><span class="text-black text-opacity-50"></span> {{ \App\Helpers::getSettings($settings, 'company_email') }}</p>
+                                    <p><span class="text-black text-opacity-50"></span>
+                                        {{ \App\Helpers::getSettings($settings, 'company_email') }}</p>
                                 </div>
                             </div>
                         </div>
                         <!-- form gửi thông tin -->
-                        <form id="myForm" class="register-form reveal-right" action="{{ route('frontend.graphic-design-post') }}"
-                            method="POST" id="feedbackForm">
+                        <form id="myForm" class="register-form reveal-right" method="POST" id="feedbackForm">
                             {{ csrf_field() }}
 
                             <p class="ff-popins fs-18 text-center text-yellow">Register now!</p>
                             <div class="form-group">
-                                <input id="name" name="name" type="text" placeholder="{{ trans('home.feedback_name') }}" class="form-control" />
+                                <input id="name" name="name" type="text"
+                                    placeholder="{{ trans('home.feedback_name') }}" class="form-control" />
                                 <span class="form-message"></span>
                             </div>
 
                             <div class="form-group">
                                 <input type="number" placeholder="{{ trans('home.feedback_phone') }}" id="phone"
-                                    name="phone"class="form-control"/>
+                                    name="phone"class="form-control" />
                                 <span class="form-message"></span>
                             </div>
                             <div class="form-group">
-                                <input id="email" name="email" type="text" placeholder="{{ trans('home.feedback_email') }}" class="form-control" />
+                                <input id="email" name="email" type="text"
+                                    placeholder="{{ trans('home.feedback_email') }}" class="form-control" />
                                 <span class="form-message"></span>
                             </div>
 
@@ -210,7 +223,6 @@
                                     var check = document.getElementById("work").value;
                                     document.getElementById("work").value = selectedOption;
                                 }
-
                             </script>
 
                             <textarea placeholder="{{ trans('home.feedback_content') }}" id="message" name="message"></textarea>
@@ -239,7 +251,7 @@
                                     success: function(response) {
                                         Swal.fire({
                                             title: response.success,
-                                            text: "LaosICT Center "+response.thank,
+                                            text: "LaosICT Center " + response.thank,
                                             icon: "success",
                                             onClose: function() {
                                                 $('#myForm')[0].reset(); // Đặt lại form về trạng thái rỗng
@@ -252,157 +264,155 @@
                                 });
                             });
                         </script>
-
-                        @if (Session::has('success'))
-                            <div class="alert alert-success">
-                                {{ Session::get('success') }}
+                    </div>
+                </section>
+            </section>
+            </section>
+            <section class="article-wrapper">
+                <section class="section-wrapper">
+                    <p class="ff-popins fs-40 fw-700 text-center">Our Experts</p>
+                    <p class="ff-popins fs-16 text-center text-lightgrey">Guided by a team of experienced experts using a
+                        hands-on approach</p>
+                    <div class="grid-items-container">
+                        <div class="card-expert">
+                            <div class="card-expert-image mb-3">
+                                <img src="/new-front-end/image/user_thumbnail_1.png" width="320" height="220">
                             </div>
+                            <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years
+                                    Work and teaching</span></p>
+                            <p class="ff-popins fw-600 fs-18">Mr. Cuong Nguyen Quoc</p>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion,
+                                    UX/UI Skills</div>
+                                <button class="btn button-view-expert"><i
+                                        class="fas fa-long-arrow-alt-right"></i></button>
+                            </div>
+                        </div>
 
-                            <script>
-                                // Cuộn đến form sau khi trang tải lại
-                                window.onload = function() {
-                                    document.getElementById('myForm').scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
-                                };
-                            </script>
-                        @endif
+                        <div class="card-expert">
+                            <div class="card-expert-image mb-3">
+                                <img src="/new-front-end/image/user_thumbnail_2.png" width="320" height="220">
+                            </div>
+                            <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years
+                                    Work and teaching</span></p>
+                            <p class="ff-popins fw-600 fs-18">Ms. Thao Le Vu</p>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion,
+                                    UX/UI Skills</div>
+                                <button class="btn button-view-expert"><i
+                                        class="fas fa-long-arrow-alt-right"></i></button>
+                            </div>
+                        </div>
 
+                        <div class="card-expert">
+                            <div class="card-expert-image mb-3">
+                                <img src="/new-front-end/image/user_thumbnail_3.png" width="320" height="220">
+                            </div>
+                            <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years
+                                    Work and teaching</span></p>
+                            <p class="ff-popins fw-600 fs-18">Mrs. Hanh Nguyen Hong</p>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion,
+                                    UX/UI Skills</div>
+                                <button class="btn button-view-expert"><i
+                                        class="fas fa-long-arrow-alt-right"></i></button>
+                            </div>
+                        </div>
                     </div>
+                </section>
             </section>
-        </section>
-        </section>
-        <section class="article-wrapper">
-            <section class="section-wrapper">
-                <p class="ff-popins fs-40 fw-700 text-center">Our Experts</p>
-                <p class="ff-popins fs-16 text-center text-lightgrey">Guided by a team of experienced experts using a hands-on approach</p>
-                <div class="grid-items-container">
-                    <div class="card-expert">
-                        <div class="card-expert-image mb-3">
-                            <img src="/new-front-end/image/user_thumbnail_1.png" width="320" height="220">
+            <section class="article-wrapper">
+                <section class="section-wrapper">
+                    <p class="ff-popins fs-40 fw-700 text-center">Student says About Course</p>
+                    <p class="ff-popins fs-16 text-center text-lightgrey">Get a feel for the course through the reviews of
+                        thousands of students who have attended our Course</p>
+                    <div class="grid-items-container student-list">
+                        <div class="card-student">
+                            <div>
+                                <img src="/new-front-end/image/student-thumbnail-1.png" style="width:160px;height:200px">
+                            </div>
+                            <div class="d-flex flex-column justify-content-between">
+                                <ul class="rate">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <h4 class="ff-popins fw-600">Best learning platform</h4>
+                                <q class="ff-popins fs-14 text-lightgrey">
+                                    This course is absolutely fantastic! It delivers high-quality content, has professional
+                                    instructors, and offers a flexible and engaging learning approach.
+                                </q>
+                                <div class="ff-popins fw-700 fs-14">Maurice Cain</div>
+                                <div class="ff-popins fs-14 text-lightgrey">Student</div>
+                            </div>
                         </div>
-                        <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
-                        <p class="ff-popins fw-600 fs-18">Mr. Cuong Nguyen Quoc</p>
-                        <hr>
-                        <div class="d-flex justify-content-between">
-                            <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
-                            <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
-                        </div>
-                    </div>
 
-                    <div class="card-expert">
-                        <div class="card-expert-image mb-3">
-                            <img src="/new-front-end/image/user_thumbnail_2.png" width="320" height="220">
-                        </div>
-                        <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
-                        <p class="ff-popins fw-600 fs-18">Ms. Thao Le Vu</p>
-                        <hr>
-                        <div class="d-flex justify-content-between">
-                            <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
-                            <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="card-expert">
-                        <div class="card-expert-image mb-3">
-                            <img src="/new-front-end/image/user_thumbnail_3.png" width="320" height="220">
-                        </div>
-                        <p><i class="far fa-play-circle"></i> <span class="ff-popins fs-14 text-lightgrey">20 years Work and teaching</span></p>
-                        <p class="ff-popins fw-600 fs-18">Mrs. Hanh Nguyen Hong</p>
-                        <hr>
-                        <div class="d-flex justify-content-between">
-                            <div class="ff-popins fs-16 text-lightgrey"><i class="fas fa-user"></i> 2D, 3D, Motion, UX/UI Skills</div>
-                            <button class="btn button-view-expert"><i class="fas fa-long-arrow-alt-right"></i></button>
+                        <div class="card-student">
+                            <div>
+                                <img src="/new-front-end/image/student-thumbnail-2.png" width="160" height="200">
+                            </div>
+                            <div class="d-flex flex-column justify-content-between">
+                                <ul class="rate">
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                </ul>
+                                <h4 class="ff-popins fw-600">Amazing Course</h4>
+                                <q class="ff-popins fs-14 text-lightgrey">
+                                    The course exceeded my expectations. The well-structured curriculum and popinsactive
+                                    lessons make learning enjoyable and highly effective.
+                                </q>
+                                <div class="ff-popins fw-700 fs-14">Lila Henderson</div>
+                                <div class="ff-popins fs-14 text-lightgrey">Student</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </section>
-        </section>
-        <section class="article-wrapper">
-            <section class="section-wrapper">
-                <p class="ff-popins fs-40 fw-700 text-center">Student says About Course</p>
-                <p class="ff-popins fs-16 text-center text-lightgrey">Get a feel for the course through the reviews of thousands of students who have attended our Course</p>
-                <div class="grid-items-container student-list">
-                    <div class="card-student">
-                        <div>
-                            <img src="/new-front-end/image/student-thumbnail-1.png" style="width:160px;height:200px">
-                        </div>
-                        <div class="d-flex flex-column justify-content-between">
-                            <ul class="rate">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <h4 class="ff-popins fw-600">Best learning platform</h4>
-                            <q class="ff-popins fs-14 text-lightgrey">
-                                This course is absolutely fantastic! It delivers high-quality content, has professional instructors, and offers a flexible and engaging learning approach.
-                            </q>
-                            <div class="ff-popins fw-700 fs-14">Maurice Cain</div>
-                            <div class="ff-popins fs-14 text-lightgrey">Student</div>
-                        </div>
-                    </div>
-
-                    <div class="card-student">
-                        <div>
-                            <img src="/new-front-end/image/student-thumbnail-2.png" width="160" height="200">
-                        </div>
-                        <div class="d-flex flex-column justify-content-between">
-                            <ul class="rate">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                            </ul>
-                            <h4 class="ff-popins fw-600">Amazing Course</h4>
-                            <q class="ff-popins fs-14 text-lightgrey">
-                                The course exceeded my expectations. The well-structured curriculum and popinsactive lessons make learning enjoyable and highly effective.
-                            </q>
-                            <div class="ff-popins fw-700 fs-14">Lila Henderson</div>
-                            <div class="ff-popins fs-14 text-lightgrey">Student</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-    </div>
-@include('frontend.footer')
+        </div>
+        @include('frontend.footer')
     </div>
 @endsection
 @section('after_scripts')
-<script src="/new-front-end/js/validation.js"></script>
+    <script src="/new-front-end/js/validation.js"></script>
     <script type="text/javascript">
-       const revealLeftElement = document.querySelector('.reveal-left');
-    window.addEventListener('scroll', () => {
-        const revealPosition = revealLeftElement.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (revealPosition < windowHeight) {
-            revealLeftElement.classList.add('active');
-        }
-    });
-    const revealRightElement = document.querySelector('.reveal-right');
-    window.addEventListener('scroll', () => {
-        const revealPosition = revealRightElement.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (revealPosition < windowHeight) {
-            revealRightElement.classList.add('active');
-        }
-    });
+        const revealLeftElement = document.querySelector('.reveal-left');
+        window.addEventListener('scroll', () => {
+            const revealPosition = revealLeftElement.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (revealPosition < windowHeight) {
+                revealLeftElement.classList.add('active');
+            }
+        });
+        const revealRightElement = document.querySelector('.reveal-right');
+        window.addEventListener('scroll', () => {
+            const revealPosition = revealRightElement.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (revealPosition < windowHeight) {
+                revealRightElement.classList.add('active');
+            }
+        });
 
-     Validator({
-        form : '#myForm',
-        errorSelector: '.form-message',
-        formGroupSelector: '.form-group',
-        rules : [
-            Validator.isRequiered('#name','Vui lòng nhập tên'),
-            Validator.isName('#name','Vui lòng nhập đúng định dạng tên (không chứa số, không chứa kí tự đặc biệt)'),
-            Validator.isRequiered('#email','Vui lòng nhập email'),
-            Validator.isEmail('#email','Vui lòng nhập đúng định dạng email'),
-            Validator.isNumberPhone('#phone','Vui lòng nhập số điện thoại hợp lệ (từ 8 đến 13 chữ số)'),
-            Validator.isRequiered('#options',"Vui lòng chọn trường này"),
-        ],
-    });
-</script>
+        Validator({
+            form: '#myForm',
+            errorSelector: '.form-message',
+            formGroupSelector: '.form-group',
+            rules: [
+                Validator.isRequiered('#name', 'Vui lòng nhập tên'),
+                Validator.isName('#name',
+                    'Vui lòng nhập đúng định dạng tên (không chứa số, không chứa kí tự đặc biệt)'),
+                Validator.isRequiered('#email', 'Vui lòng nhập email'),
+                Validator.isEmail('#email', 'Vui lòng nhập đúng định dạng email'),
+                Validator.isNumberPhone('#phone', 'Vui lòng nhập số điện thoại hợp lệ (từ 8 đến 13 chữ số)'),
+                Validator.isRequiered('#work', "Vui lòng chọn trường này"),
+            ],
+        });
+    </script>
 @endsection
